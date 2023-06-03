@@ -14,6 +14,10 @@ const routes: Routes = [
     component: HomeComponent
   }, 
   {
+    path: 'back',
+    loadChildren: () => import('./modules/back-pages/server/server.module').then(m => m.ServerModule)
+  },
+  {
     path: 'not-found',
     component: C404Component
   },

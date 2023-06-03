@@ -3,25 +3,43 @@ import { CommonModule } from '@angular/common';
 
 import { ServerRoutingModule } from './server-routing.module';
 import { NavBackComponent } from './components/nav-back/nav-back.component';
-import { PeliculasBackComponent } from './components/peliculas-back/peliculas-back.component';
-import { UsuariosBackComponent } from './components/usuarios-back/usuarios-back.component';
-import { ArticulosBackComponent } from './components/articulos-back/articulos-back.component';
+import { MoviesBackComponent } from './components/movies-back/movies-back.component';
+import { UsersBackComponent } from './components/users-back/users-back.component';
+import { ArticlesBackComponent } from './components/articles-back/articles-back.component';
 import { BackendComponent } from './backend/backend.component';
 import { MaterialModule } from '../../material/material.module';
+import { UsersBackFormComponent } from './components/users-back/users-back-form/users-back-form.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatCardModule } from '@angular/material/card';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MoviesBackFormComponent } from './components/movies-back/movies-back-form/movies-back-form.component';
+import { ArticlesBackFormComponent } from './components/articles-back/articles-back-form/articles-back-form.component';
 
 
 @NgModule({
   declarations: [
     NavBackComponent,
-    PeliculasBackComponent,
-    UsuariosBackComponent,
-    ArticulosBackComponent,
-    BackendComponent
+    MoviesBackComponent,
+    UsersBackComponent,
+    ArticlesBackComponent,
+    BackendComponent,
+    UsersBackFormComponent,
+    MoviesBackFormComponent,
+    ArticlesBackFormComponent
   ],
   imports: [
     CommonModule,
     ServerRoutingModule,
-    MaterialModule
+    MaterialModule,
+    MatInputModule,
+    MatButtonModule,
+    MatSelectModule,
+    MatRadioModule,
+    MatCardModule,
+    ReactiveFormsModule
   ]
 })
 export class ServerModule { }
