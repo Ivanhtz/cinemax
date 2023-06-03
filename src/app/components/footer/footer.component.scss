@@ -1,0 +1,19 @@
+.footer{
+    position: absolute; 
+    bottom: 0px; 
+    width: 100%;
+    background-color: rgb(56, 55, 55);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-white{
+    color: white;
+    font-size: 1rem;
+    font-family: Verdana;
+}
+
