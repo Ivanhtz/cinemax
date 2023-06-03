@@ -8,21 +8,26 @@ import { C404Component } from './components/c404/c404.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/home/header/header.component';
-import { FormComponent } from './components/home/form/form.component';
+
 import { MaterialModule } from './modules/material/material.module';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
-import { AuthService } from './services/user-service/auth.service';
+
 import { LoginGuard } from './guards/login.guard';
-import { UserService } from './services/user-service/user.service';
-import { Token } from './interceptors/interceptor.interceptor';
+
+
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
+import { UserService } from './services/users-service/users.service';
+
+import { FormComponent } from './components/home/form/form.component';
+import { Token } from './interceptors/interceptor.interceptor';
+import { AuthsService } from './services/auths-service/auths.service';
 
 
 
@@ -33,7 +38,7 @@ import { MatCardModule } from '@angular/material/card';
     FooterComponent,
     HomeComponent,
     HeaderComponent,
-    FormComponent,
+    FormComponent
 
 
 
@@ -57,7 +62,7 @@ import { MatCardModule } from '@angular/material/card';
   ],
   providers: [
     UserService,
-    AuthService,
+    AuthsService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: Token,

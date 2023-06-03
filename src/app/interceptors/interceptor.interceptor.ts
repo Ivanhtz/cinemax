@@ -8,13 +8,15 @@ import {
 } from '@angular/common/http';
 import { Observable, catchError, throwError } from 'rxjs';
 import { Router } from '@angular/router';
-import { AuthService } from '../services/user-service/auth.service';
+import { AuthsService } from '../services/auths-service/auths.service';
+
+
 
 @Injectable()
 // Definimos la clase Token que implementa HttpInterceptor. Este es un interceptor de HTTP que se utilizará para interceptar todas las solicitudes HTTP
 export class Token implements HttpInterceptor {
   // Inyectamos Router para la navegación y AuthService para obtener y eliminar el token
-  constructor(private router: Router, private authService: AuthService) {}
+  constructor(private router: Router, private authService: AuthsService) {}
 
   // El método intercept se invoca para cada solicitud HTTP. Puede manipular la solicitud y devolver un Observable que emite un solo evento HttpEvent
   intercept(
