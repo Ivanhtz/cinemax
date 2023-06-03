@@ -1,3 +1,8 @@
+.container-section{
+    background-color: #1c0101;
+}
+
+// Sección principal -hero-
 .hero {
     position: relative;
     height: 100vh;
@@ -6,16 +11,7 @@
     background-position: center;
 }
 
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.hero-content {
+.hero__content {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -24,40 +20,70 @@
     color: #fff;
 }
 
-.hero-content h1 {
+.hero__title {
     font-size: 4rem;
-    margin-bottom: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
 }
 
-.hero-content p {
+.hero__text {
     font-size: 1.5rem;
-    margin-bottom: 2rem;
 }
 
-button {
-    font-size: 1.5rem;
-    margin: 5px;
+.hero__buttons-container {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: end;
+    background-color: #1c0101;
+    padding: 1rem;
 }
 
-.mat-raised-button {
-    padding: 1rem 2rem;
-    border-radius: 5px;
+.hero__button {
+    display: inline-block;
+    padding: 6px;
+    margin-right: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
 }
+
+.hero__button--primary {
+    background-color: #631d91;
+}
+
+
+
+/*Sección para los géneros de las películas*/
 
 .genres {
-    margin-top: 3rem;
+    background-color: #541a1a;
+    border: 1px solid #ece9e9;
+    border-radius: 60px;
+    margin-top: 1rem;
+    
 }
 
 .genres__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 2rem;
     font-weight: bold;
+    padding-top: 1rem;
     margin-bottom: 1rem;
+    color: #ece9e9;
 }
 
 .genres__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+     color: #ece9e9;
 }
 
 .genres__item {
@@ -81,6 +107,60 @@ button {
     text-align: center;
 }
 
+
+//Sección slider
+
+.slider{
+    background-color: #1c0101;
+    //border: 1px solid red;
+    margin-top: 1rem;
+    
+}
+
+.slider__title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #aeabab;
+    
+}
+
+.slider__container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider__slide {
+    position: relative;
+    flex: 1 0 100%;
+    
+}
+
+.slider__image {
+    width: 100%;
+    height: 500px;
+    border-radius: 60px;
+
+
+}
+
+.slider__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.slider__subtitle {
+    font-size: 3rem;
+}
+
+
+
 /* Clases de Material Design */
 .mat-card {
     background-color: #fff;
@@ -95,4 +175,24 @@ button {
 .mat-card-image {
     width: 100%;
     height: auto;
+}
+
+.mat-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.mat-card-title {
+    font-size: 1.5rem;
+}
+
+.mat-card-image {
+    width: 100%;
+    height: auto;
+}
+
+.mat-raised-button {
+    padding: 1rem 2rem;
+    border-radius: 5px;
 }

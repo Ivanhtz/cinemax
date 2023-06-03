@@ -1,0 +1,40 @@
+.login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #7a7a7a;
+}
+
+.login-form__card {
+    width: 400px;
+}
+
+.login-form__header {
+    background-color: #8344cf;
+    color: #fff;
+}
+
+.login-form__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-form__row {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.login-form__col {
+    width: 100%;
+}
+
+.login-form__field {
+    width: 100%;
+}
+
+.login-form__actions {
+    display: flex;
+    justify-content: center;
+}
