@@ -7,6 +7,8 @@ const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'principal' },
   {
     path: 'principal', component: PrincipalComponent, children: [
+      { path: '', pathMatch: 'full', redirectTo: 'films' },
+      { path: 'films', loadChildren: () => import('../pages/films/films.module').then(m => m.FilmsModule) },
       { path: 'about', loadChildren: () => import('../pages/about/about.module').then(m => m.AboutModule) },
       { path: 'contact', loadChildren: () => import('../pages/contact-form/contact-form.module').then(m => m.ContactFormModule) }
     ]

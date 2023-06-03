@@ -16,6 +16,9 @@ import { ViewFilmComponent } from './view-film/view-film.component';
   imports: [
     CommonModule,
     FilmsRoutingModule
+  ],
+  exports: [
+    FilmsListComponent
   ]
 })
 export class FilmsModule { }
