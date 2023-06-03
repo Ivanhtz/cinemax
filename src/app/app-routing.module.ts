@@ -6,13 +6,33 @@ import { LoginGuard } from './guards/login.guard';
 import { FormComponent } from './components/home/form/form.component';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'home' },
-  { path: 'home', component: HomeComponent },
+  {
+    path:'',
+    pathMatch:'full', 
+    redirectTo: 'home' 
+  },
+  {
+    path: 'home', 
+    component: HomeComponent
+  },
+  {
+    path: 'login',
+    component: FormComponent
+  },
   { path: 'principal', loadChildren: () => import('./modules/front-pages/principal/principal.module').then(m => m.PrincipalModule) },
-  { path: 'back', component: FormComponent },
-  // { path: 'back', loadChildren: () => import('./modules/back-pages/server/server.module').then(m => m.ServerModule) },
-  { path: 'not-found', component: C404Component },
-  { path: '**', redirectTo: 'not-found' }
+  {
+    path: 'back',
+    loadChildren: () => import('./modules/back-pages/server/server.module').then(m => m.ServerModule),
+    canActivate: [LoginGuard]
+  },
+  {
+    path: 'not-found',
+    component: C404Component
+  },
+  {
+    path: '**',
+    redirectTo: 'not-found'
+  }
 ];
 
 @NgModule({
