@@ -11,6 +11,14 @@ import { HeaderComponent } from './components/home/header/header.component';
 import { FormComponent } from './components/home/form/form.component';
 import { MaterialModule } from './modules/material/material.module';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+
+import { AuthService } from './services/user-service/auth.service';
+import { LoginGuard } from './guards/login.guard';
+import { UserService } from './services/user-service/user.service';
+import { Token } from './interceptors/interceptor.interceptor';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -30,10 +38,22 @@ import { RouterModule } from '@angular/router';
     BrowserAnimationsModule, 
     MaterialModule,
     RouterModule, 
+    HttpClientModule,
+    ReactiveFormsModule
+    
     
     
   ],
-  providers: [],
+  providers: [
+    UserService,
+    AuthService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: Token,
+      multi: true
+    },
+    LoginGuard 
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
