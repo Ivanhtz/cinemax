@@ -1,0 +1,14 @@
+<section class="section">
+    <header class="section__header">
+        <h1>Sobre Nosotros</h1>
+    </header>
+
+
+    <button mat-raised-button color="accent" [matMenuTriggerFor]="menu">Menu</button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink="/principal/principal/about/history">Nuestra Historia</button>
+        <button mat-menu-item routerLink="/principal/principal/about/mission">Misión de Cinemax</button>
+    </mat-menu>
+
+    <router-outlet></router-outlet>
+</section>
