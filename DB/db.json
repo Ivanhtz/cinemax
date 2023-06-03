@@ -1,3 +1,420 @@
 {
-    "users": []
+  "users": [
+    {
+      "email": "super@hotmail.com",
+      "password": "$2a$10$91Lk2oTEzJvXf5es4huZJemi5AN2rIcZRVKzyvdBL1118NR9se4Y6",
+      "id": 1
+    }
+  ],
+  "films": [
+    {
+      "id": 1,
+      "title": "Fast & Furious X",
+      "director": "Louis Leterrier",
+      "score": 6.2,
+      "year": "2023",
+      "genre": "action",
+      "abstract": "Dom Toretto y su familia están en el punto de mira del vengativo hijo del capo de la droga Hernán Reyes.",
+      "img": "https://pics.filmaffinity.com/fast_x-854185380-large.jpg",
+      "text": "Comienza el final del camino. Fast X, la décima película de la saga Fast and Furious, pone en marcha los capítulos finales de una de las franquicias globales más populares e históricas del cine, ahora en su tercera década y todavía con fuerza, con el mismo reparto y personajes principales que cuando empezó. A lo largo de muchas misiones y contra pronósticos imposibles, Dom Toretto (Vin Diesel) y su familia han sido más astutos, más nerviosos y han superado a todos los enemigos que se han cruzado en su camino. Ahora, se enfrentan al adversario más letal al que jamás se han enfrentado: Una aterradora amenaza que emerge de las sombras del pasado, alimentada por la venganza de sangre, y que está decidida a destrozar esta familia y destruir todo -y a todos- lo que Dom ama, para siempre. En Fast Five, de 2011, Dom y su equipo acabaron con el nefasto narcotraficante brasileño Hernán Reyes y decapitaron su imperio en un puente de Río de Janeiro. Lo que no sabían era que el hijo de Reyes, Dante (Jason Momoa de Aquaman), fue testigo de todo y ha pasado los últimos 12 años ideando un plan para que Dom pague el precio definitivo. El complot de Dante dispersará a la familia de Dom desde Los Ángeles hasta las catacumbas de Roma, desde Brasil hasta Londres y desde Portugal hasta la Antártida. Se forjarán nuevos aliados y resurgirán viejos enemigos. Pero todo cambia cuando Dom descubre que su propio hijo de 8 años (Leo Abelo Perry, Black-ish) es el objetivo final de la venganza de Dante. Dirigida por Louis Leterrier (Furia de titanes, El increíble Hulk), Fast X está protagonizada por Michelle Rodriguez, Tyrese Gibson, Chris Ludacris Bridges, Nathalie Emmanuel, Jordana Brewster, Sung Kang, Jason Statham, John Cena y Scott Eastwood, junto a la ganadora del Oscar® Helen Mirren y la ganadora del Oscar® Charlize Theron. La película también cuenta con un extraordinario reparto nuevo que incluye a la ganadora del Oscar® Brie Larson como Tess, una representante rebelde de la Agencia; Alan Richtson (Reacher) como Aimes, el nuevo jefe de la Agencia que no tiene el mismo cariño por la tripulación de Dom que su predecesor, Mr. Nobody; Daniela Melchior (El Escuadrón Suicida) como una corredora callejera brasileña con un poderoso vínculo con el pasado de Dom; y la legendaria ganadora del Oscar® Rita Moreno como Dom y la Abuelita Toretto de Mia. Fast X está producida por Neal H. Moritz, Vin Diesel, Justin Lin, Jeff Kirschenbaum y Samantha Vincent. Los productores ejecutivos son Joseph M. Caracciolo, Jr., David Cain, Chris Morgan, Amanda Lewis y Mark Bomback."
+    },
+    {
+      "id": 2,
+      "title": "John Wick 4",
+      "director": "Chad Stahelski",
+      "score": 8,
+      "year": "2023",
+      "genre": "action",
+      "abstract": "John Wick descubre un camino para derrotar a La Mesa Alta. Pero antes de que pueda ganarse su libertad, Wick debe enfrentarse a un nuevo enemigo con poderosas alianzas en todo el mundo y fuerzas que convierten a viejos amigos en enemigos...",
+      "img": "https://pics.filmaffinity.com/john_wick_chapter_4-101402041-large.jpg",
+      "text": "Condenado por la tiránica Mesa Alta a huir el resto de su vida, el letal maestro de asesinos John Wick (Otro día para matar) (2014) se embarca en una misión de Sísifo de furia suicida para decidir su destino tras la despiadada carnicería de John Wick: Capítulo 3 - Parabellum (2019). Por fin, el violento viaje de John, alimentado por la venganza y el dolor, le conduce en última instancia a un fatídico enfrentamiento con sus antiguos jefes, los amos del crimen que le obligaron a exiliarse. Y mientras la venganza manchada de sangre para destruir a los que mueven los hilos continúa, viejos compañeros se enfrentan a las brutales consecuencias de la amistad, y adversarios todopoderosos y bien conectados surgen para traer la cabeza de Wick en bandeja. Pero hablar es barato... ahora las armas tienen la última palabra. ¿Podrá Baba Yaga, el sombrío mesías de la muerte, hacer que cada bala cuente en esta sangrienta lucha por la libertad?"
+    },
+    {
+      "id": 3,
+      "title": "Sisu",
+      "director": "Jalmari Helander",
+      "score": 7,
+      "year": "2022",
+      "genre": "action",
+      "abstract": "Cuando un ex soldado que descubre oro en las tierras salvajes de Laponia intenta llevar el botín a la ciudad, los soldados nazis dirigidos por un brutal oficial de las SS se enfrentan a él.",
+      "img": "https://pics.filmaffinity.com/sisu-927259029-large.jpg",
+      "text": "Durante los últimos y desesperados días de la Segunda Guerra Mundial, un solitario buscador de oro (Jorma Tommila) se cruza con los nazis en una retirada en el norte de Finlandia. Cuando los nazis le roban el oro, descubren rápidamente que no se han metido con un minero cualquiera. Aunque no existe una traducción directa de la palabra finlandesa sisu, este legendario excomando encarnará lo que significa sisu: una forma de coraje y determinación inimaginables frente a probabilidades abrumadoras. Y no importa lo que los nazis le echen, el escuadrón de la muerte de un solo hombre hará todo lo posible para recuperar su oro, incluso si eso significa matar hasta el último nazi en su camino. Lionsgate presenta, en asociación con Stage 6 Films, una producción de Subzero Film Entertainment, en asociación con Good Chaos"
+    },
+    {
+      "id": 4,
+      "title": "The Covenant",
+      "director": "Guy Ritchie",
+      "score": 7.5,
+      "year": "2023",
+      "genre": "action",
+      "abstract": "Durante la guerra de Afganistán, un intérprete local arriesga su propia vida para llevar a un sargento herido a través de kilómetros de terreno extenuante.",
+      "img": "https://pics.filmaffinity.com/guy_ritchie_s_the_covenant-145554066-large.jpg",
+      "text": "The Covenant, de Guy Ritchie, sigue al sargento del ejército estadounidense John Kinley (Jake Gyllenhaal) y al intérprete afgano Ahmed (Dar Salim). Tras una emboscada, Ahmed hace todo lo posible por salvar la vida de Kinley. Cuando Kinley se entera de que Ahmed y su familia no obtuvieron un salvoconducto a Estados Unidos como se les había prometido, debe saldar su deuda regresando a la zona de guerra para recuperarlos antes de que los talibanes les den caza primero."
+    },
+    {
+      "id": 5,
+      "title": "Danny the dog",
+      "director": "Louis Leterrier",
+      "score": 6.1,
+      "year": "2005",
+      "genre": "action",
+      "abstract": "Un hombre esclavizado por la mafia desde la infancia y educado para comportarse como un perro de presa humano, escapa de sus captores e intenta empezar una nueva vida.",
+      "img": "https://pics.filmaffinity.com/unleashed_danny_the_dog-550184656-large.jpg",
+      "text": "Dos hombres aislados del mundo por diferentes motivos se convierten en amigos y protectores improbables en este drama de acción fuera de lo común. Danny (Jet Li) es un hombre físicamente poderoso pero emocionalmente atrofiado; nunca recibió ningún tipo de educación adecuada, Danny ha aprendido poco en su vida, pero la forma de luchar, y su cuidador, Bart (Bob Hoskins), lo trata más como un perro guardián que otra cosa, utilizándolo en peleas ilegales sin restricciones que ganan Bart un montón de dinero, pero sólo refuerzan la alienación violenta de Danny. Cuando Bart resulta herido en un accidente de coche, Danny queda abandonado a su suerte y tropieza con Sam (Morgan Freeman), un anciano afinador de pianos que ha perdido la vista. Sam es la primera persona que trata a Danny con amabilidad, y la música que toca calma el alma atribulada del luchador. Sin embargo, las habilidades de lucha de Danny pronto le resultarán útiles cuando Sam se enfrente a una banda de ladrones de poca monta que creen que sabe demasiado sobre sus operaciones Traducción realizada con la versión gratuita del traductor www.DeepL.com/Translator"
+    },
+    {
+      "id": 6,
+      "title": "Top Gun: Maverick",
+      "director": "Joseph Kosinski",
+      "score": 8.3,
+      "year": "2022",
+      "genre": "action",
+      "abstract": "Después de más de treinta años de servicio como uno de los mejores aviadores de la Armada, Pete Mitchell está donde pertenece, forzando los límites como valiente piloto de pruebas y esquivando el avance de rango que lo dejaría en tierra",
+      "img": "https://pics.filmaffinity.com/guy_ritchie_s_the_covenant-145554066-large.jpg",
+      "text": "Ambientada 30 años después de su predecesora, sigue el regreso de Maverick al programa de Instrucción de Tácticas de Cazas de Ataque de la Marina de los Estados Unidos (también conocido como Escuela de Armamento de Cazas de la Marina de los Estados Unidos - TOPGUN), donde debe enfrentarse a su pasado mientras entrena a un grupo de pilotos más jóvenes, entre los que se encuentra el hijo del mejor amigo de Maverick, el teniente Nick Goose Bradshaw, USN"
+    },
+    {
+      "id": 7,
+      "title": "Snatch. Cerdos y diamantes",
+      "director": "Guy Ritchie",
+      "score": 8.2,
+      "year": "2000",
+      "genre": "comedy",
+      "abstract": "Promotores de boxeo sin escrúpulos, editores violentos, un gánster ruso, ladrones amateur incompetentes, y joyeros supuestamente judíos se enfrentan para seguirle la pista a un preciado diamante robado.",
+      "img": "https://pics.filmaffinity.com/guy_ritchie_s_the_covenant-145554066-large.jpg",
+      "text": "Turkish y su amigo íntimo y cómplice Tommy se ven arrastrados al mundo del amaño de combates por el tristemente célebre Brick Top. Las cosas se complican cuando el boxeador que tenían preparado recibe una paliza de Mickey, que entra en escena después de que Turkish, un promotor de boxeo sin licencia, quiera comprar una caravana a Travellers. Entonces intentan convencer a Mickey no sólo de que pelee para ellos, sino también de que pierda por ellos. Mientras todo esto sucede, se produce un gran robo de diamantes y un puñado de variopintos personajes entran en la historia, entre ellos Primo Avi, Boris el Cuchilla, Franky Cuatro Dedos y Tony Diente de Bala. Las cosas van de mal en peor, ya que todo gira en torno al dinero, las armas y el maldito perro."
+    },
+    {
+      "id": 8,
+      "title": "El padrino",
+      "director": "Francis Ford Coppola",
+      "score": 9.2,
+      "year": "1972",
+      "genre": "drama",
+      "abstract": "El envejecido patriarca de una dinastía del crimen organizado en la ciudad de Nueva York de la posguerra transfiere el control de su imperio clandestino a su reacio hijo menor.",
+      "img": "https://pics.filmaffinity.com/the_godfather-488102675-large.jpg",
+      "text": "El Padrino Don Vito Corleone es el jefe de la familia mafiosa Corleone en Nueva York. Asiste a la boda de su hija. Michael, el hijo menor de Vito y marine condecorado en la Segunda Guerra Mundial, también está presente en la boda. Michael parece no estar interesado en formar parte del negocio familiar. Vito es un hombre poderoso, amable con todos los que le respetan pero despiadado con los que no lo hacen. Pero cuando un rival poderoso y traicionero quiere vender drogas y necesita la influencia del Don para ello, Vito se niega a hacerlo. Lo que sigue es un choque entre los viejos valores de Vito, que se desvanecen, y las nuevas costumbres, que puede llevar a Michael a hacer lo que más se resistía a hacer: emprender una guerra contra todas las demás familias de la mafia que podría destrozar a la familia Corleone."
+    },
+    {
+      "id": 9,
+      "title": "Apocalypse Now",
+      "director": "Francis Ford Coppola",
+      "score": 8.4,
+      "year": "1979",
+      "genre": "belico",
+      "abstract": "Un oficial del ejército estadounidense que sirve en Vietnam recibe el encargo de asesinar a un coronel renegado de las fuerzas especiales que se ve a sí mismo como un dios.",
+      "img": "https://pics.filmaffinity.com/apocalypse_now-322812758-large.jpg",
+      "text": "Es el punto álgido de la guerra de Vietnam, y el capitán Willard del ejército de EE.UU. es enviado por el coronel Lucas y un general para llevar a cabo una misión que, oficialmente, no existe - ni existirá nunca. La misión: Buscar a un misterioso coronel boina verde, Walter Kurtz, cuyo ejército ha cruzado la frontera con Camboya y está llevando a cabo misiones de asalto contra el Viet Cong y el NVA. El ejército cree que Kurtz se ha vuelto completamente loco y el trabajo de Willard es eliminarlo. Willard, enviado a remontar el río Nung en una patrullera de la Marina estadounidense, descubre que su objetivo es uno de los oficiales más condecorados del ejército de su país. Su tripulación se encuentra con el teniente coronel Kilgore, jefe de un grupo de helicópteros de caballería del ejército estadounidense que elimina un puesto avanzado del Viet Cong para proporcionar un punto de entrada al río Nung. Tras algunos espeluznantes encuentros, en los que mueren algunos miembros de su tripulación, Willard, Lance y Chef llegan al puesto avanzado del coronel Kurtz, más allá del puente Do Lung. Ahora, tras convertirse en prisioneros de Kurtz, ¿podrán Willard y los demás cumplir su misión?"
+    },
+    {
+      "id": 10,
+      "title": "Pesadilla antes de Navidad",
+      "director": "Henry Selick",
+      "score": 7.9,
+      "year": "1993",
+      "genre": "animacion",
+      "abstract": "Jack Skellington, el rey de la Ciudad de Halloween, descubre la Ciudad de la Navidad, pero sus intentos de llevar la Navidad a Halloween causan confusión.",
+      "img": "https://pics.filmaffinity.com/the_nightmare_before_christmas-136057718-large.jpg",
+      "text": "Jack Skellington, el rey calabaza de Halloween, está aburrido de hacer lo mismo todos los años en Halloween. Un día se topa con Christmas Town, y le atrae tanto la idea de la Navidad que intenta que los murciélagos, demonios y duendes residentes en Halloween Town le ayuden a celebrar la Navidad en lugar de Halloween... pero, por desgracia, no lo consiguen."
+    },
+    {
+      "id": 11,
+      "title": "Pulp Fiction",
+      "director": "Quentin Tarantino",
+      "score": 8.9,
+      "year": "1994",
+      "genre": "drama",
+      "abstract": "Las vidas de dos mafiosos, un boxeador, la esposa de un gánster y un par de bandidos se entrelazan en cuatro historias de violencia y redención.",
+      "img": "https://pics.filmaffinity.com/pulp_fiction-210382116-large.jpg",
+      "text": "Jack Skellington, el rey calabaza de Halloween, está aburrido de hacer lo mismo todos los años en Halloween. Un día se topa con Christmas Town, y le atrae tanto la idea de la Navidad que intenta que los murciélagos, demonios y duendes residentes en Halloween Town le ayuden a celebrar la Navidad en lugar de Halloween... pero, por desgracia, no lo consiguen."
+    },
+    {
+      "id": 12,
+      "title": "Kill Bill: Volumen 1",
+      "director": "Quentin Tarantino",
+      "score": 8.2,
+      "year": "2003",
+      "genre": "drama",
+      "abstract": "Tras despertar de un coma de cuatro años, una antigua asesina se venga del equipo de asesinos que la traicionó.",
+      "img": "https://pics.filmaffinity.com/kill_bill_volume_1-216872360-large.jpg",
+      "text": "La protagonista, llamada La Novia, era miembro de la Brigada de Asesinatos Víbora Mortal, dirigida por su amante Bill. Al darse cuenta de que estaba embarazada de Bill, La Novia decidió escapar de su vida de asesina. Huyó a Texas, conoció a un joven que, el día del ensayo de su boda, fue abatido a tiros por un Bill furioso y celoso (con la ayuda de la Brigada de Asesinatos Víbora Mortal). Cuatro años después, La Novia despierta de un coma y descubre que su bebé ha desaparecido. Entonces decide vengarse de las cinco personas que destruyeron su vida y mataron a su bebé. Comienza la saga de Kill Bill Volumen I."
+    },
+    {
+      "id": 13,
+      "title": "Toy Story",
+      "director": "John Lasseter",
+      "score": 8.3,
+      "year": "1995",
+      "genre": "animacion",
+      "abstract": "Un vaquero de juguete se encuentra celoso y amenazado cuando un nuevo juguete, un guardián espacial, se convierte en el favorito del niño al que pertenecen.",
+      "img": "https://pics.filmaffinity.com/toy_story-626273371-large.jpg",
+      "text": "A un niño llamado Andy le encanta estar en su habitación, jugando con sus juguetes, especialmente con su muñeco llamado Woody. Pero, qué hacen los juguetes cuando Andy no está con ellos, cobran vida. Woody cree que su vida (como juguete) es buena. Sin embargo, debe preocuparse por la mudanza de la familia de Andy, y lo que Woody no sabe es sobre la fiesta de cumpleaños de Andy. Woody no se da cuenta de que la madre de Andy le ha regalado una figura de acción conocida como Buzz Lightyear, que no cree que sea un juguete, y rápidamente se convierte en el nuevo juguete favorito de Andy. Woody, que ahora está consumido por los celos, intenta deshacerse de Buzz. Entonces, tanto Woody como Buzz se encuentran perdidos. Deben encontrar la manera de volver con Andy antes de que se mude sin ellos, pero tendrán que pasar a través de un despiadado asesino de juguetes, Sid Phillips"
+    },
+    {
+      "id": 14,
+      "title": "Cars",
+      "director": "John Lasseter",
+      "score": 7.2,
+      "year": "2006",
+      "genre": "animacion",
+      "abstract": "Un coche de carreras llamado Rayo McQueen se encuentra en Radiador Springs, donde descubre el verdadero significado de la amistad y la familia.",
+      "img": "https://pics.filmaffinity.com/cars-746710621-large.jpg",
+      "text": "Mientras viaja a California para la disputa de la carrera final de la Copa Pistón contra El Rey y Chick Hicks, el famoso Rayo McQueen daña accidentalmente la carretera del pequeño pueblo Radiator Springs y es condenado a repararla. Rayo McQueen tiene que trabajar duro y encuentra amistad y amor en los sencillos lugareños, cambiando sus valores durante su estancia en el pequeño pueblo y convirtiéndose en un verdadero ganador."
+    },
+    {
+      "id": 15,
+      "title": "El rey león",
+      "director": "Roger Allers",
+      "score": 8.5,
+      "year": "1994",
+      "genre": "animacion",
+      "abstract": "El pequeño león Simba, príncipe heredero, es engañado por su malvado tío, quien desea el trono para sí mismo.",
+      "img": "https://pics.filmaffinity.com/the_lion_king-983881776-large.jpg",
+      "text": "Un joven príncipe león es expulsado de su manada por su cruel tío, que le acusa de haber matado a su padre. Mientras el tío gobierna con garra de hierro, el príncipe crece más allá de la Sabana, viviendo según una filosofía: Sin preocupaciones para el resto de sus días. Pero cuando su pasado vuelve a perseguirle, el joven príncipe debe decidir su destino: ¿Seguirá siendo un marginado o se enfrentará a sus demonios y se convertirá en lo que necesita ser?"
+    },
+    {
+      "id": 16,
+      "title": "Aladdín",
+      "director": "Roger Allers",
+      "score": 8,
+      "year": "1992",
+      "genre": "animacion",
+      "abstract": "Un joven callejero de buen corazón y un gran visir hambriento de poder, luchan por una lámpara mágica que tiene el poder de hacer realidad los deseos más profundos.",
+      "img": "https://pics.filmaffinity.com/aladdin-819103562-large.jpg",
+      "text": "Aladino es un pobre vagabundo que se pasa el tiempo robando comida en el mercado de la ciudad de Agrabah. Sus aventuras comienzan cuando conoce a una joven que resulta ser la princesa Jasmine, obligada a casarse por su chiflado y distanciado padre. La suerte de Aladino cambia repentinamente cuando recupera una lámpara mágica de la Cueva de las Maravillas. Lo que consigue sin darse cuenta es un genio amante de la diversión que sólo desea su libertad. Lo que no saben es que Jafar, el siniestro consejero del Sultán, tiene sus propios planes tanto para Aladino como para la lámpara."
+    },
+    {
+      "id": 17,
+      "title": "Killers of the Flower Moon",
+      "director": "Martin Scorsese",
+      "score": 9.6,
+      "year": "2023",
+      "genre": "drama",
+      "abstract": "Miembros de la tribu osage en los Estados Unidos son asesinados bajo circunstancias misteriosas en la década de 1920 provocado una importante investigación del FBI que involucra a J. Edgar Hoover.",
+      "img": "https://pics.filmaffinity.com/killers_of_the_flower_moon-503784032-large.jpg",
+      "text": "Miembros de la tribu Osage de Estados Unidos son asesinados en circunstancias misteriosas en la década de 1920, lo que desencadena una importante investigación del F.B.I. en la que participa J. Edgar Hoover."
+    },
+    {
+      "id": 18,
+      "title": "Uno de los nuestros",
+      "director": "Martin Scorsese",
+      "score": 8.7,
+      "year": "1990",
+      "genre": "drama",
+      "abstract": "La historia de Henry Hill y su vida en la mafia, abarcando su relación con su esposa Karen Hill y sus socios mafiosos Jimmy Conway y Tommy DeVito en el sindicato del crimen italoamericano.",
+      "img": "https://pics.filmaffinity.com/goodfellas-343032101-large.jpg",
+      "text": "Henry Hill podría ser un gángster de poca monta, que podría haber participado en un robo con Jimmy Conway y Tommy De Vito, otros dos gángsteres que podrían haber puesto sus miras un poco más altas. Sus dos socios podrían matar a todos los demás implicados en el robo y empezar a pensar poco a poco en ascender en la jerarquía de la Mafia. Henry, sin embargo, podría verse muy afectado por el éxito de sus socios, pero ¿considerará caer lo suficientemente bajo como para provocar la caída de Jimmy y Tommy?"
+    },
+    {
+      "id": 19,
+      "title": "El irlandés",
+      "director": "Martin Scorsese",
+      "score": 7.8,
+      "year": "2019",
+      "genre": "drama",
+      "abstract": "Un asesino a sueldo de la mafia recuerda su posible participación en el asesinato de Jimmy Hoffa.",
+      "img": "https://pics.filmaffinity.com/goodfellas-343032101-large.jpg",
+      "text": "Frank El Irlandés Sheeran es un hombre con muchas cosas en la cabeza. Este ex alto cargo sindical y asesino a sueldo aprendió a matar sirviendo en Italia durante la Segunda Guerra Mundial. Ahora repasa su vida y los golpes que definieron su carrera mafiosa, manteniendo conexiones con la familia criminal Bufalino. En particular, el papel que afirma haber desempeñado en la desaparición de su amigo de toda la vida, Jimmy Hoffa, ex presidente de la Hermandad Internacional de Camioneros, que desapareció misteriosamente a finales de julio de 1975 a la edad de 62 años."
+    },
+    {
+      "id": 20,
+      "title": "Posesión infernal. El despertar",
+      "director": "Lee Cronin",
+      "score": 6.7,
+      "year": "2023",
+      "genre": "terror",
+      "abstract": "Beth visita a su hermana mayor, Ella, que está criando a 3 niños en un pequeño apartamento en Los Ángeles. Su reunión es muy corta cuando encuentran un libro demoníaco, The Necronomicon Ex-Mortis.",
+      "img": "https://pics.filmaffinity.com/evil_dead_rise-438707144-large.jpg",
+      "text": "Trasladando la acción de los bosques a la ciudad, Evil Dead Rise cuenta la retorcida historia de dos hermanas distanciadas, interpretadas por Sutherland y Sullivan, cuyo reencuentro se ve truncado por la aparición de demonios carnales que las empujan a una batalla por la supervivencia mientras se enfrentan a la versión más pesadillesca de la familia que se pueda imaginar."
+    },
+    {
+      "id": 21,
+      "title": "Amanecer de los muertos",
+      "director": "Zack Snyder",
+      "score": 7.3,
+      "year": "2004",
+      "genre": "terror",
+      "abstract": "Una enfermera, un policía, un joven matrimonio, un vendedor y otros supervivientes de una plaga mundial que está produciendo zombis agresivos y carnívoros, se refugian en un megacentro comercial.",
+      "img": "https://pics.filmaffinity.com/dawn_of_the_dead-903534365-large.jpg",
+      "text": "Ana vuelve a casa, a su apacible residencia suburbana, pero se lleva una desagradable sorpresa la mañana siguiente, cuando su marido es brutalmente atacado por su vecino zombificado. En el caos de su otrora pintoresco vecindario, Ana huye y tropieza con un agente de policía llamado Kenneth, junto con más supervivientes que deciden que sus mejores posibilidades de supervivencia se encontrarían en el desierto centro comercial Crossroads. Cuando las provisiones empiezan a escasear y otros supervivientes atrapados necesitan ayuda, el grupo se da cuenta de que no pueden quedarse para siempre en el centro comercial e idean un plan para escapar."
+    },
+    {
+      "id": 22,
+      "title": "28 días después",
+      "director": "Danny Boyle",
+      "score": 7.5,
+      "year": "2002",
+      "genre": "terror",
+      "abstract": "Cuatro semanas después de que un misterioso e incurable virus se extienda por todo el Reino Unido, un puñado de supervivientes intenta encontrar refugio.",
+      "img": "https://pics.filmaffinity.com/28_days_later-469569758-large.jpg",
+      "text": "Activistas en favor de los animales invaden un laboratorio con la intención de liberar a unos chimpancés que están siendo sometidos a experimentos, infectados por un virus -un virus que causa rabia-. Los ingenuos activistas ignoran las súplicas de un científico para que mantengan las jaulas cerradas, con resultados desastrosos. Veintiocho días después, nuestro protagonista, Jim, despierta del coma, solo, en un hospital abandonado. Comienza a buscar a alguien más para encontrarse con que Londres está desierto, aparentemente sin un alma viviente. Después de encontrar una iglesia, que había sido habitada por seres humanos parecidos a zombis que pretendían acabar con él, huye para salvar su vida. Selena y Mark le rescatan de la horda y le ponen al corriente de la carnicería y el horror que se ha apoderado de Londres. Se trata de una historia de supervivencia y, en última instancia, de heroísmo, con un bonito subtexto sobre la naturaleza salvaje de la humanidad."
+    },
+    {
+      "id": 23,
+      "title": "Expediente Warren: The Conjuring",
+      "director": "James Wan",
+      "score": 7.5,
+      "year": "2013",
+      "genre": "terror",
+      "abstract": "Los investigadores de lo paranormal, Ed y Lorraine Warren, trabajan para ayudar a una familia aterrorizada por una presencia oscura en su granja.",
+      "img": "https://pics.filmaffinity.com/the_conjuring_the_warren_files-153245956-large.jpg",
+      "text": "En 1971, Carolyn y Roger Perron se mudan con su familia a una destartalada casa de campo de Rhode Island y pronto empiezan a suceder cosas extrañas a su alrededor con un terror de pesadilla creciente. Desesperada, Carolyn se pone en contacto con los conocidos investigadores paranormales Ed y Lorraine Warren para que examinen la casa. Lo que los Warren descubren es toda una zona impregnada de un embrujo satánico que ahora tiene como objetivo a la familia Perron dondequiera que vayan. Para detener este mal, los Warren tendrán que recurrir a todas sus habilidades y fuerza espiritual para derrotar esta amenaza espectral en su origen que amenaza con destruir a todos los involucrados."
+    },
+    {
+      "id": 24,
+      "title": "Annabelle: Creation",
+      "director": "David F. Sandberg",
+      "score": 6.5,
+      "year": "2017",
+      "genre": "terror",
+      "abstract": "Doce años después de la trágica muerte de su hija, un fabricante de muñecas y su esposa dan la bienvenida a una monja y varias niñas de un orfanato cerrado a su casa, donde pronto se convierten en el blanco de la creación poseída por el fabricante de muñecas, Annabelle",
+      "img": "https://pics.filmaffinity.com/annabelle-671994408-large.jpg",
+      "text": "El fabricante de muñecas Samuel Mullins es un feliz padre de familia con su esposa Esther y su hija Bee... hasta que ésta muere atropellada por un coche. Doce años después, Samuel y Esther acogen en su casa a una monja y a seis niñas huérfanas. Les dice que sólo una habitación cerrada (que pertenecía a Bee) y la habitación de Esther estarían vedadas para las niñas. La niña lisiada, Janice, consigue colarse en la habitación de Bee durante la noche y encuentra una muñeca encerrada en un armario. Después de jugar en la habitación, se ve acechada por una fuerza maligna. ¿Qué ha desatado Janice en la habitación de Bee?"
+    },
+    {
+      "id": 25,
+      "title": "Salvar al soldado Ryan",
+      "director": "Steven Spielberg",
+      "score": 8.6,
+      "year": "1998",
+      "genre": "belico",
+      "abstract": "Tras el desembarco de Normandía, un grupo de soldados estadounidenses cruza las líneas enemigas para rescatar a un paracaidista cuyos hermanos han muerto en combate.",
+      "img": "https://pics.filmaffinity.com/saving_private_ryan-585301228-large.jpg",
+      "text": "Comienza con la invasión aliada de Normandía el 6 de junio de 1944. Los miembros del 2º Batallón de Rangers, al mando del capitán Miller, luchan en tierra para asegurar la cabeza de playa. Dos hermanos mueren en combate. Anteriormente, en Nueva Guinea, un tercer hermano muere en combate. Su madre, la Sra. Ryan, recibe los tres telegramas el mismo día. El Jefe del Estado Mayor del Ejército de los Estados Unidos, George C. Marshall, tiene la oportunidad de aliviar parte de su dolor cuando se entera de la existencia de un cuarto hermano, el soldado James Ryan, y decide enviar a 8 hombres (el capitán Miller y algunos miembros del 2º de los Rangers) para encontrarlo y llevarlo de vuelta a casa con su madre..."
+    },
+    {
+      "id": 26,
+      "title": "La lista de Schindler",
+      "director": "Steven Spielberg",
+      "score": 9,
+      "year": "1993",
+      "genre": "belico",
+      "abstract": "En la Polonia ocupada por los alemanes durante la Segunda Guerra Mundial, el industrial Oskar Schindler se preocupa por sus trabajadores judíos tras presenciar su persecución por los nazis.",
+      "img": "https://pics.filmaffinity.com/schindler_s_list-473662617-large.jpg",
+      "text": "Oskar Schindler es un vanidoso y codicioso empresario alemán que se convierte en un humanitario improbable en medio del bárbaro reinado nazi alemán cuando se siente obligado a convertir su fábrica en un refugio para judíos. Basada en la historia real de Oskar Schindler, que consiguió salvar a unos 1.100 judíos de ser gaseados en el campo de concentración de Auschwitz, es un testimonio de la bondad que todos llevamos dentro."
+    },
+    {
+      "id": 27,
+      "title": "Sin novedad en el frente",
+      "director": "Edward Berger",
+      "score": 7.8,
+      "year": "2022",
+      "genre": "belico",
+      "abstract": "Las aterradoras experiencias y la angustia de un joven soldado alemán en el frente occidental durante la Primera Guerra Mundial.",
+      "img": "https://pics.filmaffinity.com/im_westen_nichts_neues-582072472-large.jpg",
+      "text": "La historia sigue a los adolescentes Paul Bäumer y sus amigos Albert y Müller, que se alistan voluntariamente en el ejército alemán, montados en una ola de fervor patriótico que rápidamente se disipa una vez que se enfrentan a las brutales realidades de la vida en el frente. Las ideas preconcebidas de Paul sobre el enemigo y los aciertos y errores del conflicto pronto se desmoronan. Sin embargo, en medio de la cuenta atrás para el armisticio, Paul debe seguir luchando hasta el final, sin otro propósito que satisfacer el deseo de los altos mandos de acabar la guerra con una ofensiva alemana."
+    },
+    {
+      "id": 28,
+      "title": "Hasta el último hombre",
+      "director": "Mel Gibson",
+      "score": 8.1,
+      "year": "2016",
+      "genre": "belico",
+      "abstract": "El médico del ejército Desmond T. Doss, que sirvió durante la batalla de Okinawa, se niega a matar y se convierte en el primer hombre de la historia de Estados Unidos que recibe la Medalla de Honor sin disparar un tiro.",
+      "img": "https://pics.filmaffinity.com/hacksaw_ridge-698653296-large.jpg",
+      "text": "La verdadera historia de Desmond T. Doss, el objetor de conciencia que, en la batalla de Okinawa, recibió la Medalla de Honor por su increíble valentía y consideración hacia sus compañeros. Vemos su educación y cómo ésta moldeó sus puntos de vista, especialmente su visión religiosa y su postura contraria a matar. Vemos las pruebas y tribulaciones de Doss tras alistarse en el ejército estadounidense e intentar convertirse en médico. Por último, vemos el infierno en la Tierra que fue Hacksaw Ridge."
+    },
+    {
+      "id": 29,
+      "title": "Jurassic Park",
+      "director": "Steven Spielberg",
+      "score": 8.2,
+      "year": "1993",
+      "genre": "aventura",
+      "abstract": "Gracias al ADN fosilizado en ámbar, John Hammond da vida a varias especies de dinosaurios y crea Jurassic Park, un parque temático en una isla de Costa Rica. Pero lo que parecía un sueño se convierte rápidamente en pesadilla.",
+      "img": "https://pics.filmaffinity.com/jurassic_park-187298880-large.jpg",
+      "text": "Los enormes avances de la tecnología científica han permitido a un magnate crear una isla llena de dinosaurios vivos. John Hammond ha invitado a cuatro personas, junto con sus dos nietos, a unirse a él en Parque Jurásico. Pero, ¿saldrá todo según lo previsto? Un empleado del parque intenta robar embriones de dinosaurio, los sistemas de seguridad críticos se desconectan y todo se convierte en una carrera por la supervivencia con los dinosaurios campando a sus anchas por la isla."
+    },
+    {
+      "id": 30,
+      "title": "Regreso al futuro",
+      "director": "Robert Zemeckis",
+      "score": 8.5,
+      "year": "1985",
+      "genre": "aventura",
+      "abstract": "Marty McFly, un estudiante de secundaria de 17 años, es enviado accidentalmente treinta años al pasado en un DeLorean que viaja en el tiempo, inventado por su gran amigo, el excéntrico científico Doc Brown.",
+      "img": "https://pics.filmaffinity.com/jurassic_park-187298880-large.jpg",
+      "text": "Marty McFly, un típico adolescente americano de los ochenta, es enviado accidentalmente al año 1955 en una máquina del tiempo DeLorean propulsada por plutonio e inventada por un científico un poco loco. Durante su viaje en el tiempo, a menudo histérico y siempre asombroso, Marty debe asegurarse de que sus futuros padres adolescentes se conozcan y se enamoren para poder volver al futuro."
+    },
+    {
+      "id": 31,
+      "title": "Terminator",
+      "director": "James Cameron",
+      "score": 8.1,
+      "year": "1984",
+      "genre": "aventura",
+      "abstract": "Un androide aparentemente indestructible viaja desde el año 2029 hasta el año 1984 para asesinar a una camarera cuyo hijo no nacido liderará a la humanidad en una guerra contra las máquinas. Se envía a un combatiente de esa guerra para que proteja a la mujer cueste lo que cueste.",
+      "img": "https://pics.filmaffinity.com/the_terminator-778052251-large.jpg",
+      "text": "Enviado de vuelta desde un distópico 2029 -donde las frías máquinas han conquistado el mundo entero- a Los Ángeles 1984, el indestructible cyborg-asesino conocido como Terminator comienza su mortal misión de matar a la mujer más importante de la humanidad: la desprevenida Sarah Connor. Sin embargo, del mismo futuro postapocalíptico devastado por la guerra llega un defensor curtido en mil batallas: Kyle Reese, un valiente soldado del Ejército de Resistencia humano, decidido a impedir que el asesino cibernético elimine a la última esperanza del mundo. Pero Terminator no tiene sentimientos, no duerme y, sobre todo, no se detendrá hasta llevar a cabo su sombría tarea. ¿Está nuestro futuro en nuestro pasado?"
+    },
+    {
+      "id": 32,
+      "title": "Indiana Jones y la última cruzada",
+      "director": "Steven Spielberg",
+      "score": 8.2,
+      "year": "1989",
+      "genre": "aventura",
+      "abstract": "En 1938, después de que su padre, el profesor Henry Jones, desapareciera mientras buscaba el Santo Grial, Indiana Jones se enfrenta de nuevo a los nazis de Adolf Hitler para impedir que obtengan sus poderes.",
+      "img": "https://pics.filmaffinity.com/indiana_jones_and_the_last_crusade-834556032-large.jpg",
+      "text": "Un coleccionista de arte pide a Indiana Jones que se embarque en la búsqueda del Santo Grial. Se entera de que otro arqueólogo ha desaparecido mientras buscaba la preciada copa, y el desaparecido es su propio padre, el Dr. Henry Jones. El artefacto es mucho más difícil de encontrar de lo que esperaban, y sus poderes son demasiado para los impuros de corazón"
+    },
+    {
+      "id": 33,
+      "title": "El señor de los anillos: La comunidad del anillo",
+      "director": "Peter Jackson",
+      "score": 8.8,
+      "year": "2001",
+      "genre": "aventura",
+      "abstract": "Un hobbit de la Comarca y ocho compañeros emprenden un viaje para destruir el poderoso Anillo Único y salvar la Tierra Media del Señor Oscuro Sauron.",
+      "img": "https://pics.filmaffinity.com/the_lord_of_the_rings_the_fellowship_of_the_ring-952398002-large.jpg",
+      "text": "Un antiguo Anillo que se creía perdido desde hace siglos ha sido encontrado y, por un extraño giro del destino, ha sido entregado a un pequeño Hobbit llamado Frodo. Cuando Gandalf descubre que el Anillo es en realidad el Anillo Único del Señor Oscuro Sauron, Frodo debe emprender una búsqueda épica hasta las Grietas del Destino para destruirlo. Sin embargo, no va solo. Le acompañan Gandalf, el elfo Legolas, el enano Gimli, Aragorn, Boromir y sus tres amigos hobbits Merry, Pippin y Samwise. A través de montañas, nieve, oscuridad, bosques, ríos y llanuras, enfrentándose al mal y al peligro en cada esquina, la Comunidad del Anillo debe avanzar. Su búsqueda para destruir el Anillo Único es la única esperanza para el fin del reinado de los Señores Oscuros."
+    },
+    {
+      "id": 34,
+      "title": "Resacón en Las Vegas",
+      "director": "Todd Phillips",
+      "score": 8.8,
+      "year": "2009",
+      "genre": "comedia",
+      "abstract": "Tres amigos se despiertan en Las Vegas después de una despedida de soltero sin memoria alguna de la noche anterior y habiendo perdido al novio. Recorren la ciudad para encontrarle antes de su boda.",
+      "img": "https://pics.filmaffinity.com/the_hangover-726045836-large.jpg",
+      "text": "Los angelinos Doug Billings y Tracy Garner están a punto de casarse. Dos días antes de la boda, los cuatro hombres de la comitiva nupcial - Doug, los dos mejores amigos de Doug, Phil Wenneck y Stu Price, y el hermano de Tracy, Alan Garner - se suben al querido Mercedes descapotable del padre de Tracy para una despedida de soltero de 24 horas en Las Vegas. Phil, un profesor de instituto casado, tiene el mismo nivel de madurez que sus alumnos cuando está con sus amigos. Stu, dentista, está preocupado por todo, especialmente por lo que piensa su controladora novia Melissa. Como ella desaprueba los rituales tradicionales de unión masculina, Stu tiene que mentirle sobre la despedida de soltero, diciéndole que van a hacer una excursión para catar vinos en el valle de Napa. En cualquier caso, su intención es casarse con ella, en contra de los consejos y deseos de sus amigos. Y Alan parece desconocer lo que se consideran las gracias sociales del mundo occidental. A la mañana siguiente de su llegada a Las Vegas, se despiertan en la suite del hotel con la peor de las resacas. Ninguno recuerda lo que ha pasado en las últimas doce horas. La suite está destrozada. Hay cosas en la suite que no deberían estar, y faltan cosas que deberían estar en la suite. Probablemente el más importante en esta última categoría es Doug. Mientras Phil, Stu y Alan intentan encontrar a Doug utilizando sólo la poca información que tienen a mano, emprenden un viaje para descubrir cómo llegaron ciertas cosas a la suite y qué pasó con los objetos desaparecidos. Sin embargo, se encuentran en una carrera contrarreloj, ya que si no encuentran a Doug en las próximas horas, tendrán que explicarle a Tracy por qué aún no han vuelto a Los Ángeles. Y lo que es peor, puede que no encuentren a Doug antes de la boda."
+    },
+    {
+      "id": 35,
+      "title": "Dos tontos muy tontos",
+      "director": "Peter Farrelly",
+      "score": 7.3,
+      "year": "1994",
+      "genre": "comedia",
+      "abstract": "Después de que una mujer deje un maletín en la terminal del aeropuerto, un tonto conductor de limusina y su amigo todavía más tonto emprenden un viaje por carretera a través del país hasta Aspen para devolverlo.",
+      "img": "https://pics.filmaffinity.com/dumb_and_dumber_dumb_dumber-138209855-large.jpg",
+      "text": "Harry y Lloyd son dos buenos amigos que resultan ser realmente estúpidos. El dúo emprende un viaje campo a través desde Providence hasta Aspen, Colorado, para devolver un maletín lleno de dinero a su legítima propietaria, una bella mujer llamada Mary Swanson. Tras un viaje lleno de percances, el dúo consigue llegar a Aspen. Pero pronto se dan cuenta de que Mary y su maletín son el menor de sus problemas."
+    },
+    {
+      "id": 36,
+      "title": "Ace Ventura: Un detective diferente",
+      "director": "Tom Shadyac",
+      "score": 6.9,
+      "year": "1994",
+      "genre": "comedia",
+      "abstract": "Un bobo detective, especializado en animales, va en busca de la mascota desaparecida de los Miami Dolphins.",
+      "img": "https://pics.filmaffinity.com/ace_ventura_when_nature_calls-617392037-large.jpg",
+      "text": "Para ser detective de mascotas, hay que entender tanto a los criminales como a los animales. Ace Ventura va aún más lejos... Se comporta como un animal criminal. Cuando la mascota de un equipo de fútbol americano (un delfín) es robada justo antes de la Superbowl, Ace Ventura es puesto en el caso. Ahora bien, ¿quién querría robar un delfín y por qué?"
+    },
+    {
+      "id": 37,
+      "title": "Austin Powers: La espía que me achuchó",
+      "director": "Jay Roach",
+      "score": 6.6,
+      "year": "1999",
+      "genre": "comedia",
+      "abstract": "El Doctor Maligno regresa y ha inventado una nueva máquina del tiempo que le permite viajar a los 60 y robarle el mojo a Austin Powers.",
+      "img": "https://pics.filmaffinity.com/austin_powers_the_spy_who_shagged_me-886827723-large.jpg",
+      "text": "Sediento de venganza tras los sucesos de Austin Powers: Misterioso agente internacional (1997), el despreciable Dr. Maligno se hace con una máquina diabólica y viaja al genial 1969. Pero todo el mundo sabe que los malos hábitos son difíciles de romper, y esta vez, además de dominar el mundo, el ambicioso megalómano está empeñado en robar todo lo que Austin aprecia: su innegable encanto y fanfarronería y su libido en alza. Mientras un inseguro Powers regresa a los psicodélicos años 60, en compañía de la rubia bomba de la CIA Felicity Shagwell, el agente británico fuera de tiempo debe hacer lo imposible: salvar lo que queda de su antaño imparable apetito sexual y frustrar el último plan lunático del Dr. Maligno. ¿Podrá Austin Powers, el hombre que perdió su mojo, evitar lo inevitable por segunda vez?"
+    }
+  ],
+  "articles": [],
+  "comments": []
 }
