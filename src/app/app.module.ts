@@ -10,6 +10,8 @@ import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/home/header/header.component';
 import { FormComponent } from './components/home/form/form.component';
 import { MaterialModule } from './modules/material/material.module';
+import { RouterModule } from '@angular/router';
+
 
 @NgModule({
   declarations: [
@@ -18,13 +20,17 @@ import { MaterialModule } from './modules/material/material.module';
     FooterComponent,
     HomeComponent,
     HeaderComponent,
-    FormComponent
+    FormComponent,
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule, 
-    MaterialModule
+    MaterialModule,
+    RouterModule, 
+    
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
