@@ -11,6 +11,7 @@ import { HeaderComponent } from './components/home/header/header.component';
 import { FormComponent } from './components/home/form/form.component';
 import { MaterialModule } from './modules/material/material.module';
 import { RouterModule } from '@angular/router';
+import { PrincipalModule } from './modules/front-pages/principal/principal.module';
 
 
 @NgModule({
@@ -21,17 +22,17 @@ import { RouterModule } from '@angular/router';
     HomeComponent,
     HeaderComponent,
     FormComponent,
-    
-   
+
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule, 
+    BrowserAnimationsModule,
     MaterialModule,
-    RouterModule, 
-    
-    
+    RouterModule,
+    PrincipalModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
