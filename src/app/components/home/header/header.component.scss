@@ -1,0 +1,98 @@
+.hero {
+    position: relative;
+    height: 100vh;
+    background-image: url('../../../../assets/img/hero1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+button {
+    font-size: 1.5rem;
+    margin: 5px;
+}
+
+.mat-raised-button {
+    padding: 1rem 2rem;
+    border-radius: 5px;
+}
+
+.genres {
+    margin-top: 3rem;
+}
+
+.genres__title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.genres__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.genres__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+}
+
+.genres__image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.genres__name {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/* Clases de Material Design */
+.mat-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.mat-card-title {
+    font-size: 1.5rem;
+}
+
+.mat-card-image {
+    width: 100%;
+    height: auto;
+}
