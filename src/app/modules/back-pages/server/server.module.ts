@@ -40,6 +40,9 @@ import { ArticlesBackFormComponent } from './components/articles-back/articles-b
     MatRadioModule,
     MatCardModule,
     ReactiveFormsModule
+  ],
+  exports: [
+    BackendComponent
   ]
 })
 export class ServerModule { }

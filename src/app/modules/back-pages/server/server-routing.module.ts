@@ -6,7 +6,8 @@ import { MoviesBackComponent } from './components/movies-back/movies-back.compon
 import { BackendComponent } from './backend/backend.component';
 
 const routes: Routes = [
-  { path: '', component: BackendComponent },
+  { path: '', pathMatch: 'full', redirectTo: 'back' },
+  { path: 'back', component: BackendComponent },
   { path: 'users', component: UsersBackComponent },
   { path: 'articles', component: ArticlesBackComponent },
   { path: 'movies', component: MoviesBackComponent },
