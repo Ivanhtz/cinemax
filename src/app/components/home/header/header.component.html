@@ -1,16 +1,20 @@
 <!--Sección principal, donde recoger el hero para la pantalla home del portal-->
 <section class="hero">
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <h1>¡Bienvenido a CineMax!</h1>
-    <p>Comparte tus películas favoritas con otros cinéfilos</p>
-    <button mat-raised-button color="primary">Login</button>
-    <button mat-raised-button color="primary">Entrar sin registro</button>
+  <div class="hero__content">
+    <h1 class="hero__title">¡Bienvenido a CineMax!</h1>
+    <p class="hero__text">
+      Comparte tus películas favoritas con otros cinéfilos
+    </p>
+  </div>
+  <div class="hero__buttons-container">
+    <a href="#" class="hero__button hero__button--primary">Login</a>
+    <a href="#" class="hero__button hero__button--secondary">Visitante</a>
   </div>
 </section>
 
 <!-- Sección 2, donde recoger las temáticas de las películas -->
-<section class="genres">
+<section class="genres hero_o">
+  <div class="hero-overlay"></div>
   <h2 class="genres__title">Géneros</h2>
   <ul class="genres__list">
     <li class="genres__item">
@@ -27,7 +31,7 @@
         src="../../../../assets/img/terror.jpg"
         alt="Comedia"
       />
-      <h3 class="genres__name">Comedia</h3>
+      <h3 class="genres__name">Terror</h3>
     </li>
     <li class="genres__item">
       <img
@@ -35,8 +39,24 @@
         src="../../../../assets/img/comedia.jpg"
         alt="Drama"
       />
-      <h3 class="genres__name">Drama</h3>
+      <h3 class="genres__name">comedia</h3>
     </li>
-    <!-- Añade más géneros de películas aquí -->
   </ul>
+</section>
+
+<!-- Sección para un slider -->
+<section class="slider">
+  <h2 class="slider__title">¡Descubre nuevas películas!</h2>
+  <div class="slider__container">
+    <div class="slider__slide">
+      <img
+        class="slider__image"
+        src="../../../../assets/img/pulp.jpg"
+        alt="Slider"
+      />
+      <div class="slider__content">
+        <h3 class="slider__subtitle">¡Comparte cine!</h3>
+      </div>
+    </div>
+  </div>
 </section>
