@@ -422,76 +422,66 @@
     }
   ],
   "articles": [
-    {
-      "id": 1,
-      "title": "¿Cuándo se estrena 'John Wick 5' en cines?",
-      "autor": "Mikel Zorrilla", 
-      "img": "../../../../../../assets/img/johnWick.jpeg",
-      "text": "Por el momento solamente está en desarrollo, un movimiento lógico por parte de Lionsgate, pero Keanu Reeves y Chad Stahelski ya comentaron que iban a dejar descansar al personaje durante un tiempo, por lo que lo más probable es que pasen varios años hasta que 'John Wick 5' se estrene en cines. Vamos, todo apunta a que fácilmente será una espera similar a los 4 años que pasaron entre 'John Wick: Capítulo 3 - Parabellum' y la cuarta entrega, aunque ahí no fue algo meditado, sino fruto del parón del sector audiovisual provocado por el coronavirus."
-    },
-    {
-      "id": 2,
-      "title": "'Chacal': gran cine para padres",
-      "autor": "Pedro Gallego", 
-      "img": "../../../../../../assets/img/chacal.jpeg",
-      "text": "Zinnemann confía plenamente en la inteligencia del espectador para seguir la acción e interesarse tanto en el asesino como en quien le da caza con detalles sugeridos. Su salto a este thriller político es un cambio con respecto a otras de sus grandes obras, como el western 'Solo ante el peligro', el melodrama 'De aquí a la eternidad' o el drama histórico 'Un hombre para la eternidad', aunque este rango muestra su talento para hacer espectáculos para adultos que podían ser reconocidos técnicamente. 'Chacal' es excelente a la hora de cumplir sus propósitos, volviéndola una perfecta expresión de lo que es el cine para padres (que suena despectivo, pero es un arte que deberíamos recuperar): películas comerciales dirigidas a adultos de géneros marcados que se presentan como entretenimientos inteligentes, cumplan o no en lo que respecta a la inteligencia. En este caso, se cumple con creces, porque es una película brutal."
-    },
-    {
-      "id": 3,
-      "title": "Nunca he visto nada parecido a ‘Spiderman: cruzando el multiverso’.",
-      "autor": "Jorge Loser", 
-      "img": "../../../../../../assets/img/spiderman.jpeg",
-      "text": "Puede que ‘‘Spiderman: cruzando el multiverso’ sea menos compacta y magra que la primera, pero multiplica de tal forma la escala, complejidad y ambición de su lienzo que lo que ofrece es todo un terremoto a las posibilidades narrativas del medio, no solo animado, sino cinematográfico. Creo que nunca he visto algo parecido en el cine y esto es algo positivo, pero al mismo tiempo lo que ofrece lleva al límite las consecuencias del déficit de atención colectivo. Hay dos formas de ver la película. Como pieza autónoma, en conjunto, tiene algunas subidas y bajadas. Como propuesta cinematográfica consigue cosas que creo que nunca se han hecho a este nivel de narración secuencial en la historia del cine. Es un gran salto y supone una ruptura en armonía con las demandas de un público al que ya no le sirve una historia lineal sencilla y sin suficientes golpes de timón. El cine de espectáculo se empieza a asemejar a una montaña rusa y la adrenalina y la dopamina exige nuevos límites de tolerancia."
-    },
-    {
-      "id": 4,
-      "title": "Esta desgarradora película es una joya de la animación",
-      "autor": "Jorge Loser", 
-      "img": "../../../../../../assets/img/exorcista.jpeg",
-      "text": "‘El exorcista’ (1973) del director William Friedkin es una de las películas de terror estadounidenses más icónicas del siglo XX y cumplirá 50 años en diciembre. William Peter Blatty ganó el Óscar a mejor guion por su adaptación de su propia novela, y desde entonces, ha sido una figura central en la historia de la película y su franquicia, aunque muchos no saben que la secuela oficial de la primera no lleva el nombre del exorcista sino ‘La novena configuración’ (1980), que acaba de estrenarse en acontra y Filmin. La película original trataba sobre una joven poseída, Regan (Linda Blair), y un sacerdote psiquiatra (Jason Miller) que se ve obligado a dejar de lado su dependencia de la ciencia y su propia angustia espiritual para salvarla. En la imaginación colectiva, se considera que secuela directa fue el fracaso de John Boorman ‘El Exorcista II: el hereje’ (1977), sin embargo es una película que pese a volver a contar con Blair, no es aceptada por el creador como una entrega oficial.  Blatty dirigió ‘El Exorcista III’, que ganado culto con los años y se considera la verdadera heredera del film de Friedkin. Ni que decir tiene que la nueva trilogía de Blumhouse, que empieza con ‘The Believer’, ha sido rechazada por los herederos de Blatty."
-    },
-    {
-      "id": 5,
-      "title": "Pocos saben que es la verdadera secuela de 'El Exorcista' ",
-      "autor": "Mikel Zorrilla", 
-      "img": "../../../../../../assets/img/johnWick.jpg",
-      "text": "Por el momento solamente está en desarrollo, un movimiento lógico por parte de Lionsgate, pero Keanu Reeves y Chad Stahelski ya comentaron que iban a dejar descansar al personaje durante un tiempo, por lo que lo más probable es que pasen varios años hasta que 'John Wick 5' se estrene en cines. Vamos, todo apunta a que fácilmente será una espera similar a los 4 años que pasaron entre 'John Wick: Capítulo 3 - Parabellum' y la cuarta entrega, aunque ahí no fue algo meditado, sino fruto del parón del sector audiovisual provocado por el coronavirus."
-    },
-    {
-      "id": 6,
-      "title": "El cine como bálsamo del alma: el complicado regreso de Víctor Erice en 'Cerrar los ojos' (Festival de Cannes 2023)",
-      "autor": "Juan Luis Caviaro", 
-      "img": "../../../../../../assets/img/cerrar.jpeg",
-      "text": "Se respiraba la emoción en la sala Debussy durante una de las noches más esperadas del 76 Festival de Cannes: por fin llegaba el momento de descubrir 'Cerrar los ojos', la nueva película de Víctor Erice, 31 años después de 'El sol del membrillo' (1992). La conversación previa estaba marcada por el entusiasmo pero también por la cautela debido al prolongado retiro del artista de 82 años y la extraña ausencia de su trabajo en Sección Oficial. De hecho, Erice no acudió a Cannes. El inicio de su nueva obra es de lo más desconcertante: al estilo de un noir clásico de Hollywood, José Coronado llega como un Humphrey Bogart a la mansión francesa de un señor excéntrico que se ha llamado a sí mismo "Rey Triste" (Josep Maria Pou) y que vive solo junto a un fiel mayordomo chino que lleva gafas de sol. Por supuesto, se ponen a fumar."
-    },
-    {
-      "id": 7,
-      "title": "'La sirenita' tiene a la Ariel perfecta",
-      "autor": "Randy Meeks", 
-      "img": "../../../../../../assets/img/sirenita.jpeg",
-      "text":"Creativamente, y quitando alguna excepción que se aleja lo suficiente del original como 'El libro de la selva', los remakes en acción real de Disney son un erial. Es la repetición por la repetición, casi más como un simple ejercicio de estilo que como película con fuste propio. Se vio en 'El rey león', que era literalmente lo mismo pero con mucha menos expresividad y emoción, en 'La bella y la bestia', donde se perdía toda la magia, y ahora en 'La sirenita', que consigue lo más difícil (encontrar una Ariel a la altura) pero fracasa en lo más sencillo (conseguir unos diseños que consigan salir del Valle Inquietante). ¿Qué buscamos en un remake de una película que hemos visto mil veces y vive en nuestra cabeza escena por escena y canción por canción? ¿Queremos algo que sea absolutamente igual, como si fuera una copia al carbón, o buscamos la visión que un nuevo director puede traer a la historia que conocemos de sobra? 'La sirenita' intenta aunar lo nuevo con lo de siempre, ahondando en la personalidad del príncipe Eric con éxito y trayendo a la palestra algunas nuevas canciones que, por mucho Lin-Manuel Miranda que esté detrás, se sienten como un chicle estirado."
-    },
-    {
-      "id": 8,
-      "title": "'The Boogeyman': la adaptación del relato más escalofriante de Stephen King",
-      "autor": "Jorge Loser", 
-      "img": "../../../../../../assets/img/king.jpeg",
-      "text": "Tras una época en la que parece que todas las novelas de Stephen King están ya adaptadas, parece que Hollywood no está dispuesto a abandonar la marca y ha comenzado con el menudeo. ‘The Boogeyman’ se estrena en cines el 2 de junio y está basada en uno de sus cuentos cortos más escalofriantes en lo que parece una tendencia imparable para rescatar sus piezas más cortas y convertirlas en película, como se espera en ‘The Monkey’, que prepara James Wan o la reciente serie ‘Chapelwaite’. No es la primera vez que ocurre, claro, además de muchas películas de segmentos, que se ajustan mejor al formato corto, también ha habido extensiones de pequeños relatos que se han convertido en películas, como ‘La fosa común’, o incluso en grandes sagas llenas de secuelas, como ‘Los chicos del maíz’. De hecho, antes de convertirse en largometraje, el slasher con niños asesinos tuvo una adaptación en corto, que formaba parte de ‘The Night Shift Collection’, una serie de adaptaciones de pequeño formato en la que precisamente también podíamos encontrar la primera versión cinematográfica de ‘El coco’."
-    },
-    {
-      "id": 9,
-      "title": "Prepárate para alucinar con 'The Sweet East'",
-      "autor": "Paula Arantzazu Ruiz", 
-      "img": "../../../../../../assets/img/sweet.jpeg",
-      "text": "No cuesta ver en la figura de Lillian, protagonista de 'The Sweet East', de Sean Price Williams, la Alicia creada por Lewis Carroll en 1865. Como la niña británica, Lillian (Talia Ryder) también cae por una madriguera y también como ella va conociendo a personajes imposibles y recorriendo distintos mundos que marcarán su devenir a medida que avanza su particular viaje. En 'The Sweet East', no obstante, el otro lado del espejo no es un submundo maravilloso, sino un Estados Unidos delirante y polarizado. Estrenada mundialmente en la Quincena de Realizadores del Festival de Cannes 2023, es más que probable que 'The Sweet East' sea una de las películas más lisérgicas de la actual edición."
-    },
-    {
-      "id": 10,
-      "title": "'Killers of the Flower Moon' es una obra maestra.",
-      "autor": "Juan Luis Caviaro", 
-      "img": "../../../../../../assets/img/killers.jpeg",
-      "text": "Martin Scorsese nos deprimía hace poco recordando que está ya muy mayor (80 años) y que por tanto le queda poco tiempo para rodar todas las historias que quiere contar. Llegará el día en el que lloraremos su muerte, y parecerá que hay un antes y un después en el cine, pero mientras tanto tenemos la suerte de descubrir nuevos trabajos de esta auténtica leyenda viva. Y la mejor noticia es que 'Killers of the Flower Moon' es una de sus películas más apasionantes. El regreso de Scorsese, 4 años después de dirigir 'El irlandés' para Netflix, es suficiente reclamo para hablar de uno de los estrenos del año pero además aquí vuelve a trabajar con sus dos actores fetiche, Robert de Niro (diez películas juntos) y Leonardo DiCaprio (seis). Los actores ya habían coincidido en otras dos películas ('Vida de este chico' y 'La habitación de Marvin') pero aquí trabajan por primera vez juntos bajo las órdenes de Scorsese en un largometraje; recordemos que ya tuvieron una especie de ensayo en el corto publicitario 'The Audition' (2015). Sencillamente, es una cita imprescindible para cualquier amante del cine."
-    }
+      {
+        "id": 1,
+        "title": "¿Cuándo se estrena 'John Wick 5' en cines?",
+        "image": "./assets/img/johnWick.jpeg",
+        "content": "Por el momento solamente está en desarrollo, un movimiento lógico por parte de Lionsgate, pero Keanu Reeves y Chad Stahelski ya comentaron que iban a dejar descansar al personaje durante un tiempo, por lo que lo más probable es que pasen varios años hasta que 'John Wick 5' se estrene en cines. Vamos, todo apunta a que fácilmente será una espera similar a los 4 años que pasaron entre 'John Wick: Capítulo 3 - Parabellum' y la cuarta entrega, aunque ahí no fue algo meditado, sino fruto del parón del sector audiovisual provocado por el coronavirus."
+      },
+      {
+        "id": 2,
+        "title": "'Chacal': gran cine para padres",
+        "image": "./assets/img/chacal.jpeg",
+        "content": "Zinnemann confía plenamente en la inteligencia del espectador para seguir la acción e interesarse tanto en el asesino como en quien le da caza con detalles sugeridos. Su salto a este thriller político es un cambio con respecto a otras de sus grandes obras, como el western 'Solo ante el peligro', el melodrama 'De aquí a la eternidad' o el drama histórico 'Un hombre para la eternidad', aunque este rango muestra su talento para hacer espectáculos para adultos que podían ser reconocidos técnicamente. 'Chacal' es excelente a la hora de cumplir sus propósitos, volviéndola una perfecta expresión de lo que es el cine para padres (que suena despectivo, pero es un arte que deberíamos recuperar): películas comerciales dirigidas a adultos de géneros marcados que se presentan como entretenimientos inteligentes, cumplan o no en lo que respecta a la inteligencia. En este caso, se cumple con creces, porque es una película brutal."
+      },
+      {
+        "id": 3,
+        "title": "Nunca he visto nada parecido a ‘Spiderman: cruzando el multiverso’.",        
+        "image": "./assets/img/spiderman.jpeg",
+        "content": "Puede que ‘‘Spiderman: cruzando el multiverso’ sea menos compacta y magra que la primera, pero multiplica de tal forma la escala, complejidad y ambición de su lienzo que lo que ofrece es todo un terremoto a las posibilidades narrativas del medio, no solo animado, sino cinematográfico. Creo que nunca he visto algo parecido en el cine y esto es algo positivo, pero al mismo tiempo lo que ofrece lleva al límite las consecuencias del déficit de atención colectivo. Hay dos formas de ver la película. Como pieza autónoma, en conjunto, tiene algunas subidas y bajadas. Como propuesta cinematográfica consigue cosas que creo que nunca se han hecho a este nivel de narración secuencial en la historia del cine. Es un gran salto y supone una ruptura en armonía con las demandas de un público al que ya no le sirve una historia lineal sencilla y sin suficientes golpes de timón. El cine de espectáculo se empieza a asemejar a una montaña rusa y la adrenalina y la dopamina exige nuevos límites de tolerancia."
+      },
+      {
+        "id": 4,
+        "title": "Esta desgarradora película es una joya de la animación",
+        "image": "./assets/img/exorcista.jpeg",
+        "content": "‘El exorcista’ (1973) del director William Friedkin es una de las películas de terror estadounidenses más icónicas del siglo XX y cumplirá 50 años en diciembre. William Peter Blatty ganó el Óscar a mejor guion por su adaptación de su propia novela, y desde entonces, ha sido una figura central en la historia de la película y su franquicia, aunque muchos no saben que la secuela oficial de la primera no lleva el nombre del exorcista sino ‘La novena configuración’ (1980), que acaba de estrenarse en acontra y Filmin. La película original trataba sobre una joven poseída, Regan (Linda Blair), y un sacerdote psiquiatra (Jason Miller) que se ve obligado a dejar de lado su dependencia de la ciencia y su propia angustia espiritual para salvarla. En la imaginación colectiva, se considera que secuela directa fue el fracaso de John Boorman ‘El Exorcista II: el hereje’ (1977), sin embargo es una película que pese a volver a contar con Blair, no es aceptada por el creador como una entrega oficial.  Blatty dirigió ‘El Exorcista III’, que ganado culto con los años y se considera la verdadera heredera del film de Friedkin. Ni que decir tiene que la nueva trilogía de Blumhouse, que empieza con ‘The Believer’, ha sido rechazada por los herederos de Blatty."
+      },
+      {
+        "id": 5,
+        "title": "Pocos saben que es la verdadera secuela de 'El Exorcista' ",         
+        "image": "./assets/img/johnWick.jpg",
+        "content": "Por el momento solamente está en desarrollo, un movimiento lógico por parte de Lionsgate, pero Keanu Reeves y Chad Stahelski ya comentaron que iban a dejar descansar al personaje durante un tiempo, por lo que lo más probable es que pasen varios años hasta que 'John Wick 5' se estrene en cines. Vamos, todo apunta a que fácilmente será una espera similar a los 4 años que pasaron entre 'John Wick: Capítulo 3 - Parabellum' y la cuarta entrega, aunque ahí no fue algo meditado, sino fruto del parón del sector audiovisual provocado por el coronavirus."
+      },
+      {
+        "id": 6,
+        "title": "El cine como bálsamo del alma: el complicado regreso de Víctor Erice en 'Cerrar los ojos' (Festival de Cannes 2023)",         
+        "image": "./assets/img/cerrar.jpeg",
+        "content": "Se respiraba la emoción en la sala Debussy durante una de las noches más esperadas del 76 Festival de Cannes: por fin llegaba el momento de descubrir 'Cerrar los ojos', la nueva película de Víctor Erice, 31 años después de 'El sol del membrillo' (1992). La conversación previa estaba marcada por el entusiasmo pero también por la cautela debido al prolongado retiro del artista de 82 años y la extraña ausencia de su trabajo en Sección Oficial. De hecho, Erice no acudió a Cannes. El inicio de su nueva obra es de lo más desconcertante: al estilo de un noir clásico de Hollywood, José Coronado llega como un Humphrey Bogart a la mansión francesa de un señor excéntrico que se ha llamado a sí mismo 'Rey Triste' (Josep Maria Pou) y que vive solo junto a un fiel mayordomo chino que lleva gafas de sol. Por supuesto, se ponen a fumar."
+      },
+      {
+        "id": 7,
+        "title": "'La sirenita' tiene a la Ariel perfecta",         
+        "image": "./assets/img/sirenita.jpeg",
+        "content":"Creativamente, y quitando alguna excepción que se aleja lo suficiente del original como 'El libro de la selva', los remakes en acción real de Disney son un erial. Es la repetición por la repetición, casi más como un simple ejercicio de estilo que como película con fuste propio. Se vio en 'El rey león', que era literalmente lo mismo pero con mucha menos expresividad y emoción, en 'La bella y la bestia', donde se perdía toda la magia, y ahora en 'La sirenita', que consigue lo más difícil (encontrar una Ariel a la altura) pero fracasa en lo más sencillo (conseguir unos diseños que consigan salir del Valle Inquietante). ¿Qué buscamos en un remake de una película que hemos visto mil veces y vive en nuestra cabeza escena por escena y canción por canción? ¿Queremos algo que sea absolutamente igual, como si fuera una copia al carbón, o buscamos la visión que un nuevo director puede traer a la historia que conocemos de sobra? 'La sirenita' intenta aunar lo nuevo con lo de siempre, ahondando en la personalidad del príncipe Eric con éxito y trayendo a la palestra algunas nuevas canciones que, por mucho Lin-Manuel Miranda que esté detrás, se sienten como un chicle estirado."
+      },
+      {
+        "id": 8,
+        "title": "'The Boogeyman': la adaptación del relato más escalofriante de Stephen King",         
+        "image": "./assets/img/king.jpeg",
+        "content": "Tras una época en la que parece que todas las novelas de Stephen King están ya adaptadas, parece que Hollywood no está dispuesto a abandonar la marca y ha comenzado con el menudeo. ‘The Boogeyman’ se estrena en cines el 2 de junio y está basada en uno de sus cuentos cortos más escalofriantes en lo que parece una tendencia imparable para rescatar sus piezas más cortas y convertirlas en película, como se espera en ‘The Monkey’, que prepara James Wan o la reciente serie ‘Chapelwaite’. No es la primera vez que ocurre, claro, además de muchas películas de segmentos, que se ajustan mejor al formato corto, también ha habido extensiones de pequeños relatos que se han convertido en películas, como ‘La fosa común’, o incluso en grandes sagas llenas de secuelas, como ‘Los chicos del maíz’. De hecho, antes de convertirse en largometraje, el slasher con niños asesinos tuvo una adaptación en corto, que formaba parte de ‘The Night Shift Collection’, una serie de adaptaciones de pequeño formato en la que precisamente también podíamos encontrar la primera versión cinematográfica de ‘El coco’."
+      },
+      {
+        "id": 9,
+        "title": "Prepárate para alucinar con 'The Sweet East'",        
+        "image": "./assets/img/sweet.jpeg",
+        "content": "No cuesta ver en la figura de Lillian, protagonista de 'The Sweet East', de Sean Price Williams, la Alicia creada por Lewis Carroll en 1865. Como la niña británica, Lillian (Talia Ryder) también cae por una madriguera y también como ella va conociendo a personajes imposibles y recorriendo distintos mundos que marcarán su devenir a medida que avanza su particular viaje. En 'The Sweet East', no obstante, el otro lado del espejo no es un submundo maravilloso, sino un Estados Unidos delirante y polarizado. Estrenada mundialmente en la Quincena de Realizadores del Festival de Cannes 2023, es más que probable que 'The Sweet East' sea una de las películas más lisérgicas de la actual edición."
+      },
+      {
+        "id": 10,
+        "title": "'Killers of the Flower Moon' es una obra maestra.",        
+        "image": "./assets/img/killers.jpeg",
+        "content": "Martin Scorsese nos deprimía hace poco recordando que está ya muy mayor (80 años) y que por tanto le queda poco tiempo para rodar todas las historias que quiere contar. Llegará el día en el que lloraremos su muerte, y parecerá que hay un antes y un después en el cine, pero mientras tanto tenemos la suerte de descubrir nuevos trabajos de esta auténtica leyenda viva. Y la mejor noticia es que 'Killers of the Flower Moon' es una de sus películas más apasionantes. El regreso de Scorsese, 4 años después de dirigir 'El irlandés' para Netflix, es suficiente reclamo para hablar de uno de los estrenos del año pero además aquí vuelve a trabajar con sus dos actores fetiche, Robert de Niro (diez películas juntos) y Leonardo DiCaprio (seis). Los actores ya habían coincidido en otras dos películas ('Vida de este chico' y 'La habitación de Marvin') pero aquí trabajan por primera vez juntos bajo las órdenes de Scorsese en un largometraje; recordemos que ya tuvieron una especie de ensayo en el corto publicitario 'The Audition' (2015). Sencillamente, es una cita imprescindible para cualquier amante del cine."
+      }
   ],
   "comments": []
 }
