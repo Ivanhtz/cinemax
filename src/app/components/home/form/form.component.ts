@@ -2,8 +2,9 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { AuthService } from 'src/app/services/user-service/auth.service';
-import { UserService } from 'src/app/services/user-service/user.service';
+import { AuthsService } from 'src/app/services/auths-service/auths.service';
+import { UserService } from 'src/app/services/users-service/users.service';
+
 
 @Component({
   selector: 'app-form',
@@ -18,11 +19,11 @@ export class FormComponent implements OnInit, OnDestroy {
     private fb: FormBuilder,
     private users: UserService,
     private router: Router,
-    private authService: AuthService
+    private authsService: AuthsService
   ) {}
 
   ngOnInit() {
-    if (this.authService.isAuthenticated()) {
+    if (this.authsService.isAuthenticated()) {
       this.router.navigate(['/back']);
     }
 
@@ -38,7 +39,7 @@ export class FormComponent implements OnInit, OnDestroy {
         next: (data) => {
           console.log(data);
           if (data && data.accessToken) {
-            this.authService.saveToken(data.accessToken);
+            this.authsService.saveToken(data.accessToken);
             this.router.navigate(['/back']);
           }
         },

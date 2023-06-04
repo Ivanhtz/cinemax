@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 // Definimos la clase AuthService, que se utilizará para manejar la lógica de autenticación en nuestra aplicación.
-export class AuthService {
+export class AuthsService {
   // El constructor está vacío en este caso porque no necesitamos inyectar ninguna dependencia en este servicio.
   constructor() {}
 

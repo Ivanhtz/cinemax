@@ -5,6 +5,7 @@ import { FilmsRoutingModule } from './films-routing.module';
 import { FilmsListComponent } from './films-list/films-list.component';
 import { FilmComponent } from './film/film.component';
 import { ViewFilmComponent } from './view-film/view-film.component';
+import { MaterialModule } from 'src/app/modules/material/material.module';
 
 
 @NgModule({
@@ -15,7 +16,11 @@ import { ViewFilmComponent } from './view-film/view-film.component';
   ],
   imports: [
     CommonModule,
-    FilmsRoutingModule
+    FilmsRoutingModule,
+    MaterialModule
+  ],
+  exports: [
+    FilmsListComponent
   ]
 })
 export class FilmsModule { }

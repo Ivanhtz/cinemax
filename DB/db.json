@@ -4,6 +4,12 @@
       "email": "super@hotmail.com",
       "password": "$2a$10$91Lk2oTEzJvXf5es4huZJemi5AN2rIcZRVKzyvdBL1118NR9se4Y6",
       "id": 1
+    },
+    {
+      "email": "super2@hotmail.com",
+      "password": "$2a$10$PaE8dbcyVmDtm0f17jd58e3l57.hpgls7uqhouRCOrEwiZimzDJ9q",
+      "date": "03/06/2023",
+      "id": 2
     }
   ],
   "films": [

@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { UrlTree, Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { AuthService } from '../services/user-service/auth.service';
+import { AuthsService } from '../services/auths-service/auths.service';
+
 
 
 @Injectable({
@@ -10,7 +11,7 @@ import { AuthService } from '../services/user-service/auth.service';
 // Definimos la clase LoginGuard, este es un Guard que se utiliza para proteger rutas en Angular
 export class LoginGuard {
   // En el constructor, inyectamos AuthService para verificar la autenticación y Router para la navegación
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(private authService: AuthsService, private router: Router) {}
 
   // El método canActivate se utiliza para decidir si una ruta se puede activar o no.
   // Puede devolver un Observable, una promesa que resuelve un valor booleano o un UrlTree, o un booleano o UrlTree directamente
