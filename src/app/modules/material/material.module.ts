@@ -11,6 +11,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 
@@ -29,7 +30,11 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatFormFieldModule,
     MatInputModule,
     MatMenuModule,
-    MatGridListModule
+    MatGridListModule,
+    MatPaginatorModule,
+    MatButtonModule,
+    MatIconModule
+   
 
   ],
   exports: [
@@ -43,7 +48,10 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatFormFieldModule,
     MatInputModule,
     MatMenuModule,
-    MatGridListModule
+    MatGridListModule,
+    MatPaginatorModule,
+    MatButtonModule,
+    MatIconModule
   ]
 })
 export class MaterialModule { }

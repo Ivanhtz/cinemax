@@ -17,6 +17,7 @@ import { MatCardModule } from '@angular/material/card';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MoviesBackFormComponent } from './components/movies-back/movies-back-form/movies-back-form.component';
 import { ArticlesBackFormComponent } from './components/articles-back/articles-back-form/articles-back-form.component';
+import { UsersListBackComponent } from './components/users-back/users-list-back/users-list-back.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { ArticlesBackFormComponent } from './components/articles-back/articles-b
     BackendComponent,
     UsersBackFormComponent,
     MoviesBackFormComponent,
-    ArticlesBackFormComponent
+    ArticlesBackFormComponent,
+    UsersListBackComponent
   ],
   imports: [
     CommonModule,

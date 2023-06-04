@@ -1,45 +1,87 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable, Subject, tap, of } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 import { UserDto } from './user-dto/user.dto';
 import { ResponseDto } from './response-dto/response.dto';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-export class UserService  {
-  // Declaramos una variable privada llamada apiUrl que contiene la URL base de nuestro servicio API.
+export class UserService {
   private apiUrl = 'http://localhost:3000';
+  private userBeingEditedSubject = new BehaviorSubject<UserDto | null>(null);
+  public userBeingEdited$ = this.userBeingEditedSubject.asObservable();
+  userUpdates$ = new Subject<void>();
 
-  // En el constructor inyectamos la dependencia HttpClient de Angular que utilizaremos para realizar las peticiones HTTP.
   constructor(private http: HttpClient) {}
 
-  // Método register que toma un objeto userData de tipo UserDto y realiza una petición POST a la ruta '/register' de nuestro servicio API.
-  // Este método devuelve un Observable de tipo UserDto.
-  register(userData: UserDto): Observable<UserDto> {
-    return this.http.post<UserDto>(`${this.apiUrl}/register`, userData);
+  startEditingUser(user: UserDto) {
+    this.userBeingEditedSubject.next(user);
   }
 
-  // Método login que toma un objeto userData de tipo UserDto y realiza una petición POST a la ruta '/login' de nuestro servicio API.
-  // Este método devuelve un Observable de tipo UserLoginResponseDto.
-  login(userData: UserDto): Observable<ResponseDto> {
-    return this.http.post<ResponseDto>(
-      `${this.apiUrl}/login`,
-      userData
+  stopEditingUser() {
+    this.userBeingEditedSubject.next(null);
+  }
+
+  register(userData: UserDto): Observable<UserDto> {
+    return this.http.post<UserDto>(`${this.apiUrl}/register`, userData).pipe(
+      catchError(this.handleError<UserDto>('register'))
     );
   }
 
-  // Método deleteUser que toma un id de usuario y realiza una petición DELETE a la ruta '/users' de nuestro servicio API.
-  // Este método devuelve un Observable de cualquier tipo (ya que no sabemos qué tipo de respuesta devolverá el endpoint).
-  deleteUser(id: number): Observable<UserDto> {
-    const params = new HttpParams().set('id', id.toString());
-    return this.http.delete<any>(`${this.apiUrl}/users`, { params });
+  login(userData: UserDto): Observable<ResponseDto> {
+    return this.http.post<ResponseDto>(`${this.apiUrl}/login`, userData).pipe(
+      catchError(this.handleError<ResponseDto>('login'))
+    );
   }
 
-  // Método updateUser que toma un id de usuario y un objeto userData de tipo UserDto, y realiza una petición PUT a la ruta '/users' de nuestro servicio API.
-  // Este método devuelve un Observable de tipo UserDto.
+  getUsers(): Observable<UserDto[]> {
+    return this.http.get<UserDto[]>(`${this.apiUrl}/users`).pipe(
+      catchError(this.handleError<UserDto[]>('getUsers', []))
+    );
+  }
+
+  getUser(id: number): Observable<UserDto> {
+    return this.http.get<UserDto>(`${this.apiUrl}/users/${id}`).pipe(
+      catchError(this.handleError<UserDto>('getUser'))
+    );
+  }
+
+  deleteUser(id: number): Observable<UserDto> {
+    return this.http
+      .delete<any>(`${this.apiUrl}/users/${id}`)
+      .pipe(
+        tap(() => this.userUpdates$.next()),
+        catchError(this.handleError<any>('deleteUser'))
+      );
+  }
+
+  createUser(userData: any): Observable<UserDto> {
+    userData.createdAt = new Date(); // Agregue esta línea
+    return this.http
+      .post<UserDto>(`${this.apiUrl}/users`, userData)
+      .pipe(
+        tap(() => this.userUpdates$.next()),
+        catchError(this.handleError<UserDto>('createUser'))
+      );
+  }
+
   updateUser(id: number, userData: UserDto): Observable<UserDto> {
-    const params = new HttpParams().set('id', id.toString());
-    return this.http.put<UserDto>(`${this.apiUrl}/users`, userData, { params });
+    return this.http
+      .put<UserDto>(`${this.apiUrl}/users/${id}`, userData)
+      .pipe(
+        tap(() => this.userUpdates$.next()),
+        catchError(this.handleError<UserDto>('updateUser'))
+      );
+  }
+
+  private handleError<T>(operation = 'operation', result?: T) {
+    return (error: any): Observable<T> => {
+      console.error(`${operation} failed: ${error.message}`);
+      // TODO: send the error to remote logging infrastructure
+      // Let the app keep running by returning an empty result.
+      return of(result as T);
+    };
   }
 }
