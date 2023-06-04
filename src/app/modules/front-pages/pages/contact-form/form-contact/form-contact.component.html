@@ -1,11 +1,11 @@
 <form [formGroup]="addressForm" novalidate (ngSubmit)="onSubmit()">
-  <mat-card class="shipping-card">
+  <mat-card class="shipping-card ">
     <mat-card-header>
       <mat-card-title>Contacta con nosotros</mat-card-title>
     </mat-card-header>
     <mat-card-content>
 
-      <div class="row">
+      <div class="row ">
         <div class="col">
           <mat-form-field class="full-width">
             <input matInput placeholder="Nombre" formControlName="firstName">
@@ -39,3 +39,7 @@
     </mat-card-actions>
   </mat-card>
 </form>
+
+<div class="container">
+  <img src="./assets/img/mail2.svg" class="img-fluid" alt="imagen prueba">
+</div>
