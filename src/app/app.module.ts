@@ -28,6 +28,7 @@ import { UserService } from './services/users-service/users.service';
 import { FormComponent } from './components/home/form/form.component';
 import { Token } from './interceptors/interceptor.interceptor';
 import { AuthsService } from './services/auths-service/auths.service';
+import { MovieService } from './services/movies-service/movies.service';
 
 
 
@@ -68,7 +69,8 @@ import { AuthsService } from './services/auths-service/auths.service';
       useClass: Token,
       multi: true
     },
-    LoginGuard
+    LoginGuard,
+    MovieService
   ],
   bootstrap: [AppComponent]
 })

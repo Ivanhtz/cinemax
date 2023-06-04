@@ -12,11 +12,18 @@ export class MovieService {
 
   constructor(private http: HttpClient) { }
 
+
   getAllsMovies(): Promise<Ifilm[]> {
 
     const getAllMovies = `${this.urlMovies}films`;
 
     return lastValueFrom(this.http.get<Ifilm[]>(getAllMovies));
 
+  }
+
+  getMovieById(id: any): Promise<Ifilm> {
+    const urlId = `${this.urlMovies}films/${id}`;
+
+    return lastValueFrom(this.http.get<Ifilm>(urlId));
   }
 }

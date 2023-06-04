@@ -20,7 +20,8 @@ import { MaterialModule } from 'src/app/modules/material/material.module';
     MaterialModule
   ],
   exports: [
-    FilmsListComponent
+    FilmsListComponent,
+    ViewFilmComponent
   ]
 })
 export class FilmsModule { }
