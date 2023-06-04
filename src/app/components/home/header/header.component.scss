@@ -34,7 +34,7 @@
     position: sticky;
     top: 0;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     background-color: #1c0101;
     padding: 1rem;
 }
@@ -83,7 +83,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-     color: #ece9e9;
+    color: #ece9e9;
 }
 
 .genres__item {
