@@ -1,9 +1,13 @@
 .sidenav-container {
   height: 100%;
+
 }
 
 .sidenav {
   width: 200px;
+  background-color: rgb(230, 230, 230);
+
+
 }
 
 .sidenav .mat-toolbar {
@@ -12,6 +16,8 @@
 
 .mat-toolbar.mat-primary {
   position: sticky;
+  background-color: rgb(133, 50, 172);
   top: 0;
-  z-index: 1;
+  z-index: 4;
+  color: whitesmoke;
 }
