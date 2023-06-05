@@ -12,6 +12,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSelectModule } from '@angular/material/select';
 
 
 
@@ -33,8 +34,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatGridListModule,
     MatPaginatorModule,
     MatButtonModule,
-    MatIconModule
-   
+    MatIconModule,
+    MatSelectModule
+
 
   ],
   exports: [
@@ -51,7 +53,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatGridListModule,
     MatPaginatorModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatSelectModule
   ]
 })
 export class MaterialModule { }

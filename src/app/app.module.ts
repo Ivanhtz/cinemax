@@ -17,7 +17,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LoginGuard } from './guards/login.guard';
 
 
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
@@ -58,7 +58,8 @@ import { MovieService } from './services/movies-service/movies.service';
     MatButtonModule,
     MatSelectModule,
     MatRadioModule,
-    MatCardModule
+    MatCardModule,
+    FormsModule
 
 
 
@@ -74,7 +75,7 @@ import { MovieService } from './services/movies-service/movies.service';
     LoginGuard,
     MovieService,
     ArticlesService
-    
+
   ],
   bootstrap: [AppComponent]
 })

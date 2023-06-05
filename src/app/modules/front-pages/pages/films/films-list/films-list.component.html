@@ -3,6 +3,28 @@
         <h1>Listado de Películas</h1>
     </header>
 
+    <div class="filters container">
+        <div class="filters__totalMovies">
+            <p>Números total de películas: <span> {{numberMovies}} </span> </p>
+        </div>
+
+        <form>
+            <fieldset>
+                <div class="mb-3">
+                    <label for="disabledSelect" class="form-label">Filtra por Género</label>
+                    <select id="disabledSelect" class="form-select" name="generoPelicula" [(ngModel)]="generoo">
+                        <option value="" selected>Género</option>
+                        <option *ngFor="let genero of gendersArr" [value]="genero">
+                            {{genero}}
+                        </option>
+                    </select>
+                </div>
+
+                <button type="button" class="btn btn-primary" (click)="showFilms()">Buscar</button>
+            </fieldset>
+        </form>
+    </div>
+
     <main>
         <div class="album py-5 bg-body-black">
             <div class="container">
