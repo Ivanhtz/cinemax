@@ -29,11 +29,16 @@
         <div class="album py-5 bg-body-black">
             <div class="container">
 
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div *ngIf="filmsArr.length != 0; else noData" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                     <div *ngFor="let movie of filmsArr" class="col">
                         <app-film [movie]="movie"></app-film>
                     </div>
                 </div>
+
+                <ng-template #noData>
+                    <mat-spinner></mat-spinner>
+                </ng-template>
+
             </div>
         </div>
     </main>

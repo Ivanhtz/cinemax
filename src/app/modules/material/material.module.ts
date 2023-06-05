@@ -13,6 +13,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSelectModule } from '@angular/material/select';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 
 
@@ -35,7 +36,8 @@ import { MatSelectModule } from '@angular/material/select';
     MatPaginatorModule,
     MatButtonModule,
     MatIconModule,
-    MatSelectModule
+    MatSelectModule,
+    MatProgressSpinnerModule
 
 
   ],
@@ -54,7 +56,8 @@ import { MatSelectModule } from '@angular/material/select';
     MatPaginatorModule,
     MatButtonModule,
     MatIconModule,
-    MatSelectModule
+    MatSelectModule,
+    MatProgressSpinnerModule
   ]
 })
 export class MaterialModule { }
