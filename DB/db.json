@@ -500,5 +500,24 @@
       "text": "Puede sonar triste pero el Indy que cambió el cine de aventuras murió en los 80. Debemos asumirlo. Más allá de la edad de 'nuestro' héroe encarnado por Harrison Ford, la nueva 'Indiana Jones y el Dial del Destino' confirma que los tiempos han cambiado, como decía Bob Dylan, el cine actual de Hollywood tiene otro lenguaje y otras formas de comunicarse con el público y vender entradas. De hecho, ni el mismísimo Steven Spielberg pudo replicar su propia receta en la cuarta entrega, 'Indiana Jones y el Reino de la Calavera de Cristal'. Maldita nostalgia: Una película que no convenció a pesar de contar con el director de las tres aventuras anteriores y el creador de la saga, George Lucas. Creo que los ataques fueron excesivos e injustos (como señaló Ford, se pretendió señalar a los creadores, Spielberg y Lucas, qué es y qué no es Indiana Jones); a mí me entretuvo aunque reconozco que me dejó un sabor agridulce, seguramente fruto de expectativas irreales y una nostalgia mal gestionada. 15 años después vuelvo a tropezar en la misma piedra, más o menos, si bien aquí resulta evidente que faltan Spielberg y Lucas. No es que 'Indiana Jones 5' haya caído en malas manos, ni mucho menos. La película está dirigida por el fiable James Mangold, experto realizador con un gusto clásico del cine pero adaptado a los nuevos tiempos. Así lo demostró en el remake de 'El tren de las 3:10' ('3:10 to Yuma') o en 'Logan', una de las pocas películas de superhéroes tan aplaudidas que han superado la barrera de prejuicios del género para conquistar a público y crítica. Cabía esperar que 'El dial del destino' fuese la 'Logan' de 'Indy', sobre todo tras las declaraciones de Ford anunciando su despedida del arqueólogo, pero no es el caso. Leeré el guion cuando esté disponible pero ahora mismo apostaría a que el principal problema está ahí. Es eso o un rodaje problemático, y eso me parece menos probable con este equipo. Recordemos que se está hablando de 'Indy 5' desde 2015 y el proyecto fue anunciado de forma oficial en 2016 con Spielberg de director y David Koepp como guionista. En 2020, Spielberg se baja del proyecto, sube Mangold y hay cambio de guionistas: se va Koepp y el propio Mangold se ocupa del guion junto a Jez y John-Henry Butterworth, sus colaboradores en 'Le Mans '66' ('Ford v Ferrari'). Koepp reconoció que su trabajo no convencía a Spielberg y quizá el libreto definitivo que ha dirigido Mangold es maravilloso (de nuevo, no lo he leído) pero guardad estas declaraciones de George Lucas: 'Es muy difícil crear un buen MacGuffin, que en nuestro caso tiene que ser un objeto sobrenatural de naturaleza arqueológica que sea real o que la gente crea que es real. Eso es lo opuesto a todas las copias que se han producido en masa desde 'En busca del arca perdida' ['Raiders of the Lost Ark'], que van de objetos inventados y fantasiosos. No te puedes inventar simplemente algo, como una máquina del tiempo. [Indiana Jones] no va de eso. Estos son misterios sobrenaturales, no aventuras de acción donde no tienes un contexto histórico o arqueológico.'"
     }
   ],
-  "comments": []
+  "comments": [
+      {
+        "id": 1,
+        "name": "Juan",
+        "text": "Excelente artículo",
+        "articleId": 1
+    },
+    {
+        "id": 2,
+        "name": "María",
+        "text": "Muy interesante",
+        "articleId": 1
+    },
+    {
+        "id": 3,
+        "name": "Pedro",
+        "text": "No estoy de acuerdo",
+        "articleId": 2
+    }
+  ]
 }
