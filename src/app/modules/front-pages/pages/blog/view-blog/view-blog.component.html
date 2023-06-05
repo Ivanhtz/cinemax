@@ -6,38 +6,27 @@
   <div class="article__content">
     <h1 class="article__title">{{ article?.title }}</h1>
     <p class="article__text">{{ article?.text }}</p>
-    <button (click)="showForm()" class="article__button-form">Comenta</button>
+    <!-- <button (click)="showForm()" class="article__button-form">Comenta</button> -->
     <button routerLink="/principal/principal/blog" class="article__button">
       Atrás
     </button>
 
-    <h3>Comentarios</h3>
+    <section class="comments">
+      <h2 class="comments__title">Comentarios</h2>
+      <ul class="comments__list">
+        <li *ngFor="let comment of comments" class="comments__item">
+          <div class="comment">
+            <p class="comment-text">{{ comment.text }}</p>
+            <p class="comment-author">By {{ comment.name }}</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </div>
+</article>
 
-    <div *ngFor="let comment of comments">
-      <p>
-        <strong>{{ comment.name }}</strong>
-      </p>
-      <p>{{ comment.text }}</p>
-    </div>
-
-    <hr />
-
-    <h3>Añadir Comentario</h3>
-
-    <form (ngSubmit)="addComment()">
-      <div>
-        <label for="name">Nombre:</label>
-        <input type="text" id="name" [(ngModel)]="newComment.name" required />
-      </div>
-      <div>
-        <label for="text">Comentario:</label>
-        <textarea id="text" [(ngModel)]="newComment.text" required></textarea>
-      </div>
-      <button type="submit">Enviar Comentario</button>
-    </form>
-
-    <!-- Formulario para agregar comentarios -->
-    <!-- <form
+<!-- Formulario para agregar comentarios -->
+<!-- <form
       *ngIf="showCommentForm"
       (ngSubmit)="addComment(name.value + ': ' + comment.value)"
       class="view-blog__form"
@@ -63,13 +52,12 @@
       >
         Enviar
       </button>
-    </form> -->
+    </form>
 
-    <!-- Lista de comentarios -->
-    <!-- <ul class="view-blog__comments">
+    Lista de comentarios
+
+    <ul class="view-blog__comments">
       <li *ngFor="let comment of article?.comments" class="view-blog__comment">
         {{ comment }}
       </li>
     </ul> -->
-  </div>
-</article>
