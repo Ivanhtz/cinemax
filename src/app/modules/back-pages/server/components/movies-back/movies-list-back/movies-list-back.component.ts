@@ -21,7 +21,6 @@ export class MoviesListBackComponent implements OnInit {
 
   constructor(
     private moviesService: MoviesService,
-    private router: Router
   ) {}
 
   deleteFilm(id: number): void {
