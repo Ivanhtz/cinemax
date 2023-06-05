@@ -33,11 +33,16 @@ export class FilmsListComponent {
   }
 
 
-  showFilms() {
+  // Genero una función que permita mostrar las películas filtradas por su género
+  async showFilms(): Promise<void> {
 
-    console.log(this.generoo);
+    if (this.generoo === "" || this.generoo === "todos") {
+      this.filmsArr = await this.films.getAllsMovies();
+    } else {
+      this.filmsArr = await this.films.getAllsMovies();
+      this.filmsArr = this.filmsArr.filter(value => value.genre === this.generoo);
+    }
 
-    this.filmsArr = this.filmsArr.filter(value => value.genre === this.generoo);
   }
 
 }
