@@ -1,9 +1,9 @@
 <div class="container">
     <div class="card mb-3">
-        <img [src]="movie.img" class="card-img-top" alt="movie.title">
+        <img [src]="movie?.img" class="card-img-top" alt="movie?.title">
         <div class="card-body">
-            <h5 class="card-title"> {{movie.title}} </h5>
-            <p class="card-text"> {{ movie.text }} </p>
+            <h5 class="card-title"> {{movie?.title}} </h5>
+            <p class="card-text"> {{ movie?.text }} </p>
             <button routerLink="/principal/principal/films">Volver</button>
         </div>
     </div>
