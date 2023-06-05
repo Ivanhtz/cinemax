@@ -3,7 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { AuthsService } from 'src/app/services/auths-service/auths.service';
-import { UserService } from 'src/app/services/users-service/users.service';
+import { UsersService } from 'src/app/services/users-service/users.service';
 
 
 @Component({
@@ -17,7 +17,7 @@ export class FormComponent implements OnInit, OnDestroy {
 
   constructor(
     private fb: FormBuilder,
-    private users: UserService,
+    private users: UsersService,
     private router: Router,
     private authsService: AuthsService
   ) {}
@@ -57,6 +57,10 @@ export class FormComponent implements OnInit, OnDestroy {
         },
       });
     }
+  }
+
+  goBack() {
+    this.router.navigate(['']);  // reemplaza '/ruta-anterior' con la ruta a la que quieres ir
   }
 
   ngOnDestroy() {

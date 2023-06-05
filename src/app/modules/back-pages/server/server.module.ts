@@ -18,6 +18,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MoviesBackFormComponent } from './components/movies-back/movies-back-form/movies-back-form.component';
 import { ArticlesBackFormComponent } from './components/articles-back/articles-back-form/articles-back-form.component';
 import { UsersListBackComponent } from './components/users-back/users-list-back/users-list-back.component';
+import { MoviesListBackComponent } from './components/movies-back/movies-list-back/movies-list-back.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { UsersListBackComponent } from './components/users-back/users-list-back/
     UsersBackFormComponent,
     MoviesBackFormComponent,
     ArticlesBackFormComponent,
-    UsersListBackComponent
+    UsersListBackComponent,
+    MoviesListBackComponent
   ],
   imports: [
     CommonModule,
