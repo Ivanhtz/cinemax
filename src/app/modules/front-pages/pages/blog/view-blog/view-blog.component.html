@@ -11,8 +11,33 @@
       Atrás
     </button>
 
+    <h3>Comentarios</h3>
+
+    <div *ngFor="let comment of comments">
+      <p>
+        <strong>{{ comment.name }}</strong>
+      </p>
+      <p>{{ comment.text }}</p>
+    </div>
+
+    <hr />
+
+    <h3>Añadir Comentario</h3>
+
+    <form (ngSubmit)="addComment()">
+      <div>
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" [(ngModel)]="newComment.name" required />
+      </div>
+      <div>
+        <label for="text">Comentario:</label>
+        <textarea id="text" [(ngModel)]="newComment.text" required></textarea>
+      </div>
+      <button type="submit">Enviar Comentario</button>
+    </form>
+
     <!-- Formulario para agregar comentarios -->
-    <form
+    <!-- <form
       *ngIf="showCommentForm"
       (ngSubmit)="addComment(name.value + ': ' + comment.value)"
       class="view-blog__form"
@@ -38,13 +63,13 @@
       >
         Enviar
       </button>
-    </form>
+    </form> -->
 
     <!-- Lista de comentarios -->
-    <ul class="view-blog__comments">
+    <!-- <ul class="view-blog__comments">
       <li *ngFor="let comment of article?.comments" class="view-blog__comment">
         {{ comment }}
       </li>
-    </ul>
+    </ul> -->
   </div>
 </article>
