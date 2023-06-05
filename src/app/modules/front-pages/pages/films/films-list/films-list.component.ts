@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Ifilm } from 'src/app/interfaces/ifilm.interface';
-import { MovieService } from 'src/app/services/movies-service/movies.service';
+import { MoviesService } from 'src/app/services/movies-service/movies.service';
 
 @Component({
   selector: 'app-films-list',
@@ -16,7 +16,7 @@ export class FilmsListComponent {
   generoo: string = '';
 
 
-  constructor(private films: MovieService) { }
+  constructor(private films: MoviesService) { }
 
   async ngOnInit(): Promise<void> {
     let response = await this.films.getAllsMovies();

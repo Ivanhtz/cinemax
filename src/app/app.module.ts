@@ -23,13 +23,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
-import { UserService } from './services/users-service/users.service';
+import { UsersService } from './services/users-service/users.service';
 
 import { FormComponent } from './components/home/form/form.component';
 import { Token } from './interceptors/interceptor.interceptor';
 import { AuthsService } from './services/auths-service/auths.service';
-import { ArticlesService } from './services/articles-service/articles.service';
-import { MovieService } from './services/movies-service/movies.service';
+import { MoviesService } from './services/movies-service/movies.service';
 
 
 
@@ -65,16 +64,15 @@ import { MovieService } from './services/movies-service/movies.service';
 
   ],
   providers: [
-    UserService,
+    UsersService,
     AuthsService,
+    MoviesService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: Token,
       multi: true
     },
-    LoginGuard,
-    MovieService,
-    ArticlesService
+    LoginGuard
 
   ],
   bootstrap: [AppComponent]

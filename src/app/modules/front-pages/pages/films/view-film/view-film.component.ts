@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { MovieService } from 'src/app/services/movies-service/movies.service';
+import { MoviesService } from 'src/app/services/movies-service/movies.service';
 
 @Component({
   selector: 'app-view-film',
@@ -12,7 +12,7 @@ export class ViewFilmComponent {
   movie!: any;
 
 
-  constructor(private movies: MovieService, private aRoute: ActivatedRoute) { }
+  constructor(private movies: MoviesService, private aRoute: ActivatedRoute) { }
 
   async ngOnInit(): Promise<void> {
 
