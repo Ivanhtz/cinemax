@@ -6,6 +6,7 @@ import { FilmsListComponent } from './films-list/films-list.component';
 import { FilmComponent } from './film/film.component';
 import { ViewFilmComponent } from './view-film/view-film.component';
 import { MaterialModule } from 'src/app/modules/material/material.module';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { MaterialModule } from 'src/app/modules/material/material.module';
   imports: [
     CommonModule,
     FilmsRoutingModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ],
   exports: [
     FilmsListComponent,

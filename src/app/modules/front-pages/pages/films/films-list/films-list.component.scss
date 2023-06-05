@@ -7,3 +7,21 @@ header {
         padding-top: 40px;
     }
 }
+
+mat-spinner {
+    margin: 0 auto;
+}
+
+.filters {
+    background-color: rgb(184, 179, 179);
+    border-radius: 5px;
+    padding: 10px;
+
+    form {
+        width: 30%;
+    }
+}
+
+span {
+    color: green;
+}

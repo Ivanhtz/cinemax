@@ -3,15 +3,42 @@
         <h1>Listado de Películas</h1>
     </header>
 
+    <div class="filters container">
+        <div class="filters__totalMovies">
+            <h2>Números total de películas: <span> {{numberMovies}} </span> </h2>
+        </div>
+
+        <form>
+            <fieldset>
+                <div class="mb-3">
+                    <label for="disabledSelect" class="form-label">Filtra por Género</label>
+                    <select id="disabledSelect" class="form-select" name="generoPelicula" [(ngModel)]="generoo">
+                        <option value="" selected>Género</option>
+                        <option value="todos">Todos</option>
+                        <option *ngFor="let genero of gendersArr" [value]="genero">
+                            {{genero}}
+                        </option>
+                    </select>
+                </div>
+                <button mat-raised-button color="primary" (click)="showFilms()">Buscar</button>
+            </fieldset>
+        </form>
+    </div>
+
     <main>
         <div class="album py-5 bg-body-black">
             <div class="container">
 
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div *ngIf="filmsArr.length != 0; else noData" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                     <div *ngFor="let movie of filmsArr" class="col">
                         <app-film [movie]="movie"></app-film>
                     </div>
                 </div>
+
+                <ng-template #noData>
+                    <mat-spinner></mat-spinner>
+                </ng-template>
+
             </div>
         </div>
     </main>
