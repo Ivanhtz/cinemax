@@ -1,16 +1,13 @@
 .header__blog-list{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
-.title__blog-list{
-    font-size: 3rem;
-    padding: 1.5rem;
-    border-radius: 50px;
-    background-color: #4c0404;
+.title__blog-list{ 
     color: #fdfafa;
-    margin-top: 10px;
-    margin-left: 10px;
+    margin-top: 30px;
+    font-size: 2rem;
+        
 }
 
 .blog-list__container {
@@ -18,23 +15,26 @@
     flex-direction: column;
     align-items: center;
     margin: 10px 50px;
+  
   }
 
   .blog-list__row {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 50px;
+     
   }
 
   .blog-list__col {
     flex: 0 0 calc(33.33% - 16px);
     max-width: calc(33.33% - 16px);
-    margin: 0 8px;
+    margin: 10px 8px;
+    
   }
 
   .blog-card {
     position: relative;
+    height: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -58,8 +58,4 @@
     color: #fff;
     border-radius: 20px;
     text-align: center;
-  }
-
-  .app-article {
-    margin-top: -50px;
   }

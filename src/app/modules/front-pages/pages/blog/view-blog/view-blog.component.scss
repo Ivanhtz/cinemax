@@ -1,0 +1,158 @@
+.article__content {
+  position: relative;
+  z-index: 1;
+  padding: 40px;
+  width: calc(50% - 40px);
+}
+
+.article__title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #fff;
+  transition: all .3s ease-in-out;
+  line-height: 1em;
+}
+
+.article__text {
+  font-size: 20px;
+  line-height: 1.5;
+  color: #eee;
+  transition: all .3s ease-in-out;
+}
+
+.article__button{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100px;
+  padding: 5px;
+  background-color: rgba(6, 100, 214);
+  color: #fff;
+  border-radius: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.article__button-form{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  padding: 5px;
+  background-color: rgba(6, 100, 214);
+  color: #fff;
+  border-radius: 20px;
+  text-align: center;
+  margin: 10px;
+  
+}
+
+   /* Estilos personalizados para el formulario de comentarios */
+
+   .view-blog__form {
+    margin-top: 32px;
+  }
+  
+  .view-blog__form-group {
+    margin-bottom: 16px;  
+  }
+  
+  .view-blog__form-field {
+    width: 100%;
+    
+  }
+  
+  .view-blog__form-field--name {
+    font-size: 16px;
+    
+  }
+  
+  .view-blog__form-field--comment {
+    font-size: 14px;
+  }
+  
+  .view-blog__form-button {
+    background-color: #2196f3;
+    color: #fff;
+  }
+  
+  .view-blog__form-button:hover {
+    background-color: #1976d2;
+  }
+
+
+
+
+
+@media (max-width: 767px) {
+  .article {
+    height: auto;
+    min-height: auto;
+    max-height: none;
+    overflow: visible;
+    transform-style: flat;
+    perspective: none;
+    box-shadow: none;
+    border-top: none;
+    border-bottom: none;
+    cursor: auto;
+    transform-origin: initial;
+    transition: none;
+  }
+  
+
+  .article:hover {
+    transform: none;
+    box-shadow: none;
+    z-index:auto; 
+    border-color:#f44336; 
+    transition:none; 
+   }
+
+   .article:hover .article__image-container{
+      transform:none; 
+      z-index:auto; 
+   }
+
+   .article:hover .article__content{
+      transform:none; 
+      z-index:auto; 
+   }
+
+   .article:hover .article__title{
+      color:#fff; 
+      transition:none; 
+   }
+
+   .article:hover .article__text{
+      color:#eee; 
+      transition:none; 
+   }
+
+   .article__image-container {
+     width: 100%;
+     height: auto;
+     overflow:hidden;
+     position:relative; 
+     z-index:-1; 
+     transform-style: flat; 
+     transform-origin:left center; 
+     transform:none; 
+     backface-visibility:hidden; 
+     border-radius:.25rem; 
+     box-shadow:-20px -20px rgba(255,255,255,0.8) inset, -10px -10px rgba(0,0,0,0.2) inset, -10px -10px rgba(255,255,255,0.2) inset, -15px -15px rgba(0,0,0,0.3) inset, -15px -15px rgba(255,255,255,0.3) inset;
+   }
+
+   .article__image {
+     filter:none; 
+     transition:none; 
+   }
+
+   .article__content {
+     width: 100%;
+     padding: 20px;
+   }
+
+}

@@ -22,7 +22,8 @@ import { MaterialModule } from 'src/app/modules/material/material.module';
     MaterialModule
   ],
   exports:[
-    BlogListComponent
+    BlogListComponent,
+    ViewBlogComponent
   ]
 })
 export class BlogModule { }

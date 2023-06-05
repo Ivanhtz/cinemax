@@ -2,10 +2,10 @@
     <img [src]="movie.img" [alt]="movie.title">
     <div class="card-body">
         <h3 class="text-center"> {{movie.title}} </h3>
-        <!-- <p class="card-text"> {{movie.abstract}} </p> -->
         <div class="d-flex justify-content-between align-items-center">
             <div class="btn-group">
-                <button mat-raised-button color="accent">Ver más</button>
+                <button mat-raised-button color="accent" routerLink="/principal/principal/films/{{movie.id}}">Ver
+                    más</button>
             </div>
         </div>
     </div>

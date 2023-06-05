@@ -1,16 +1,18 @@
-<header>
-    <h1>Listado de Películas</h1>
-</header>
+<div class="color-back-front">
+    <header>
+        <h1>Listado de Películas</h1>
+    </header>
 
-<main>
-    <div class="album py-5 bg-body-tertiary">
-        <div class="container">
+    <main>
+        <div class="album py-5 bg-body-black">
+            <div class="container">
 
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                <div *ngFor="let movie of filmsArr" class="col">
-                    <app-film [movie]="movie"></app-film>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <div *ngFor="let movie of filmsArr" class="col">
+                        <app-film [movie]="movie"></app-film>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</main>
+    </main>
+</div>

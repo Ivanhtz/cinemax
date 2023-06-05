@@ -1,1 +1,50 @@
-<h1>Esta es la página de las vista de cada noticia</h1>
+<!-- Template del componente ViewBlogComponent -->
+<article class="article">
+  <div class="article__image-container">
+    <img class="article__image" [src]="article.image" alt="article.title" />
+  </div>
+  <div class="article__content">
+    <h1 class="article__title">{{ article.title }}</h1>
+    <p class="article__text">{{ article.text }}</p>
+    <button (click)="showForm()" class="article__button-form">Comenta</button>
+    <button routerLink="/principal/principal/blog" class="article__button">
+      Atrás
+    </button>
+
+    <!-- Formulario para agregar comentarios -->
+    <form
+      *ngIf="showCommentForm"
+      (ngSubmit)="addComment(name.value + ': ' + comment.value)"
+      class="view-blog__form"
+    >
+      <mat-form-field appearance="fill" class="view-blog__form-field">
+        <mat-label>Nombre</mat-label>
+        <input matInput name="name" #name class="view-blog__form-input" />
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="view-blog__form-field">
+        <mat-label>Comentario</mat-label>
+        <textarea
+          matInput
+          name="comment"
+          #comment
+          class="view-blog__form-textarea"
+        ></textarea>
+      </mat-form-field>
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        class="view-blog__form-button"
+      >
+        Enviar
+      </button>
+    </form>
+
+    <!-- Lista de comentarios -->
+    <ul class="view-blog__comments">
+      <li *ngFor="let comment of article.comments" class="view-blog__comment">
+        {{ comment }}
+      </li>
+    </ul>
+  </div>
+</article>

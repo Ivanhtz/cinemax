@@ -7,7 +7,11 @@
     <div class="blog-list__col" *ngFor="let article of arrArticles">
       <div class="blog-card">
         <app-article [article]="article"></app-article>
-        <a href="#" class="blog-card__link">Leer más</a>
+        <a
+          routerLink="/principal/principal/blog/{{ article.id }}"
+          class="blog-card__link"
+          >Leer más</a
+        >
       </div>
     </div>
   </div>
