@@ -1,18 +1,30 @@
 <mat-sidenav-container class="sidenav-container color-back-front">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false"
+  >
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
       <a mat-list-item routerLink="/home">Inicio</a>
       <a mat-list-item routerLink="/principal/principal/films">Películas</a>
+      <a mat-list-item routerLink="/principal/principal/blog">Blog</a>
       <a mat-list-item routerLink="/principal/principal/contact">Contacto</a>
       <a mat-list-item routerLink="/principal/principal/about">Nosotros</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">
-      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async"
+      >
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <span>Bienvenido a Cinemax</span>

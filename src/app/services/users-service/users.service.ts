@@ -1,6 +1,6 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, Subject, tap, of } from 'rxjs';
+import { BehaviorSubject, Observable, Subject, tap, of, throwError, defer } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { Iresponse } from 'src/app/interfaces/iresponse.interface';
 
@@ -40,7 +40,7 @@ export class UsersService {
   getUsers(): Observable<Iuser[]> {
     return this.http
       .get<Iuser[]>(`${this.apiUrl}/users`)
-      .pipe(catchError(this.handleError<Iuser[]>('getUsers', [])));
+      .pipe(catchError(this.handleError<Iuser[]>('getUsers')));
   }
 
   getUser(id: number): Observable<Iuser> {
@@ -70,13 +70,14 @@ export class UsersService {
       catchError(this.handleError<Iuser>('updateUser'))
     );
   }
-
-  private handleError<T>(operation = 'operation', result?: T) {
+  private handleError<T>(operation = 'operation') {
     return (error: any): Observable<T> => {
       console.error(`${operation} failed: ${error.message}`);
-      // TODO: send the error to remote logging infrastructure
-      // Let the app keep running by returning an empty result.
-      return of(result as T);
+  
+      // Handle the error here (e.g. show a message to the user)
+  
+      // Re-throw the error
+      return throwError(() => error);
     };
   }
 }

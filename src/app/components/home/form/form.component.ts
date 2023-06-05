@@ -5,7 +5,6 @@ import { Subscription } from 'rxjs';
 import { AuthsService } from 'src/app/services/auths-service/auths.service';
 import { UsersService } from 'src/app/services/users-service/users.service';
 
-
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
@@ -29,7 +28,7 @@ export class FormComponent implements OnInit, OnDestroy {
 
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
-      password: ['', Validators.required]
+      password: ['', Validators.required],
     });
   }
 
@@ -44,23 +43,33 @@ export class FormComponent implements OnInit, OnDestroy {
           }
         },
         error: (error) => {
-          console.log(error);
-          if (error.status === 400) {
-            alert(
-              'Las credenciales proporcionadas no son correctas. Por favor, inténtalo de nuevo.'
-            );
-          } else {
-            alert(
-              'Ha ocurrido un error inesperado. Por favor, inténtalo de nuevo más tarde.'
-            );
+          // Imprime el objeto de error completo en la consola
+          console.log('Error completo:', error);
+
+          let status = error.status || (error.error && error.error.status);
+          switch (status) {
+            case 400:
+              alert(
+                'La solicitud es incorrecta o las credenciales no son correctas. Por favor, revisa los datos ingresados.'
+              );
+              break;
+            case 401:
+            case 403:
+              alert(
+                'Las credenciales proporcionadas no son correctas. Por favor, inténtalo de nuevo.'
+              );
+              break;
+            default:
+              alert(
+                'Ha ocurrido un error inesperado. Por favor, inténtalo de nuevo más tarde.'
+              );
           }
         },
       });
     }
   }
-
   goBack() {
-    this.router.navigate(['']);  // reemplaza '/ruta-anterior' con la ruta a la que quieres ir
+    this.router.navigate(['']); // reemplaza '/ruta-anterior' con la ruta a la que quieres ir
   }
 
   ngOnDestroy() {

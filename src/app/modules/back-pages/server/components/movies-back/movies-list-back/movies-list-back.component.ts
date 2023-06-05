@@ -36,11 +36,11 @@ export class MoviesListBackComponent implements OnInit {
   editFilm(id: number): void {
     if (id) {
       console.log(`Editing film with ID: ${id}`);
-      this.moviesService.getMovieById(id).subscribe(film => {
+      this.moviesService.getMovieById(id).then(film => {
         this.moviesService.startEditingMovie(film);
       });
     }
-  }
+}
 
   ngOnInit(): void {
     console.log('DataSource:', this.dataSource); // Log to check dataSource
