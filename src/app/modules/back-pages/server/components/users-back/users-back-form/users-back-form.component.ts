@@ -1,9 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core';
-
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
-import { UserDto } from 'src/app/services/users-service/user-dto/user.dto';
-import { UserService } from 'src/app/services/users-service/users.service';
+import { Iuser } from 'src/app/interfaces/iuser.interface';
+import { UsersService } from 'src/app/services/users-service/users.service';
 
 @Component({
   selector: 'app-users-back-form',
@@ -12,70 +10,46 @@ import { UserService } from 'src/app/services/users-service/users.service';
 })
 export class UsersBackFormComponent implements OnInit {
   addressForm: FormGroup;
-  editingUser: UserDto;
+  editingUser: Iuser;
   isEditing: boolean = false;
 
   constructor(
     private formBuilder: FormBuilder,
-    private userService: UserService
+    private usersService: UsersService
   ) {
+    this.editingUser = { id: 0, email: '', password: '' };
     this.addressForm = this.formBuilder.group({
-      email: ['', Validators.required],
-      password: ['', Validators.required],
+      email: [this.editingUser.email, Validators.required],
+      password: [this.editingUser.password, Validators.required],
     });
-    this.editingUser = {
-      id: 0,
-      email: '',
-      password: '',
-    };
   }
 
   ngOnInit(): void {
-    this.userService.userBeingEdited$.subscribe((user) => {
-      if (user) {
-        this.isEditing = true;
-        this.editingUser = user;
-        this.addressForm = this.formBuilder.group({
-          email: [user.email, Validators.required],
-          password: [user.password, Validators.required],
-        });
-      } else {
-        this.isEditing = false;
-        this.editingUser = {
-          id: 0,
-          email: '',
-          password: '',
-        };
-        this.addressForm = this.formBuilder.group({
-          email: ['', []],
-          password: ['', []],
-        });
-      }
+    this.usersService.userBeingEdited$.subscribe((user) => {
+      this.isEditing = !!user;
+      this.editingUser = user || { id: 0, email: '', password: '' };
+      this.createForm(this.editingUser);
     });
   }
+
+  createForm(user: Iuser): void {
+    this.addressForm = this.formBuilder.group({
+      email: [user.email || '', Validators.required],
+      password: [user.password || '', Validators.required],
+    });
+  }
+
   onSubmit(): void {
-    if (this.isEditing) {
-      // Estás editando un usuario existente
-      // Incluye la fecha de creación original cuando se guarda el usuario
-      const updatedUser = {
-        ...this.addressForm.value,
-        createdAt: this.editingUser.createdAt
-      };
-      this.userService
-        .updateUser(this.editingUser.id, updatedUser)
-        .subscribe(() => {
-          this.userService.stopEditingUser();
-        });
-    } else {
-      // Estás creando un nuevo usuario
-      this.userService.createUser(this.addressForm.value).subscribe(() => {
-        this.userService.stopEditingUser();
-      });
-    }
+    const userObservable = this.isEditing ?
+      this.usersService.updateUser(this.editingUser.id, this.addressForm.value) :
+      this.usersService.createUser(this.addressForm.value);
+      
+    userObservable.subscribe(() => {
+      this.usersService.stopEditingUser();
+    });
   }
 
   cancel(): void {
-    this.userService.stopEditingUser();
+    this.usersService.stopEditingUser();
   }
-  
 }

@@ -3,8 +3,8 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { switchMap } from 'rxjs/operators';
-import { UserDto } from 'src/app/services/users-service/user-dto/user.dto';
-import { UserService } from 'src/app/services/users-service/users.service';
+import { Iuser } from 'src/app/interfaces/iuser.interface';
+import { UsersService } from 'src/app/services/users-service/users.service';
 
 @Component({
   selector: 'app-users-back',
@@ -15,9 +15,9 @@ export class UsersBackComponent implements AfterViewInit {
   @ViewChild(MatPaginator) paginator?: MatPaginator;
   @ViewChild(MatSort) sort?: MatSort;
 
-  users: MatTableDataSource<UserDto> = new MatTableDataSource<UserDto>();
+  users: MatTableDataSource<Iuser> = new MatTableDataSource<Iuser>();
 
-  constructor(private userService: UserService) {}
+  constructor(private userService: UsersService) {}
 
   ngAfterViewInit(): void {
     // Primero, obtener los usuarios iniciales
