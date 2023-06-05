@@ -21,7 +21,7 @@ export class MovieService {
 
   }
 
-  getMovieById(id: any): Promise<Ifilm> {
+  getMovieById(id: number): Promise<Ifilm> {
     const urlId = `${this.urlMovies}films/${id}`;
 
     return lastValueFrom(this.http.get<Ifilm>(urlId));

@@ -1,10 +1,22 @@
-<div class="container">
-    <div class="card mb-3">
-        <img [src]="movie?.img" class="card-img-top" alt="movie?.title">
-        <div class="card-body">
-            <h5 class="card-title"> {{movie?.title}} </h5>
-            <p class="card-text"> {{ movie?.text }} </p>
-            <button routerLink="/principal/principal/films">Volver</button>
+<main class="container my-5 my-md-0 vh-md-100 d-flex align-items-center justify-content-center">
+    <article class="card overflow-hidden border-0 rounded-3 flex-md-row align-items-center">
+        <div class="bg-primary order-md-2 flex-md-grow-1 w-100">
+            <picture>
+                <img [src]="movie?.img" [alt]="movie?.title" class="card-img" />
+            </picture>
         </div>
-    </div>
-</div>
+        <section class="order-md-1 flex-md-grow-1 w-100">
+            <div class="card-body text-center text-md-start ">
+                <h1 class="card-title h2">
+                    {{ movie?.title }}
+                </h1>
+                <p class="text-secondary">
+                    {{ movie?.text }}
+                </p>
+                <div class="row">
+                    <button mat-raised-button color="primary" routerLink="/principal/principal/films">Volver</button>
+                </div>
+            </div>
+        </section>
+    </article>
+</main>
