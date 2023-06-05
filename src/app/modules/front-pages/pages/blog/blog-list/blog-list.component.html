@@ -1,0 +1,18 @@
+<header class="header__blog-list">
+  <h1 class="title__blog-list">Listado de artículos</h1>
+</header>
+
+<div class="blog-list__container">
+  <div class="blog-list__row">
+    <div class="blog-list__col" *ngFor="let article of arrArticles">
+      <div class="blog-card">
+        <app-article [article]="article"></app-article>
+        <a
+          routerLink="/principal/principal/blog/{{ article.id }}"
+          class="blog-card__link"
+          >Leer más</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
