@@ -1,18 +1,30 @@
-<header class="header__blog-list">
-  <h1 class="title__blog-list">Listado de artículos</h1>
-</header>
-
-<div class="blog-list__container">
-  <div class="blog-list__row">
-    <div class="blog-list__col" *ngFor="let article of arrArticles">
-      <div class="blog-card">
-        <app-article [article]="article"></app-article>
-        <a
-          routerLink="/principal/principal/blog/{{ article.id }}"
-          class="blog-card__link"
-          >Leer más</a
-        >
+<div class="color-back-front">
+  <header>
+    <h1>Listado de artículos</h1>
+  </header>
+  <main>
+    <div class="album py-5 bg-body-black">
+      <div class="container">
+        <div class="row">
+          <div
+            *ngFor="
+              let article of arrArticles.slice(
+                pageIndex * pageSize,
+                (pageIndex + 1) * pageSize
+              )
+            "
+            class="col-12 mb-3"
+          >
+            <app-article [article]="article"></app-article>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+    <mat-paginator
+      [length]="arrArticles.length"
+      [pageSize]="pageSize"
+      [pageSizeOptions]="[5, 10, 25, 100]"
+      (page)="handlePageChange($event)"
+    ></mat-paginator>
+  </main>
 </div>

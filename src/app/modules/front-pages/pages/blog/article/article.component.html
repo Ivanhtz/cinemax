@@ -1,5 +1,18 @@
-<div class="article__container">
-  <h2 class="article__title">{{ article.title }}</h2>
+<div class="card shadow-sm">
   <img [src]="article.image" [alt]="article.title" class="article__image" />
-  <p class="article__content">{{ article.content }}</p>
+  <div class="card-body">
+    <h2 class="text-center">{{ article.title }}</h2>
+    <p>{{ article.content }}</p>
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="btn-group">
+        <button
+          mat-raised-button
+          color="accent"
+          routerLink="/principal/principal/blog/{{ article.id }}"
+        >
+          Leer más
+        </button>
+      </div>
+    </div>
+  </div>
 </div>

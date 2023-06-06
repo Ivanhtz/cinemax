@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { IComment } from 'src/app/interfaces/icomment.interface';
 import { CommentsService } from 'src/app/services/comments-service/comments.service';
+import { MatPaginator, PageEvent } from '@angular/material/paginator';
+import { ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-comment',
@@ -9,6 +11,9 @@ import { CommentsService } from 'src/app/services/comments-service/comments.serv
   styleUrls: ['./comment.component.scss']
 })
 export class CommentComponent {
+  @ViewChild(MatPaginator) paginator?: MatPaginator;
+  pageSize = 5; 
+  pageIndex = 0; 
   comments : IComment[]= [];
   newComments:IComment[]=[]; 
   articleId: number = 0;
@@ -33,6 +38,11 @@ export class CommentComponent {
     let newResponse = this.comments.filter(value => value.articleId == this.articleId);
     this.newComments = newResponse; 
     console.log(this.newComments); 
+  }
+
+  handlePageChange(event: PageEvent) {
+    this.pageSize = event.pageSize;
+    this.pageIndex = event.pageIndex;
   }
 
 }

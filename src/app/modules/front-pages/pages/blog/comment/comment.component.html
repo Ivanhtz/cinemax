@@ -1,12 +1,16 @@
 <div class="container">
-  <h1>Comentarios filtrados</h1>
-
-  <!-- Lista de comentarios filtrados -->
   <article class="comment-container">
     <div class="comment-wrapper">
-      <!-- Lista de comentarios filtrados -->
       <div class="comment-list">
-        <div *ngFor="let comment of newComments" class="comment-item">
+        <div
+          *ngFor="
+            let comment of newComments.slice(
+              pageIndex * pageSize,
+              (pageIndex + 1) * pageSize
+            )
+          "
+          class="comment-item"
+        >
           <div class="comment-item__header">
             <span class="comment-item__author">{{ comment?.name }}</span>
           </div>
@@ -15,4 +19,11 @@
       </div>
     </div>
   </article>
+
+  <mat-paginator
+    [length]="newComments.length"
+    [pageSize]="pageSize"
+    [pageSizeOptions]="[5, 10, 25, 100]"
+    (page)="handlePageChange($event)"
+  ></mat-paginator>
 </div>

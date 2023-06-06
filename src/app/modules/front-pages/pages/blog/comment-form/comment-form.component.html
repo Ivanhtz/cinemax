@@ -1,26 +1,23 @@
 <form class="view-blog__form">
-  <div class="form__group">
-    <mat-form-field appearance="fill">
-      <mat-label>Nombre</mat-label>
-      <input matInput [(ngModel)]="nameComment" name="nameComment" />
-    </mat-form-field>
+  <div class="form-group">
+    <label class="form-label" for="nameComment">Nombre</label>
+    <input
+      class="form-control"
+      [(ngModel)]="nameComment"
+      name="nameComment"
+      id="nameComment"
+    />
   </div>
-  <div class="form__group">
-    <mat-form-field appearance="fill">
-      <mat-label>Comentario</mat-label>
-      <textarea
-        matInput
-        [(ngModel)]="textComment"
-        name="textComment"
-      ></textarea>
-    </mat-form-field>
+  <div class="form-group">
+    <label class="form-label mt-3" for="textComment">Comentario</label>
+    <textarea
+      class="form-control"
+      [(ngModel)]="textComment"
+      name="textComment"
+      id="textComment"
+    ></textarea>
   </div>
-  <button
-    mat-raised-button
-    color="primary"
-    type="submit"
-    (click)="addComment()"
-  >
+  <button class="btn btn-primary mt-3" type="submit" (click)="addComment()">
     Enviar
   </button>
 </form>
