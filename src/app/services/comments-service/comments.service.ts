@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, catchError, map, of, lastValueFrom } from 'rxjs';
+import { Observable, catchError, map, of, lastValueFrom, Subject } from 'rxjs';
 import { IComment } from 'src/app/interfaces/icomment.interface';
 
 @Injectable({
@@ -8,11 +8,9 @@ import { IComment } from 'src/app/interfaces/icomment.interface';
 })
 export class CommentsService {
   private urlComments: string = 'http://localhost:3000/';
+    commentAdded = new Subject<void>();
 
   constructor(private http: HttpClient) {}
-
-  
- 
 
   //Método para obtener todos los comentarios
   getAllComments(): Promise<IComment[]>{
@@ -22,12 +20,12 @@ export class CommentsService {
   }
   
   //Método para añadir comentarios
-  postComment(comment:IComment): Promise<IComment>{
+  async postComment(comment:IComment): Promise<IComment>{
     const url = `${this.urlComments}comments`;
-    return lastValueFrom(this.http.post<IComment>(url, comment));
+    const response = await lastValueFrom(this.http.post<IComment>(url, comment));
+    this.commentAdded.next();
+    return response;
   }
-
-
 
   //Método para obtener los comentarios de la base de datos
 

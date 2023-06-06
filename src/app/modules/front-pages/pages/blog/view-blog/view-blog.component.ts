@@ -21,7 +21,7 @@ export class ViewBlogComponent {
   
 
   // Variable para indicar si el formulario de comentarios está visible
-showCommentForm = false;
+  showCommentForm = false;
 
 
 
@@ -32,14 +32,15 @@ showCommentForm = false;
       let idArticle = parseInt(params.id);
       let response = this.articles.getArticleById(idArticle); 
       this.article = await response;
-    })  
-      
+    })         
   }
 
     // Método para mostrar el formulario de comentarios
     showForm(): void {
       this.showCommentForm = true;
     }
+
+
     
 
    

@@ -23,9 +23,8 @@ export class CommentFormComponent {
 
 
   async ngOnInit(): Promise <void> {
-
     this.filteredComments(); 
-
+    this.commentsService.commentAdded.subscribe(() => this.filteredComments());
   }
 
 
@@ -44,10 +43,8 @@ export class CommentFormComponent {
       let response = await this.commentsService.postComment(newComment);
       this.filteredComments(); 
       this.nameComment = '';  // Borrar el campo de nombre
-      this.textComment = '';  // Borrar el campo de comentario
-      
-    }
-    
+      this.textComment = '';  // Borrar el campo de comentario   
+    }    
   }
 
   async filteredComments(){
@@ -62,5 +59,4 @@ export class CommentFormComponent {
     this.newComments = newResponse; 
     console.log(this.newComments); 
   }
-
 }

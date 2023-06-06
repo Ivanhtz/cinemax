@@ -29,6 +29,7 @@ import { FormComponent } from './components/home/form/form.component';
 import { Token } from './interceptors/interceptor.interceptor';
 import { AuthsService } from './services/auths-service/auths.service';
 import { MoviesService } from './services/movies-service/movies.service';
+import { HeaderCComponent } from './components/home/header-c/header-c.component';
 
 
 
@@ -40,7 +41,8 @@ import { MoviesService } from './services/movies-service/movies.service';
     FooterComponent,
     HomeComponent,
     HeaderComponent,
-    FormComponent
+    FormComponent,
+    HeaderCComponent
 
 
 
