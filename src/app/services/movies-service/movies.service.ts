@@ -53,17 +53,20 @@ export class MoviesService {
     );
   }
 
+  deleteMovie(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.urlMovie}films/${id}`).pipe(
+      tap(() => {
+        this.movieUpdates$.next();
+        this.stopEditingMovie();
+      }),
+      catchError(this.handleError<void>('deleteMovie'))
+    );
+  }
+
   updateMovie(id: number, movie: Ifilm): Observable<Ifilm> {
     return this.http.put<Ifilm>(`${this.urlMovie}films/${id}`, movie).pipe(
       tap(() => this.movieUpdates$.next()),
       catchError(this.handleError<Ifilm>('updateMovie'))
-    );
-  }
-
-  deleteMovie(id: number): Observable<{}> {
-    return this.http.delete(`${this.urlMovie}films/${id}`).pipe(
-      tap(() => this.movieUpdates$.next()),
-      catchError(this.handleError<{}>('deleteMovie'))
     );
   }
 

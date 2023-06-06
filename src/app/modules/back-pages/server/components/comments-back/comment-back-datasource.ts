@@ -1,31 +1,31 @@
-// user-datasource.ts
+// comment-back-datasource.ts
 import { DataSource } from '@angular/cdk/collections';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { map } from 'rxjs/operators';
 import { Observable, of as observableOf, merge } from 'rxjs';
-import { Iuser } from 'src/app/interfaces/iuser.interface';
-import { UsersService } from 'src/app/services/users-service/users.service';
+import { IComment } from 'src/app/interfaces/icomment.interface';
+import { CommentsService } from 'src/app/services/comments-service/comments.service';
 
-export class UserDataSource extends DataSource<Iuser> {
-  dataSource: Iuser[] = [];
+export class CommentBackDataSource extends DataSource<IComment> {
+  dataSource: IComment[] = [];
   paginator: MatPaginator | undefined;
   sort: MatSort | undefined;
-  data: Iuser[] = [];
+  data: IComment[] = [];
 
-  constructor(private userService: UsersService) {
+  constructor(private commentsService: CommentsService) {
     super();
     this.loadData();
   }
 
   loadData(): void {
-    this.userService.getUsers().subscribe((users) => {
-      this.data = users;
+    this.commentsService.getComments().subscribe((comments) => {
+      this.data = comments;
       this.paginator?._changePageSize(this.paginator.pageSize);
     });
   }
 
-  connect(): Observable<Iuser[]> {
+  connect(): Observable<IComment[]> {
     if (this.paginator && this.sort) {
       return merge(
         observableOf(this.data),
@@ -45,7 +45,7 @@ export class UserDataSource extends DataSource<Iuser> {
 
   disconnect(): void {}
 
-  private getPagedData(data: Iuser[]): Iuser[] {
+  private getPagedData(data: IComment[]): IComment[] {
     if (this.paginator) {
       const startIndex = this.paginator.pageIndex * this.paginator.pageSize;
       return data.splice(startIndex, this.paginator.pageSize);
@@ -54,7 +54,7 @@ export class UserDataSource extends DataSource<Iuser> {
     }
   }
 
-  private getSortedData(data: Iuser[]): Iuser[] {
+  private getSortedData(data: IComment[]): IComment[] {
     if (!this.sort || !this.sort.active || this.sort.direction === '') {
       return data;
     }
@@ -62,8 +62,8 @@ export class UserDataSource extends DataSource<Iuser> {
     return data.sort((a, b) => {
       const isAsc = this.sort?.direction === 'asc';
       switch (this.sort?.active) {
-        case 'email':
-          return compare(a.email, b.email, isAsc);
+        case 'text':
+          return compare(a.text, b.text, isAsc);
         case 'id':
           return compare(+a.id, +b.id, isAsc);
         default:
