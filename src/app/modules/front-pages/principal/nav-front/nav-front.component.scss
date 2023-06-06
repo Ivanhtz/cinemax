@@ -5,8 +5,7 @@
 
 .sidenav {
   width: 200px;
-  // background-color: rgb(230, 230, 230);
-  background-color: rgb(203, 203, 252);
+  background-color: rgb(134, 134, 134);
 }
 
 .sidenav .mat-toolbar {
@@ -18,5 +17,9 @@
   background-color: rgb(133, 50, 172);
   top: 0;
   z-index: 4;
+  color: whitesmoke;
+}
+
+mat-toolbar {
   color: whitesmoke;
 }
