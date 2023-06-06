@@ -524,39 +524,12 @@
       "name": "Pedro",
       "text": "No estoy de acuerdo",
       "articleId": 2
-<<<<<<< HEAD
-    },
-    {
-      "name": "Juan Carlos",
-      "text": "Una gran película",
-      "articleId": 1,
-      "id": 4
-    },
-    {
-      "name": "Raquel",
-      "text": "No me gustó",
-      "articleId": 1,
-      "id": 5
-    },
-    {
-      "name": "Rosaad",
-      "text": "asdasdasdasdasdasdasda",
-      "articleId": 1,
-      "id": 6
     },
     {
       "name": "Felipe",
-      "text": "holaholaaaaaaaaaa",
-      "articleId": 0,
-      "id": 7
-    },
-    {
-      "name": "asdas",
-      "text": "asdasdasdasdasdasdas",
+      "text": "Gran película",
       "articleId": 1,
-      "id": 8
-=======
->>>>>>> 440720a4629ac03c8c8d68ddd6bbe7172f7efba0
+      "id": 4
     }
   ]
 }

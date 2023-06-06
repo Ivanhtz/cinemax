@@ -24,7 +24,7 @@
 
 .article__button{
   position: absolute;
-  bottom: 0;
+  top:20px;
   right: 0;
   width: 100px;
   padding: 5px;
@@ -32,7 +32,8 @@
   color: #fff;
   border-radius: 20px;
   text-align: center;
-  margin-bottom: 10px;
+  
+
 }
 
 .article__button-form{
@@ -45,8 +46,8 @@
   color: #fff;
   border-radius: 20px;
   text-align: center;
-  margin: 10px;
-  
+  margin: 50px;
+
 }
 
 @media (max-width: 767px) {

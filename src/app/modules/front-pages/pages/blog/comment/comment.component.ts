@@ -18,10 +18,8 @@ export class CommentComponent {
 
 
   async ngOnInit(): Promise <void> {
-
-
     this.filteredComments(); 
-
+    this.commentsService.commentAdded.subscribe(()=> this.filteredComments()); 
   }
 
   async filteredComments(){
