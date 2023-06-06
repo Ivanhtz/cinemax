@@ -13,7 +13,7 @@ export class FilmsListComponent {
   gendersArr: string[] = []; // Genero array para almacenar los géneros para aplicar un filtro de búsqueda
   directorsArr: string[] = []; // Genero array para almacenar los directores para aplicar un filtro de búsqueda
   numberMovies: number = 0;
-  generoo: string = '';
+  filterGenre: string = '';
 
 
   constructor(private films: MoviesService) { }
@@ -36,11 +36,11 @@ export class FilmsListComponent {
   // Genero una función que permita mostrar las películas filtradas por su género
   async showFilms(): Promise<void> {
 
-    if (this.generoo === "" || this.generoo === "todos") {
+    if (this.filterGenre === "" || this.filterGenre === "todos") {
       this.filmsArr = await this.films.getAllsMovies();
     } else {
       this.filmsArr = await this.films.getAllsMovies();
-      this.filmsArr = this.filmsArr.filter(value => value.genre === this.generoo);
+      this.filmsArr = this.filmsArr.filter(value => value.genre === this.filterGenre);
     }
 
   }
