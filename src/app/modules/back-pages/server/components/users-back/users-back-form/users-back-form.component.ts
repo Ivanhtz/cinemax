@@ -1,5 +1,6 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Iuser } from 'src/app/interfaces/iuser.interface';
 import { UsersService } from 'src/app/services/users-service/users.service';
 
@@ -15,7 +16,8 @@ export class UsersBackFormComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private usersService: UsersService
+    private usersService: UsersService,
+    private snackBar: MatSnackBar
   ) {
     this.editingUser = { id: 0, email: '', password: '' };
     this.addressForm = this.formBuilder.group({
@@ -40,15 +42,31 @@ export class UsersBackFormComponent implements OnInit {
   }
 
   onSubmit(): void {
-    const userObservable = this.isEditing ?
-      this.usersService.updateUser(this.editingUser.id, this.addressForm.value) :
-      this.usersService.createUser(this.addressForm.value);
-      
+    const userObservable = this.isEditing
+      ? this.usersService.updateUser(
+          this.editingUser.id,
+          this.addressForm.value
+        )
+      : this.usersService.createUser(this.addressForm.value);
+  
+    const wasEditing = this.isEditing; 
+  
     userObservable.subscribe(() => {
       this.usersService.stopEditingUser();
+      this.snackBar.open(
+        `Usuario ${wasEditing ? 'editado' : 'creado'} exitosamente`,
+        'Cerrar',
+        { duration: 5000 }
+      );
+    },
+    (error) => { // Aquí se captura el error
+      this.snackBar.open(
+        `Error: ${error.message}`,
+        'Cerrar',
+        { duration: 5000 }
+      );
     });
   }
-
   cancel(): void {
     this.usersService.stopEditingUser();
   }

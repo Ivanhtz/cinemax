@@ -66,19 +66,26 @@ export class ArticlesService {
     return this.http
       .put<Iarticle>(`${this.urlArticle}articles/${id}`, article)
       .pipe(
-        tap(() => this.articleUpdates$.next()),
+        tap(() => {
+          this.articleUpdates$.next();
+          // Nos aseguramos de que no estamos editando el artículo que acabamos de actualizar
+          this.stopEditingArticle();
+        }),
         catchError(this.handleError<Iarticle>('updateArticle'))
       );
   }
 
   // Método para eliminar un artículo
-  deleteArticle(id: number): Observable<{}> {
-    return this.http.delete(`${this.urlArticle}articles/${id}`).pipe(
-      tap(() => this.articleUpdates$.next()),
-      catchError(this.handleError<{}>('deleteArticle'))
+  deleteArticle(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.urlArticle}articles/${id}`).pipe(
+      tap(() => {
+        this.articleUpdates$.next();
+        // Noa aseguramos de que no estamos editando el artículo que acabamos de eliminar
+        this.stopEditingArticle();
+      }),
+      catchError(this.handleError<void>('deleteArticle'))
     );
   }
-
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
       console.error(`${operation} failed: ${error.message}`);

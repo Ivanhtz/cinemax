@@ -20,6 +20,9 @@ import { ArticlesBackFormComponent } from './components/articles-back/articles-b
 import { UsersListBackComponent } from './components/users-back/users-list-back/users-list-back.component';
 import { MoviesListBackComponent } from './components/movies-back/movies-list-back/movies-list-back.component';
 import { ArticlesListBackComponent } from './components/articles-back/articles-list-back/articles-list-back.component';
+import { DialogContentComponent } from './components/dialog-content.component';
+import { CommentsBackComponent } from './components/comments-back/comments-back.component';
+import { CommentsListBackComponent } from './components/comments-back/comments-list-back/comments-list-back.component';
 
 
 @NgModule({
@@ -34,7 +37,10 @@ import { ArticlesListBackComponent } from './components/articles-back/articles-l
     ArticlesBackFormComponent,
     UsersListBackComponent,
     MoviesListBackComponent,
-    ArticlesListBackComponent
+    ArticlesListBackComponent,
+    DialogContentComponent,
+    CommentsBackComponent,
+    CommentsListBackComponent
   ],
   imports: [
     CommonModule,

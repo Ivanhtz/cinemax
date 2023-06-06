@@ -4,6 +4,7 @@ import { UsersBackComponent } from './components/users-back/users-back.component
 import { ArticlesBackComponent } from './components/articles-back/articles-back.component';
 import { MoviesBackComponent } from './components/movies-back/movies-back.component';
 import { BackendComponent } from './backend/backend.component';
+import { CommentsBackComponent } from './components/comments-back/comments-back.component';
 
 const routes: Routes = [
   { 
@@ -13,6 +14,7 @@ const routes: Routes = [
       { path: 'users', component: UsersBackComponent },
       { path: 'articles', component: ArticlesBackComponent },
       { path: 'movies', component: MoviesBackComponent },
+      { path: 'comments', component: CommentsBackComponent},
     ]
   },
 ];

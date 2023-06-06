@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>Comentarios filtrados</h1>
+
+  <!-- Lista de comentarios filtrados -->
+  <article class="comment-container">
+    <div class="comment-wrapper">
+      <!-- Lista de comentarios filtrados -->
+      <div class="comment-list">
+        <div *ngFor="let comment of newComments" class="comment-item">
+          <div class="comment-item__header">
+            <span class="comment-item__author">{{ comment?.name }}</span>
+          </div>
+          <p class="comment-item__content">{{ comment?.text }}</p>
+        </div>
+      </div>
+    </div>
+  </article>
+</div>

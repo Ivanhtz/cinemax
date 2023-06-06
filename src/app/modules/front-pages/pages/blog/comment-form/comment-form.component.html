@@ -1,0 +1,27 @@
+<form class="view-blog__form">
+  <div class="form__group">
+    <mat-form-field appearance="fill">
+      <mat-label>Nombre</mat-label>
+      <input matInput [(ngModel)]="nameComment" name="nameComment" required />
+    </mat-form-field>
+  </div>
+  <div class="form__group">
+    <mat-form-field appearance="fill">
+      <mat-label>Comentario</mat-label>
+      <textarea
+        matInput
+        [(ngModel)]="textComment"
+        name="textComment"
+        required
+      ></textarea>
+    </mat-form-field>
+  </div>
+  <button
+    mat-raised-button
+    color="primary"
+    type="submit"
+    (click)="addComment()"
+  >
+    Enviar
+  </button>
+</form>
