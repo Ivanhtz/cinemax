@@ -32,64 +32,19 @@ showCommentForm = false;
       let idArticle = parseInt(params.id);
       let response = this.articles.getArticleById(idArticle); 
       this.article = await response;
-    })
-
-
-    
-
-    this.filteredComments(); 
-
-
+    })  
+      
   }
 
-  
-  // Método para mostrar el formulario de comentarios
-  showForm(): void {
-    this.showCommentForm = true;
-  }
-  
-  //Método para añadir comentarios nuevos
-  async addComment(): Promise<void>{
-    let newComment = {
-      name: this.nameComment,
-      text: this.textComment,
-      articleId: this.articleId
+    // Método para mostrar el formulario de comentarios
+    showForm(): void {
+      this.showCommentForm = true;
     }
     
-    if (newComment.name === '' || newComment.text === ''){
-      alert ("Campos vacíos");
-      return; 
-    }else{
-      let response = await this.commentsService.postComment(newComment);
-      this.filteredComments(); 
-      this.nameComment = '';  // Borrar el campo de nombre
-      this.textComment = '';  // Borrar el campo de comentario
-    }
-    
-  }
 
-  async filteredComments(){
-    this.aRoute.params.subscribe(async(params:any) => {
-      this.articleId = parseInt(params.id)
-    })
-    
-    let resp = await this.commentsService.getAllComments(); 
-    this.comments = resp; 
-
-    let newResponse = this.comments.filter(value => value.articleId == this.articleId);
-    this.newComments = newResponse; 
-    console.log(this.newComments); 
-  }
+   
     
 }
 
 
 
-//   // Método para agregar un comentario a un artículo
-// async addComment(comment: string): Promise<void> {
-//   const articleId = this.article.id;
-//   await this.articles.addCommentToArticle(articleId, comment);
-//   // Actualizar el artículo para mostrar el nuevo comentario
-//   this.article = await this.articles.getArticleById(articleId);
-//   this.article.comments.push(comment); 
-// }

@@ -7,6 +7,9 @@ import { ViewBlogComponent } from './view-blog/view-blog.component';
 import { ArticleComponent } from './article/article.component';
 import { MaterialModule } from 'src/app/modules/material/material.module';
 import { FormsModule } from '@angular/forms';
+import { CommentFormComponent } from './comment-form/comment-form.component';
+import { CommentComponent } from './comment/comment.component';
+
 
 
 
@@ -15,6 +18,8 @@ import { FormsModule } from '@angular/forms';
     BlogListComponent,
     ViewBlogComponent,
     ArticleComponent,
+    CommentFormComponent,
+    CommentComponent
     
   ],
   imports: [
