@@ -82,6 +82,52 @@
     background-color: #1976d2;
   }
 
+  .comment-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .comment-wrapper {
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+  }
+  
+  .comment-list {
+    margin-top: 20px;
+  }
+  
+  .comment-item {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .comment-item__header {
+    margin-bottom: 5px;
+  }
+  
+  .comment-item__author {
+    font-weight: bold;
+  }
+  
+  .comment-item__content {
+    margin-top: 5px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 600px) {
+    .comment-wrapper {
+      padding: 10px;
+    }
+  
+    .comment-item {
+      padding: 5px;
+    }
+  }
+
 
 
 

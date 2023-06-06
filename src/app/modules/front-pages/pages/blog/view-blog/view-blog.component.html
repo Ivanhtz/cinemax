@@ -6,58 +6,70 @@
   <div class="article__content">
     <h1 class="article__title">{{ article?.title }}</h1>
     <p class="article__text">{{ article?.text }}</p>
-    <!-- <button (click)="showForm()" class="article__button-form">Comenta</button> -->
+    <button (click)="showForm()" class="article__button-form">Comenta</button>
     <button routerLink="/principal/principal/blog" class="article__button">
       Atrás
     </button>
 
-    <section class="comments">
-      <h2 class="comments__title">Comentarios</h2>
-      <ul class="comments__list">
-        <li *ngFor="let comment of comments" class="comments__item">
-          <div class="comment">
-            <p class="comment-text">{{ comment.text }}</p>
-            <p class="comment-author">By {{ comment.name }}</p>
-          </div>
-        </li>
-      </ul>
-    </section>
-  </div>
-</article>
-
-<!-- Formulario para agregar comentarios -->
-<!-- <form
-      *ngIf="showCommentForm"
-      (ngSubmit)="addComment(name.value + ': ' + comment.value)"
-      class="view-blog__form"
-    >
-      <mat-form-field appearance="fill" class="view-blog__form-field">
-        <mat-label>Nombre</mat-label>
-        <input matInput name="name" #name class="view-blog__form-input" />
-      </mat-form-field>
-      <mat-form-field appearance="fill" class="view-blog__form-field">
-        <mat-label>Comentario</mat-label>
-        <textarea
-          matInput
-          name="comment"
-          #comment
-          class="view-blog__form-textarea"
-        ></textarea>
-      </mat-form-field>
+    <form *ngIf="showCommentForm" class="view-blog__form">
+      <div class="form__group">
+        <mat-form-field appearance="fill">
+          <mat-label>Nombre</mat-label>
+          <input
+            matInput
+            [(ngModel)]="nameComment"
+            name="nameComment"
+            required
+          />
+        </mat-form-field>
+      </div>
+      <div class="form__group">
+        <mat-form-field appearance="fill">
+          <mat-label>Comentario</mat-label>
+          <textarea
+            matInput
+            [(ngModel)]="textComment"
+            name="textComment"
+            required
+          ></textarea>
+        </mat-form-field>
+      </div>
       <button
         mat-raised-button
         color="primary"
         type="submit"
-        class="view-blog__form-button"
+        (click)="addComment()"
       >
         Enviar
       </button>
     </form>
 
-    Lista de comentarios
+    <div class="container">
+      <h1>Comentarios filtrados</h1>
 
-    <ul class="view-blog__comments">
-      <li *ngFor="let comment of article?.comments" class="view-blog__comment">
-        {{ comment }}
-      </li>
-    </ul> -->
+      <!-- Lista de comentarios filtrados -->
+      <article class="comment-container">
+        <div class="comment-wrapper">
+          <!-- Lista de comentarios filtrados -->
+          <div class="comment-list">
+            <div *ngFor="let comment of newComments" class="comment-item">
+              <div class="comment-item__header">
+                <span class="comment-item__author">{{ comment?.name }}</span>
+              </div>
+              <p class="comment-item__content">{{ comment?.text }}</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- <form>
+  <label for="comment-text">Commentario</label>
+  <input type="text" name="commentText" [(ngModel)]="variableText" />
+  <input type="text" name="commentName" [(ngModel)]="variableNombre" />
+  <button type="button" (click)="addComment()">Añadir Comentario</button>
+</form>
+
+<button (click)="borrar()">Prueba</button> -->
+    </div>
+  </div>
+</article>
