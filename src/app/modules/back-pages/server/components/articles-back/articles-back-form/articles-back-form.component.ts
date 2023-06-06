@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Iarticle } from 'src/app/interfaces/iarticle.interface';
-import { MatSnackBar } from '@angular/material/snack-bar'; // Importa MatSnackBar aquí
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
+import { Iarticle } from 'src/app/interfaces/iarticle.interface';
 import { ArticlesService } from 'src/app/services/articles-service/articles.service';
 
 @Component({
@@ -10,45 +12,76 @@ import { ArticlesService } from 'src/app/services/articles-service/articles.serv
   templateUrl: './articles-back-form.component.html',
   styleUrls: ['./articles-back-form.component.scss'],
 })
-export class ArticlesBackFormComponent implements OnInit {
+export class ArticlesBackFormComponent implements OnInit, OnDestroy {
   articleForm: FormGroup;
   editingArticle: Iarticle;
   isEditing: boolean = false;
+  loading: boolean = false;
+  private destroy$ = new Subject<void>();
 
   constructor(
     private formBuilder: FormBuilder,
     private articlesService: ArticlesService,
-    private snackBar: MatSnackBar // Inyecta MatSnackBar aquí
+    private snackBar: MatSnackBar
   ) {
     this.editingArticle = this.initArticle();
     this.articleForm = this.initForm();
   }
 
   ngOnInit(): void {
-    this.articlesService.articleBeingEdited$.subscribe((article) => {
-      if (article) {
-        this.isEditing = true;
-        this.editingArticle = article;
-        this.articleForm = this.initForm(article);
-      } else {
-        this.isEditing = false;
-        this.editingArticle = this.initArticle();
-        this.articleForm = this.initForm();
-      }
-    });
+    this.articlesService.articleBeingEdited$
+      .pipe(takeUntil(this.destroy$))
+      .subscribe((article) => {
+        if (article) {
+          this.isEditing = true;
+          this.editingArticle = article;
+          this.articleForm = this.initForm(article);
+        } else {
+          this.isEditing = false;
+          this.editingArticle = this.initArticle();
+          this.articleForm = this.initForm();
+        }
+      });
   }
 
-  // Actualización del método initForm
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
+  }
+
   private initForm(article?: Iarticle): FormGroup {
     return this.formBuilder.group({
-      title: [article ? article.title : '', Validators.required],
-      image: [article ? article.image : '', Validators.required],
-      content: [article ? article.content : '', Validators.required],
-      text: [article ? article.text : '', Validators.required],
+      title: [
+        article ? article.title : '',
+        [
+          Validators.required,
+          Validators.minLength(5),
+          Validators.maxLength(50),
+        ],
+      ],
+      image: [
+        article ? article.image : '',
+        [Validators.required, Validators.pattern('https?://.+|/[^/]+')],
+      ],
+      content: [
+        article ? article.content : '',
+        [
+          Validators.required,
+          Validators.minLength(10),
+          Validators.maxLength(1000),
+        ],
+      ],
+      text: [
+        article ? article.text : '',
+        [
+          Validators.required,
+          Validators.minLength(10),
+          Validators.maxLength(1000),
+        ],
+      ],
     });
   }
 
-  // Actualización del método initArticle
   private initArticle(): Iarticle {
     return {
       id: 0,
@@ -60,6 +93,8 @@ export class ArticlesBackFormComponent implements OnInit {
   }
 
   onSubmit(): void {
+    this.loading = true; // Establece "loading" a true cuando comienza el envío
+
     const articleObservable = this.isEditing
       ? this.articlesService.updateArticle(
           this.editingArticle.id,
@@ -70,6 +105,7 @@ export class ArticlesBackFormComponent implements OnInit {
     const wasEditing = this.isEditing;
 
     articleObservable.subscribe(() => {
+      this.loading = false; // Establece "loading" a false cuando la operación asincrónica se completa
       this.articlesService.stopEditingArticle();
       this.articleForm.reset();
       this.editingArticle = this.initArticle();
@@ -89,3 +125,4 @@ export class ArticlesBackFormComponent implements OnInit {
     this.editingArticle = this.initArticle();
   }
 }
+

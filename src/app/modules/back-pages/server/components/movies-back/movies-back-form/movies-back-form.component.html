@@ -20,14 +20,14 @@
   </mat-form-field>
 
   <mat-form-field class="full-width">
-    <input matInput placeholder="Puntuación" formControlName="score">
+    <input matInput type="number" min="0" max="10" step="0.1" placeholder="Puntuación" formControlName="score">
     <mat-error *ngIf="movieForm.controls['score'].hasError('required')">
       Puntuación es <strong>requerida</strong>
     </mat-error>
   </mat-form-field>
 
   <mat-form-field class="full-width">
-    <input matInput placeholder="Año" formControlName="year">
+    <input matInput type="number" min="1880" max="{{currentYear}}" step="1" placeholder="Año" formControlName="year">
     <mat-error *ngIf="movieForm.controls['year'].hasError('required')">
       Año es <strong>requerido</strong>
     </mat-error>

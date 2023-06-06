@@ -25,3 +25,7 @@
 .col:last-child {
   margin-right: 0;
 }
+
+button:not(:last-child) {
+  margin-right: 10px;
+}

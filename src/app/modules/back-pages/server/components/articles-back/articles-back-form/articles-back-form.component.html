@@ -1,40 +1,49 @@
 <!-- articles-back-form.component.html -->
 
-<form [formGroup]="articleForm" (ngSubmit)="onSubmit()">
+<mat-card>
+  <form [formGroup]="articleForm" (ngSubmit)="onSubmit()">
 
-  <h2 *ngIf="isEditing">Editar artículo</h2>
-  <h2 *ngIf="!isEditing">Nuevo artículo</h2>
+    <h2 mat-card-title *ngIf="isEditing">Editar artículo</h2>
+    <h2 mat-card-title *ngIf="!isEditing">Nuevo artículo</h2>
 
-  <mat-form-field class="full-width">
-    <input matInput placeholder="Título" formControlName="title">
-    <mat-error *ngIf="articleForm.controls['title'].hasError('required')">
-      Título es <strong>requerido</strong>
-    </mat-error>
-  </mat-form-field>
+    <mat-card-content>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Título" formControlName="title">
+        <mat-error *ngIf="articleForm.controls['title'].hasError('required')">
+          Título es <strong>requerido</strong>
+        </mat-error>
+      </mat-form-field>
 
-  <mat-form-field class="full-width">
-    <input matInput placeholder="URL de imagen" formControlName="image">
-    <mat-error *ngIf="articleForm.controls['image'].hasError('required')">
-      URL de imagen es <strong>requerida</strong>
-    </mat-error>
-  </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="URL de imagen" formControlName="image">
+        <mat-error *ngIf="articleForm.controls['image'].hasError('required')">
+          URL de imagen es <strong>requerida</strong>
+        </mat-error>
+      </mat-form-field>
 
-  <mat-form-field class="full-width">
-    <textarea matInput placeholder="Contenido" formControlName="content"></textarea>
-    <mat-error *ngIf="articleForm.controls['content'].hasError('required')">
-      Contenido es <strong>requerido</strong>
-    </mat-error>
-  </mat-form-field>
+      <mat-form-field class="full-width">
+        <textarea matInput placeholder="Contenido" formControlName="content"></textarea>
+        <mat-error *ngIf="articleForm.controls['content'].hasError('required')">
+          Contenido es <strong>requerido</strong>
+        </mat-error>
+      </mat-form-field>
 
-  <!-- Aquí está tu nuevo campo de formulario "text" -->
-  <mat-form-field class="full-width">
-    <textarea matInput placeholder="Texto" formControlName="text"></textarea>
-    <mat-error *ngIf="articleForm.controls['text'].hasError('required')">
-      Texto es <strong>requerido</strong>
-    </mat-error>
-  </mat-form-field>
+      <!-- Aquí está tu nuevo campo de formulario "text" -->
+      <mat-form-field class="full-width">
+        <textarea matInput placeholder="Texto" formControlName="text"></textarea>
+        <mat-error *ngIf="articleForm.controls['text'].hasError('required')">
+          Texto es <strong>requerido</strong>
+        </mat-error>
+      </mat-form-field>
+    </mat-card-content>
 
-  <button type="button" mat-raised-button color="primary" (click)="onSubmit()">Guardar</button>
-  <button type="button" mat-raised-button color="warn" (click)="cancel()">Cancelar</button>
+    <mat-card-actions>
+      <button type="button" mat-raised-button color="primary" [disabled]="articleForm.invalid" (click)="onSubmit()">
+        Guardar
+        <mat-spinner diameter="20" *ngIf="loading"></mat-spinner>
+      </button>
+      <button type="button" mat-raised-button color="warn" (click)="cancel()">Cancelar</button>
+    </mat-card-actions>
 
-</form>
+  </form>
+</mat-card>
