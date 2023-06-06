@@ -10,6 +10,12 @@
       "password": "$2a$10$HZDWg4690X.DFYvmsXwhMeE1hKCDcSHvnefSilGpNihhImUlP1ghS",
       "createdAt": "2023-06-04T16:22:26.494Z",
       "id": 2
+    },
+    {
+      "email": "ivan3@gmail.com",
+      "password": "$2a$10$9i.jwNHxeqL3x1tlNPMV.Oku/880AIFVnnUmOgOLX063rOqfQwkmO",
+      "createdAt": "2023-06-06T09:13:34.440Z",
+      "id": 3
     }
   ],
   "films": [
@@ -501,23 +507,23 @@
     }
   ],
   "comments": [
-      {
-        "id": 1,
-        "name": "Juan",
-        "text": "Excelente artículo",
-        "articleId": 1
+    {
+      "id": 1,
+      "name": "Juan",
+      "text": "Excelente artículo",
+      "articleId": 1
     },
     {
-        "id": 2,
-        "name": "María",
-        "text": "Muy interesante",
-        "articleId": 1
+      "id": 2,
+      "name": "María",
+      "text": "Muy interesante",
+      "articleId": 1
     },
     {
-        "id": 3,
-        "name": "Pedro",
-        "text": "No estoy de acuerdo",
-        "articleId": 2
+      "id": 3,
+      "name": "Pedro",
+      "text": "No estoy de acuerdo",
+      "articleId": 2
     }
   ]
 }

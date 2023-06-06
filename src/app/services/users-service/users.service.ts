@@ -1,7 +1,15 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, Subject, tap, of, throwError, defer } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+import {
+  BehaviorSubject,
+  Observable,
+  Subject,
+  tap,
+  of,
+  throwError,
+  defer,
+} from 'rxjs';
+import { catchError, switchMap } from 'rxjs/operators';
 import { Iresponse } from 'src/app/interfaces/iresponse.interface';
 
 import { Iuser } from 'src/app/interfaces/iuser.interface';
@@ -49,15 +57,19 @@ export class UsersService {
       .pipe(catchError(this.handleError<Iuser>('getUser')));
   }
 
-  deleteUser(id: number): Observable<Iuser> {
-    return this.http.delete<any>(`${this.apiUrl}/users/${id}`).pipe(
-      tap(() => this.userUpdates$.next()),
-      catchError(this.handleError<any>('deleteUser'))
+  deleteUser(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}/users/${id}`).pipe(
+      tap(() => {
+        this.userUpdates$.next();
+        // Nos aseguramos de que no estamos editando el usuario que se acaba de eliminar
+        this.stopEditingUser();
+      }),
+      catchError(this.handleError<void>('deleteUser'))
     );
   }
 
   createUser(userData: any): Observable<Iuser> {
-    userData.createdAt = new Date(); // Agregue esta línea
+    userData.createdAt = new Date();
     return this.http.post<Iuser>(`${this.apiUrl}/users`, userData).pipe(
       tap(() => this.userUpdates$.next()),
       catchError(this.handleError<Iuser>('createUser'))
@@ -65,18 +77,31 @@ export class UsersService {
   }
 
   updateUser(id: number, userData: Iuser): Observable<Iuser> {
-    return this.http.put<Iuser>(`${this.apiUrl}/users/${id}`, userData).pipe(
-      tap(() => this.userUpdates$.next()),
+    return this.getUsers().pipe(
+      switchMap((users) => {
+        const emailExists = users.some(
+          (user) => user.email === userData.email && user.id !== id
+        );
+        if (emailExists) {
+          return throwError(
+            () => new Error('Correo electrónico ya existente.')
+          );
+        } else {
+          return this.http
+            .patch<Iuser>(`${this.apiUrl}/users/${id}`, userData)
+            .pipe(
+              tap(() => this.userUpdates$.next()),
+              catchError(this.handleError<Iuser>('updateUser'))
+            );
+        }
+      }),
       catchError(this.handleError<Iuser>('updateUser'))
     );
   }
+
   private handleError<T>(operation = 'operation') {
     return (error: any): Observable<T> => {
       console.error(`${operation} failed: ${error.message}`);
-  
-      // Handle the error here (e.g. show a message to the user)
-  
-      // Re-throw the error
       return throwError(() => error);
     };
   }

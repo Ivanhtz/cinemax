@@ -1,8 +1,9 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
-import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar'; 
 import { Iarticle } from 'src/app/interfaces/iarticle.interface';
-
+import { DialogContentComponent } from '../../dialog-content.component'; 
 import { ArticlesService } from 'src/app/services/articles-service/articles.service';
 
 @Component({
@@ -18,16 +19,26 @@ export class ArticlesListBackComponent implements OnInit {
 
   constructor(
     private articlesService: ArticlesService,
-    private router: Router
+    public dialog: MatDialog,
+    private snackBar: MatSnackBar 
   ) {}
 
   deleteArticle(id: number): void {
-    if (confirm('¿Está seguro de que desea eliminar este artículo?')) {
-      this.articlesService.deleteArticle(id).subscribe(() => {
-        alert('Artículo eliminado exitosamente');
-        // Más acciones aquí
-      });
-    }
+    const dialogRef = this.dialog.open(DialogContentComponent, {
+      data: { message: '¿Está seguro de que desea eliminar este artículo?' },
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result === 'confirm') {
+        this.articlesService.deleteArticle(id).subscribe(() => {
+          this.snackBar.open(
+            `Artículo con ID ${id} eliminado exitosamente`,
+            'Cerrar',
+            { duration: 5000 }
+          );
+        });
+      }
+    });
   }
 
   editArticle(id: number): void {
@@ -40,6 +51,6 @@ export class ArticlesListBackComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log('DataSource:', this.dataSource); // Log to check dataSource
+    console.log('DataSource:', this.dataSource); 
   }
 }

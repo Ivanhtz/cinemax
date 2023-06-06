@@ -4,16 +4,16 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { map } from 'rxjs/operators';
 import { Observable, of as observableOf, merge } from 'rxjs';
-import { UserDto } from 'src/app/services/users-service/user-dto/user.dto';
-import { UserService } from 'src/app/services/users-service/users.service';
+import { Iuser } from 'src/app/interfaces/iuser.interface';
+import { UsersService } from 'src/app/services/users-service/users.service';
 
-export class UserDataSource extends DataSource<UserDto> {
-  dataSource: UserDto[] = [];
+export class UserDataSource extends DataSource<Iuser> {
+  dataSource: Iuser[] = [];
   paginator: MatPaginator | undefined;
   sort: MatSort | undefined;
-  data: UserDto[] = [];
+  data: Iuser[] = [];
 
-  constructor(private userService: UserService) {
+  constructor(private userService: UsersService) {
     super();
     this.loadData();
   }
@@ -25,7 +25,7 @@ export class UserDataSource extends DataSource<UserDto> {
     });
   }
 
-  connect(): Observable<UserDto[]> {
+  connect(): Observable<Iuser[]> {
     if (this.paginator && this.sort) {
       return merge(
         observableOf(this.data),
@@ -45,7 +45,7 @@ export class UserDataSource extends DataSource<UserDto> {
 
   disconnect(): void {}
 
-  private getPagedData(data: UserDto[]): UserDto[] {
+  private getPagedData(data: Iuser[]): Iuser[] {
     if (this.paginator) {
       const startIndex = this.paginator.pageIndex * this.paginator.pageSize;
       return data.splice(startIndex, this.paginator.pageSize);
@@ -54,7 +54,7 @@ export class UserDataSource extends DataSource<UserDto> {
     }
   }
 
-  private getSortedData(data: UserDto[]): UserDto[] {
+  private getSortedData(data: Iuser[]): Iuser[] {
     if (!this.sort || !this.sort.active || this.sort.direction === '') {
       return data;
     }

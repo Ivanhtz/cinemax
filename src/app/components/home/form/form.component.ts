@@ -68,8 +68,9 @@ export class FormComponent implements OnInit, OnDestroy {
       });
     }
   }
-  goBack() {
-    this.router.navigate(['']); // reemplaza '/ruta-anterior' con la ruta a la que quieres ir
+  goBack(event: Event) {
+    event.preventDefault();
+    this.router.navigate(['']);
   }
 
   ngOnDestroy() {

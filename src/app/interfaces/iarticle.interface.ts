@@ -3,4 +3,7 @@ export interface Iarticle {
     title: string;
     image: string;
     content: string;
-}
+    text: string;  
+  }
+  
+
