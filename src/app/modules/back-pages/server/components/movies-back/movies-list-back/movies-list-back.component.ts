@@ -52,6 +52,10 @@ export class MoviesListBackComponent implements OnInit {
     }
   }
   ngOnInit(): void {
-    console.log('DataSource:', this.dataSource); 
+    console.log('DataSource:', this.dataSource);
+  }
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 }

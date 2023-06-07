@@ -16,12 +16,14 @@ export class MoviesBackFormComponent implements OnInit, OnDestroy {
   editingMovie: Ifilm;
   isEditing: boolean = false;
   private unsubscribe$ = new Subject<void>();
+  currentYear: number;
 
   constructor(
     private formBuilder: FormBuilder,
     private moviesService: MoviesService,
-    private snackBar: MatSnackBar // Inyecta MatSnackBar aquí
+    private snackBar: MatSnackBar 
   ) {
+    this.currentYear = new Date().getFullYear();
     this.editingMovie = this.getEmptyMovie();
     this.movieForm = this.initForm();
   }
@@ -40,6 +42,7 @@ export class MoviesBackFormComponent implements OnInit, OnDestroy {
           this.movieForm = this.initForm();
         }
       });
+      this.currentYear = new Date().getFullYear();
   }
 
   ngOnDestroy(): void {
@@ -63,24 +66,62 @@ export class MoviesBackFormComponent implements OnInit, OnDestroy {
 
   private initForm(movie?: Ifilm): FormGroup {
     return this.formBuilder.group({
-      title: [movie ? movie.title : '', Validators.required],
-      director: [movie ? movie.director : '', Validators.required],
+      title: [
+        movie ? movie.title : '',
+        [
+          Validators.required,
+          Validators.minLength(2),
+          Validators.maxLength(100),
+        ],
+      ],
+      director: [
+        movie ? movie.director : '',
+        [
+          Validators.required,
+          Validators.minLength(2),
+          Validators.maxLength(50),
+        ],
+      ],
       score: [
         movie ? movie.score : '',
         [Validators.required, Validators.min(0), Validators.max(10)],
       ],
       year: [
-        movie ? movie.year : '',
+        movie ? movie.year : null,
         [
           Validators.required,
           Validators.min(1880),
           Validators.max(new Date().getFullYear()),
         ],
       ],
-      genre: [movie ? movie.genre : '', Validators.required],
-      abstract: [movie ? movie.abstract : '', Validators.required],
-      img: [movie ? movie.img : '', Validators.required],
-      text: [movie ? movie.text : '', Validators.required],
+      genre: [
+        movie ? movie.genre : '',
+        [
+          Validators.required,
+          Validators.minLength(2),
+          Validators.maxLength(50),
+        ],
+      ],
+      abstract: [
+        movie ? movie.abstract : '',
+        [
+          Validators.required,
+          Validators.minLength(10),
+          Validators.maxLength(500),
+        ],
+      ],
+      img: [
+        movie ? movie.img : '',
+        [Validators.required, Validators.pattern('https?://.+|/[^/]+')],
+      ],
+      text: [
+        movie ? movie.text : '',
+        [
+          Validators.required,
+          Validators.minLength(10),
+          Validators.maxLength(1000),
+        ],
+      ],
     });
   }
 

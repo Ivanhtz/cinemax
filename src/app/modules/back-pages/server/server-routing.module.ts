@@ -11,6 +11,7 @@ const routes: Routes = [
     path: '', 
     component: BackendComponent, 
     children: [
+      { path: '', redirectTo: 'movies', pathMatch: 'full' },
       { path: 'users', component: UsersBackComponent },
       { path: 'articles', component: ArticlesBackComponent },
       { path: 'movies', component: MoviesBackComponent },
@@ -18,6 +19,7 @@ const routes: Routes = [
     ]
   },
 ];
+
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

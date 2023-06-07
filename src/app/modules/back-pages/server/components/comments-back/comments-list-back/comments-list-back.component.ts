@@ -7,16 +7,16 @@ import { IComment } from 'src/app/interfaces/icomment.interface';
 import { CommentsService } from 'src/app/services/comments-service/comments.service';
 import { DialogContentComponent } from '../../dialog-content.component';
 
-
 @Component({
   selector: 'app-comments-list-back',
   templateUrl: './comments-list-back.component.html',
-  styleUrls: ['./comments-list-back.component.scss']
+  styleUrls: ['./comments-list-back.component.scss'],
 })
-export class CommentsListBackComponent implements OnInit {
-  displayedColumns: string[] = ['id', 'name', 'delete'];
+export class CommentsListBackComponent {
+  displayedColumns: string[] = ['id', 'name', 'text', 'delete'];
 
-  @Input() dataSource: MatTableDataSource<IComment> = new MatTableDataSource<IComment>();
+  @Input() dataSource: MatTableDataSource<IComment> =
+    new MatTableDataSource<IComment>();
 
   constructor(
     private commentsService: CommentsService,
@@ -24,15 +24,11 @@ export class CommentsListBackComponent implements OnInit {
     private snackBar: MatSnackBar
   ) {}
 
-  ngOnInit(): void {
-    console.log('DataSource:', this.dataSource);
-  }
-
   deleteComment(id: number): void {
     const dialogRef = this.dialog.open(DialogContentComponent, {
       data: { message: '¿Está seguro de que desea eliminar este comentario?' },
     });
-  
+
     dialogRef.afterClosed().subscribe((result) => {
       if (result === 'confirm') {
         this.commentsService.deleteComment(id).subscribe(() => {
@@ -41,7 +37,7 @@ export class CommentsListBackComponent implements OnInit {
             'Cerrar',
             { duration: 5000 }
           );
-  
+
           // Actualizar la fuente de datos de la tabla
           this.commentsService.refreshComments().subscribe((comments) => {
             this.dataSource = new MatTableDataSource<IComment>(comments);
