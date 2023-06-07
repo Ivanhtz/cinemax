@@ -12,11 +12,10 @@ import { DialogContentComponent } from '../../dialog-content.component';
   templateUrl: './users-list-back.component.html',
   styleUrls: ['./users-list-back.component.scss'],
 })
-export class UsersListBackComponent implements OnInit {
+export class UsersListBackComponent {
   displayedColumns: string[] = [
     'id',
     'email',
-    'password',
     'createdAt',
     'edit',
     'delete',
@@ -52,14 +51,9 @@ export class UsersListBackComponent implements OnInit {
 
   editUser(id: number): void {
     if (id) {
-      console.log(`Editing user with ID: ${id}`);
       this.usersService.getUser(id).subscribe((user) => {
         this.usersService.startEditingUser(user);
       });
     }
-  }
-
-  ngOnInit(): void {
-    console.log('DataSource:', this.dataSource);
   }
 }

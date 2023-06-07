@@ -1,0 +1,20 @@
+.createdAt::before {
+    content: attr(data-date);
+    display: none;
+  }
+
+  .long-email {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100px;
+}
+  
+  @media screen and (max-width: 768px) {
+    .createdAt {
+      display: none;
+    }
+    .createdAt::before {
+      display: block;
+    }
+  }
