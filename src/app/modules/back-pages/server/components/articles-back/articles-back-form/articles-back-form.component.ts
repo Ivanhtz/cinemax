@@ -55,7 +55,7 @@ export class ArticlesBackFormComponent implements OnInit, OnDestroy {
         [
           Validators.required,
           Validators.minLength(5),
-          Validators.maxLength(50),
+          Validators.maxLength(150),
         ],
       ],
       image: [
@@ -75,7 +75,7 @@ export class ArticlesBackFormComponent implements OnInit, OnDestroy {
         [
           Validators.required,
           Validators.minLength(10),
-          Validators.maxLength(1000),
+          Validators.maxLength(3000),
         ],
       ],
     });

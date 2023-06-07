@@ -24,6 +24,7 @@ import { ColorTextDirective } from './directives/colorText.directive';
     FilmsRoutingModule,
     MaterialModule,
     FormsModule
+
   ],
   exports: [
     FilmsListComponent,

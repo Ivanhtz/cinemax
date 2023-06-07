@@ -26,7 +26,7 @@ import { MatCardModule } from '@angular/material/card';
 import { UsersService } from './services/users-service/users.service';
 
 import { FormComponent } from './components/home/form/form.component';
-import { Token } from './interceptors/interceptor.interceptor';
+import { Token } from './interceptors/token.interceptor';
 import { AuthsService } from './services/auths-service/auths.service';
 import { MoviesService } from './services/movies-service/movies.service';
 

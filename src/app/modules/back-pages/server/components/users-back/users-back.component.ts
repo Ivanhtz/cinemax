@@ -17,15 +17,15 @@ export class UsersBackComponent implements AfterViewInit {
 
   users: MatTableDataSource<Iuser> = new MatTableDataSource<Iuser>();
 
-  constructor(private userService: UsersService) {}
+  constructor(private usersService: UsersService) {}
 
   ngAfterViewInit(): void {
     // Primero, obtener los usuarios iniciales
     this.getUsersAndSetData();
 
     // Luego, cada vez que userUpdates$ emite, obtener los usuarios de nuevo
-    this.userService.userUpdates$
-      .pipe(switchMap(() => this.userService.getUsers()))
+    this.usersService.userUpdates$
+      .pipe(switchMap(() => this.usersService.getUsers()))
       .subscribe((users) => {
         this.users.data = users;
         if (this.paginator) {
@@ -35,7 +35,7 @@ export class UsersBackComponent implements AfterViewInit {
   }
 
   private getUsersAndSetData(): void {
-    this.userService.getUsers().subscribe((users) => {
+    this.usersService.getUsers().subscribe((users) => {
       this.users.data = users;
       if (this.paginator) {
         this.users.paginator = this.paginator;

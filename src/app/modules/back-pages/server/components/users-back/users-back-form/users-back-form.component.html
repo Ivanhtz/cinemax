@@ -8,18 +8,23 @@
   <mat-form-field class="full-width">
     <input matInput placeholder="Email" formControlName="email">
     <mat-error *ngIf="addressForm.controls['email'].hasError('required')">
-      Email is <strong>required</strong>
+      El <strong>correo</strong> es requerido
+    </mat-error>
+    <mat-error *ngIf="addressForm.controls['email'].hasError('email')">
+      El <strong>correo</strong> no es válido
     </mat-error>
   </mat-form-field>
 
   <mat-form-field class="full-width">
     <input matInput placeholder="Password" formControlName="password">
     <mat-error *ngIf="addressForm.controls['password'].hasError('required')">
-      Password is <strong>required</strong>
+      La <strong>contraseña</strong> es requerida
+    </mat-error>
+    <mat-error *ngIf="addressForm.controls['password'].hasError('minlength')">
+      La <strong>contraseña</strong> debe tener al menos 6 caracteres
     </mat-error>
   </mat-form-field>
-
-  <button type="button" mat-raised-button color="primary" (click)="onSubmit()">Guardar</button>
+  <button type="button" mat-raised-button color="primary" (click)="onSubmit()" [disabled]="addressForm.invalid">Guardar</button>
   <button type="button" mat-raised-button color="warn" (click)="cancel()">Cancelar</button>
 
 </form>

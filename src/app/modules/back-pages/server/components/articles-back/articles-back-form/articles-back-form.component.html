@@ -16,7 +16,7 @@
         Título debe tener al menos 5 caracteres.
       </mat-error>
       <mat-error *ngIf="articleForm.controls['title'].hasError('maxlength')">
-        Título no debe exceder 50 caracteres.
+        Título no debe exceder 150 caracteres.
       </mat-error>
     </mat-form-field>
 
@@ -41,7 +41,7 @@
         Contenido debe tener al menos 10 caracteres.
       </mat-error>
       <mat-error *ngIf="articleForm.controls['content'].hasError('maxlength')">
-        Contenido no debe exceder 1000 caracteres.
+        Contenido no debe exceder 3000 caracteres.
       </mat-error>
     </mat-form-field>
 

@@ -21,8 +21,19 @@ export class UsersBackFormComponent implements OnInit {
   ) {
     this.editingUser = { id: 0, email: '', password: '' };
     this.addressForm = this.formBuilder.group({
-      email: [this.editingUser.email, Validators.required],
-      password: [this.editingUser.password, Validators.required],
+      email: [
+        this.editingUser.email,
+        [
+          Validators.required,
+          Validators.pattern(
+            '^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$'
+          ),
+        ],
+      ],
+      password: [
+        this.editingUser.password,
+        [Validators.required, Validators.minLength(6)],
+      ],
     });
   }
 
@@ -36,8 +47,11 @@ export class UsersBackFormComponent implements OnInit {
 
   createForm(user: Iuser): void {
     this.addressForm = this.formBuilder.group({
-      email: [user.email || '', Validators.required],
-      password: [user.password || '', Validators.required],
+      email: [this.editingUser.email, [Validators.required, Validators.email]],
+      password: [
+        this.editingUser.password,
+        [Validators.required, Validators.minLength(6)],
+      ],
     });
   }
 
@@ -48,23 +62,23 @@ export class UsersBackFormComponent implements OnInit {
           this.addressForm.value
         )
       : this.usersService.createUser(this.addressForm.value);
-  
-    const wasEditing = this.isEditing; 
-  
-    userObservable.subscribe(() => {
-      this.usersService.stopEditingUser();
-      this.snackBar.open(
-        `Usuario ${wasEditing ? 'editado' : 'creado'} exitosamente`,
-        'Cerrar',
-        { duration: 5000 }
-      );
-    },
-    (error) => { // Aquí se captura el error
-      this.snackBar.open(
-        `Error: ${error.message}`,
-        'Cerrar',
-        { duration: 5000 }
-      );
+
+    const wasEditing = this.isEditing;
+
+    userObservable.subscribe({
+      next: () => {
+        this.usersService.stopEditingUser();
+        this.snackBar.open(
+          `Usuario ${wasEditing ? 'editado' : 'creado'} exitosamente`,
+          'Cerrar',
+          { duration: 5000 }
+        );
+      },
+      error: (error) => {
+        this.snackBar.open(`Error: ${error.message}`, 'Cerrar', {
+          duration: 5000,
+        });
+      },
     });
   }
   cancel(): void {
