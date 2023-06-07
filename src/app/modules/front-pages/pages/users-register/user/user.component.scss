@@ -7,3 +7,20 @@
         color: rgb(240, 224, 224);
     }
 }
+
+.user-status-circle {
+    float: right;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.active-status {
+    background-color: green;
+}
+
+.inactive-status {
+    background-color: red;
+}

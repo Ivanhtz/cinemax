@@ -8,3 +8,33 @@ header {
     }
 }
 
+.filter-bar {
+    display: flex;
+    align-items: center;
+    background-color: #cccccc;
+    padding: 10px;
+    border-radius: 8px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.filter-bar label {
+    color: white;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.filter-bar select {
+    padding: 6px;
+    border-radius: 4px;
+    background-color: white;
+    color: #663399;
+    font-size: 14px;
+    border: none;
+    outline: none;
+}
+
+.filter-bar select option {
+    background-color: white;
+    color: #663399;
+}

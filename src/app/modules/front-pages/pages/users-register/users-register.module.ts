@@ -7,13 +7,15 @@ import { UsersListComponent } from './users-list/users-list.component';
 import { ViewUserComponent } from './view-user/view-user.component';
 import { FormsModule } from '@angular/forms';
 import { MaterialModule } from 'src/app/modules/material/material.module';
+import { UserStatusPipe } from './pipes/user-status.pipe';
 
 
 @NgModule({
   declarations: [
     UserComponent,
     UsersListComponent,
-    ViewUserComponent
+    ViewUserComponent,
+    UserStatusPipe
   ],
   imports: [
     CommonModule,
