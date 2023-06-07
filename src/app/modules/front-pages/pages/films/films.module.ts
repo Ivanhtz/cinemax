@@ -7,13 +7,15 @@ import { FilmComponent } from './film/film.component';
 import { ViewFilmComponent } from './view-film/view-film.component';
 import { MaterialModule } from 'src/app/modules/material/material.module';
 import { FormsModule } from '@angular/forms';
+import { AbstractPipe } from './pipes/abstract.pipe';
 
 
 @NgModule({
   declarations: [
     FilmsListComponent,
     FilmComponent,
-    ViewFilmComponent
+    ViewFilmComponent,
+    AbstractPipe
   ],
   imports: [
     CommonModule,
