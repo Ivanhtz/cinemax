@@ -10,8 +10,8 @@ import { MatPaginator, PageEvent } from '@angular/material/paginator';
 })
 export class BlogListComponent{
   @ViewChild(MatPaginator) paginator ?: MatPaginator;
-  pageSize = 6; 
-  pageIndex = 0; 
+  pageSize = 6; //número de artículos por página
+  pageIndex = 0; //índice en el que empieza
   arrArticles: Iarticle[]=[] ; 
   
 
@@ -19,15 +19,13 @@ export class BlogListComponent{
   constructor(private articlesService: ArticlesService ){}
 
   async ngOnInit(): Promise<void>{
-   let response = await this.articlesService.getArticles(); 
-   
+   let response = await this.articlesService.getArticles();   
    this.arrArticles = response; 
   }
 
+  //Método para controlar el paginador
   handlePageChange(event: PageEvent) {
     this.pageSize = event.pageSize;
     this.pageIndex = event.pageIndex;
   }
-
-
 }

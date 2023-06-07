@@ -10,7 +10,7 @@ export class CommentsService {
   private urlComments: string = 'http://localhost:3000/';
   commentAdded = new Subject<void>();
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   //Método para obtener todos los comentarios
   getAllComments(): Promise<IComment[]> {
@@ -42,4 +42,3 @@ export class CommentsService {
     };
   }
 }
-

@@ -16,17 +16,13 @@ export class CommentFormComponent {
   textComment: string = '';
   nameComment: string = ''; 
   articleId: number = 0;
-
-   
   
   constructor(private articles: ArticlesService, private commentsService:CommentsService, private aRoute: ActivatedRoute){ }
-
 
   async ngOnInit(): Promise <void> {
     this.filteredComments(); 
     this.commentsService.commentAdded.subscribe(() => this.filteredComments());
   }
-
 
   //Método para añadir comentarios nuevos
   async addComment(): Promise<void>{
@@ -56,7 +52,6 @@ export class CommentFormComponent {
     this.comments = resp; 
 
     let newResponse = this.comments.filter(value => value.articleId == this.articleId);
-    this.newComments = newResponse; 
-    console.log(this.newComments); 
+    this.newComments = newResponse;      
   }
 }
