@@ -1,1 +1,40 @@
-<p>view-user works!</p>
+<main
+  class="container my-5 my-md-0 vh-md-100 d-flex align-items-center justify-content-center"
+>
+  <div
+    class="card overflow-hidden border-0 rounded-3 flex-md-row align-items-center mt-5"
+  >
+    <div class="bg-primary order-md-2 flex-md-grow-1 w-100">
+      <picture>
+        <img
+          [src]="user?.img"
+          class="card-img img-fluid rounded-start"
+          alt="Imagen del usuario"
+        />
+      </picture>
+    </div>
+    <section class="order-md-1 flex-md-grow-1 w-100">
+      <div class="card-body text-center text-md-start">
+        <h1 class="card-title h2 mb-4">{{ user?.name }}</h1>
+        <p class="card-text mb-4">
+          Cuenta creada el {{ user?.createdAt | date : "dd/MM/yyyy" }}
+        </p>
+        <div class="row justify-content-center mt-4">
+          <span
+            class="p-2 badge bg-success {{ user?.active ? '' : 'bg-danger' }}"
+            >{{ user?.active ? "Activo" : "Inactivo" }}</span
+          >
+        </div>
+        <div class="row justify-content-center mt-5">
+          <button
+            mat-raised-button
+            color="primary"
+            routerLink="/principal/users/"
+          >
+            Volver
+          </button>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>

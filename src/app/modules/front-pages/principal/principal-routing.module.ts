@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PrincipalComponent } from './principal.component';
 import { ViewFilmComponent } from '../pages/films/view-film/view-film.component';
 import { ViewBlogComponent } from '../pages/blog/view-blog/view-blog.component';
+import { ViewUserComponent } from '../pages/users-register/view-user/view-user.component';
 
 
 const routes: Routes = [
@@ -14,6 +15,8 @@ const routes: Routes = [
       { path: 'blog', loadChildren: () => import('../pages/blog/blog.module').then(m => m.BlogModule) },
       { path: 'films/:id', component: ViewFilmComponent },
       { path: 'blog/:id', component: ViewBlogComponent},
+      { path: 'users/:id', component: ViewUserComponent},
+      { path: 'users', loadChildren: () => import('../pages/users-register/users-register.module').then(m => m.UsersRegisterModule)},
       { path: 'about', loadChildren: () => import('../pages/about/about.module').then(m => m.AboutModule) },
       { path: 'contact', loadChildren: () => import('../pages/contact-form/contact-form.module').then(m => m.ContactFormModule) }
     ]

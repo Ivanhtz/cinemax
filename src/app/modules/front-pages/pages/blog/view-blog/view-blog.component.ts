@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
-import { async } from '@angular/core/testing';
 import { ActivatedRoute } from '@angular/router';
-import { IComment } from 'src/app/interfaces/icomment.interface';
 import { ArticlesService } from 'src/app/services/articles-service/articles.service';
-import { CommentsService } from 'src/app/services/comments-service/comments.service';
+
 
 @Component({
   selector: 'app-view-blog',
@@ -13,19 +11,16 @@ import { CommentsService } from 'src/app/services/comments-service/comments.serv
 export class ViewBlogComponent {
 
   article !: any; 
-  comments : IComment[]= [];
-  newComments:IComment[]=[]; 
-  textComment: string = '';
-  nameComment: string = ''; 
-  articleId: number = 0;  
 
-  constructor(private articles: ArticlesService, private commentsService:CommentsService, private aRoute: ActivatedRoute){ }
+
+  constructor(private articles: ArticlesService, private aRoute: ActivatedRoute){ }
 
   async ngOnInit(): Promise <void> {
     this.aRoute.params.subscribe(async (params: any) =>{
       let idArticle = parseInt(params.id);
       let response = this.articles.getArticleById(idArticle); 
       this.article = await response;
+      console.log(this.article);
     })         
   }  
 }
