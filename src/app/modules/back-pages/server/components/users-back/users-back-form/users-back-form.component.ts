@@ -19,21 +19,41 @@ export class UsersBackFormComponent implements OnInit {
     private usersService: UsersService,
     private snackBar: MatSnackBar
   ) {
-    this.editingUser = { id: 0, email: '', password: '' };
+    this.editingUser = {
+      id: 0,
+      email: '',
+      password: '',
+      name: '',
+      img: '',
+      active: false,
+    };
     this.addressForm = this.formBuilder.group({
       email: [
         this.editingUser.email,
-        [
-          Validators.required,
-          Validators.pattern(
-            '^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$'
-          ),
-        ],
+        [Validators.required, Validators.pattern('https?://.+|/[^/]+')],
       ],
       password: [
         this.editingUser.password,
         [Validators.required, Validators.minLength(6)],
       ],
+      name: [
+        this.editingUser.name,
+        [
+          Validators.required,
+          Validators.minLength(2),
+          Validators.maxLength(50),
+        ],
+      ],
+      img: [
+        this.editingUser.img,
+        [
+          Validators.required,
+          Validators.pattern(
+            'https?://.+|/[^/]+'
+          ),
+        ],
+      ],
+      active: [this.editingUser.active],
     });
   }
 
@@ -47,11 +67,26 @@ export class UsersBackFormComponent implements OnInit {
 
   createForm(user: Iuser): void {
     this.addressForm = this.formBuilder.group({
-      email: [this.editingUser.email, [Validators.required, Validators.email]],
-      password: [
-        this.editingUser.password,
-        [Validators.required, Validators.minLength(6)],
+      email: [user.email, [Validators.required, Validators.email]],
+      password: [user.password, [Validators.required, Validators.minLength(6)]],
+      name: [
+        user.name,
+        [
+          Validators.required,
+          Validators.minLength(2),
+          Validators.maxLength(50),
+        ],
       ],
+      img: [
+        this.editingUser.img,
+        [
+          Validators.required,
+          Validators.pattern(
+            '^(https?://)?([da-z.-]+).([a-z.]{2,6})([/w .-]*)*/?$'
+          ),
+        ],
+      ],
+      active: [user.active],
     });
   }
 
