@@ -8,7 +8,7 @@ import { ViewBlogComponent } from '../pages/blog/view-blog/view-blog.component';
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'principal' },
   {
-    path: 'principal', component: PrincipalComponent, children: [
+    path: '', component: PrincipalComponent, children: [
       { path: '', pathMatch: 'full', redirectTo: 'films' },
       { path: 'films', loadChildren: () => import('../pages/films/films.module').then(m => m.FilmsModule) },
       { path: 'blog', loadChildren: () => import('../pages/blog/blog.module').then(m => m.BlogModule) },

@@ -28,7 +28,6 @@ export class CommentsService {
   }
 
   //Método para obtener los comentarios de la base de datos
-
   getComments(): Observable<IComment[]> {
     const url = `${this.urlComments}comments`;
     return this.http.get<IComment[]>(url);

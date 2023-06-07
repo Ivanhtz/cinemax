@@ -5,7 +5,11 @@
     <p appResaltar>{{ article.content }}</p>
     <div class="d-flex justify-content-between align-items-center">
       <div class="btn-group">
-        <button mat-raised-button color="accent" routerLink="/principal/principal/blog/{{ article.id }}">
+        <button
+          mat-raised-button
+          color="accent"
+          routerLink="/principal/blog/{{ article.id }}"
+        >
           Leer más
         </button>
       </div>
