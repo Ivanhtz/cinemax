@@ -11,6 +11,7 @@ import { CommentFormComponent } from './comment-form/comment-form.component';
 import { CommentComponent } from './comment/comment.component';
 import { AddIconPipe } from './pipes/add-icon.pipe';
 import { ResaltarDirective } from './directives/resaltar.directive';
+import { LimitCharactersPipe } from './pipes/limit-characters.pipe';
 
 
 
@@ -23,7 +24,8 @@ import { ResaltarDirective } from './directives/resaltar.directive';
     CommentFormComponent,
     CommentComponent,
     AddIconPipe,
-    ResaltarDirective
+    ResaltarDirective,
+    LimitCharactersPipe
 
   ],
   imports: [
