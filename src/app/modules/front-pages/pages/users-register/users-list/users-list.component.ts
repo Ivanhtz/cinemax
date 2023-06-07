@@ -8,10 +8,10 @@ import { UsersService } from 'src/app/services/users-service/users.service';
   styleUrls: ['./users-list.component.scss']
 })
 export class UsersListComponent {
-  
+
   arrUsers: Iuser[] = [];
-  
-  constructor (private usersService:UsersService){ }
+
+  constructor(private usersService: UsersService) { }
 
   ngOnInit() {
     this.usersService.getUsers()

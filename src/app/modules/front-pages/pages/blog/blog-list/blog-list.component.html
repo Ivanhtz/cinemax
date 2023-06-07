@@ -10,9 +10,7 @@
             *ngFor="
               let article of arrArticles.slice(
                 pageIndex * pageSize,
-                (pageIndex + 1) * pageSize
-              )
-            "
+                (pageIndex + 1) * pageSize )"
             class="col-12 mb-3"
           >
             <app-article [article]="article"></app-article>

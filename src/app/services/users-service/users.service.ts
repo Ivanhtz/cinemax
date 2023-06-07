@@ -1,13 +1,11 @@
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import {
   BehaviorSubject,
   Observable,
   Subject,
   tap,
-  of,
-  throwError,
-  defer,
+  throwError
 } from 'rxjs';
 import { catchError, switchMap } from 'rxjs/operators';
 import { Iresponse } from 'src/app/interfaces/iresponse.interface';

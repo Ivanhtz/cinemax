@@ -36,16 +36,12 @@ export class FormComponent implements OnInit, OnDestroy {
     if (this.loginForm.valid) {
       this.subscription = this.users.login(this.loginForm.value).subscribe({
         next: (data) => {
-          console.log(data);
           if (data && data.accessToken) {
             this.authsService.saveToken(data.accessToken);
             this.router.navigate(['/back']);
           }
         },
         error: (error) => {
-          // Imprime el objeto de error completo en la consola
-          console.log('Error completo:', error);
-
           let status = error.status || (error.error && error.error.status);
           switch (status) {
             case 400:

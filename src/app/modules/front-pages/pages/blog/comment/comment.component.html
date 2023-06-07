@@ -2,30 +2,27 @@
   <article class="comment-container">
     <div class="comment-wrapper">
       <div class="comment-list">
-        <div
-          *ngFor="
+        <div *ngFor="
             let comment of newComments.slice(
               pageIndex * pageSize,
               (pageIndex + 1) * pageSize
             )
-          "
-          class="comment-item"
-        >
+          " class="comment-item">
           <div class="comment-item__header">
-            <span class="comment-item__author">{{ comment?.name }}</span>
+            <span class="comment-item__author">{{ comment?.name | addIcon }}</span>
           </div>
           <p style="color: green" class="comment-item__content">
-            {{ comment?.text | addIcon }}
+            {{ comment?.text | limitCharacters }}
           </p>
         </div>
       </div>
     </div>
   </article>
-
-  <mat-paginator
-    [length]="newComments.length"
-    [pageSize]="pageSize"
+  <mat-paginator 
+    [length]="newComments.length" 
+    [pageSize]="pageSize" 
     [pageSizeOptions]="[5, 10, 25, 100]"
     (page)="handlePageChange($event)"
-  ></mat-paginator>
+  >
+  </mat-paginator>
 </div>

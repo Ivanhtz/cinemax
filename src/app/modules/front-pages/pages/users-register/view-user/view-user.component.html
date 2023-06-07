@@ -7,6 +7,7 @@
     <div class="bg-primary order-md-2 flex-md-grow-1 w-100">
       <picture>
         <img
+          id="fotoPrueba"
           [src]="user?.img"
           class="card-img img-fluid rounded-start"
           alt="Imagen del usuario"
@@ -16,7 +17,7 @@
     <section class="order-md-1 flex-md-grow-1 w-100">
       <div class="card-body text-center text-md-start">
         <h1 class="card-title h2 mb-4">{{ user?.name }}</h1>
-        <p class="card-text mb-4">
+        <p class="mb-4">
           Cuenta creada el {{ user?.createdAt | date : "dd/MM/yyyy" }}
         </p>
         <div class="row justify-content-center mt-4">

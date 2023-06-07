@@ -21,7 +21,7 @@ export class MoviesBackFormComponent implements OnInit, OnDestroy {
   constructor(
     private formBuilder: FormBuilder,
     private moviesService: MoviesService,
-    private snackBar: MatSnackBar 
+    private snackBar: MatSnackBar
   ) {
     this.currentYear = new Date().getFullYear();
     this.editingMovie = this.getEmptyMovie();
@@ -42,7 +42,7 @@ export class MoviesBackFormComponent implements OnInit, OnDestroy {
           this.movieForm = this.initForm();
         }
       });
-      this.currentYear = new Date().getFullYear();
+    this.currentYear = new Date().getFullYear();
   }
 
   ngOnDestroy(): void {
@@ -71,7 +71,7 @@ export class MoviesBackFormComponent implements OnInit, OnDestroy {
         [
           Validators.required,
           Validators.minLength(2),
-          Validators.maxLength(100),
+          Validators.maxLength(50),
         ],
       ],
       director: [
