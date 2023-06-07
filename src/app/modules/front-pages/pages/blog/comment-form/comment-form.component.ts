@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
-import { async } from '@angular/core/testing';
 import { ActivatedRoute } from '@angular/router';
 import { IComment } from 'src/app/interfaces/icomment.interface';
-import { ArticlesService } from 'src/app/services/articles-service/articles.service';
 import { CommentsService } from 'src/app/services/comments-service/comments.service';
 
 @Component({
@@ -11,47 +9,47 @@ import { CommentsService } from 'src/app/services/comments-service/comments.serv
   styleUrls: ['./comment-form.component.scss']
 })
 export class CommentFormComponent {
-  comments : IComment[]= [];
-  newComments:IComment[]=[]; 
+  comments: IComment[] = [];
+  newComments: IComment[] = [];
   textComment: string = '';
-  nameComment: string = ''; 
+  nameComment: string = '';
   articleId: number = 0;
-  
-  constructor(private articles: ArticlesService, private commentsService:CommentsService, private aRoute: ActivatedRoute){ }
 
-  async ngOnInit(): Promise <void> {
-    this.filteredComments(); 
+  constructor(private commentsService: CommentsService, private aRoute: ActivatedRoute) { }
+
+  async ngOnInit(): Promise<void> {
+    this.filteredComments();
     this.commentsService.commentAdded.subscribe(() => this.filteredComments());
   }
 
   //Método para añadir comentarios nuevos
-  async addComment(): Promise<void>{
+  async addComment(): Promise<void> {
     let newComment = {
       name: this.nameComment,
       text: this.textComment,
       articleId: this.articleId
     }
-    
-    if (newComment.name === '' || newComment.text === ''){
-      alert ("Campos vacíos");
-      return; 
-    }else{
+
+    if (newComment.name === '' || newComment.text === '') {
+      alert("Campos vacíos");
+      return;
+    } else {
       let response = await this.commentsService.postComment(newComment);
-      this.filteredComments(); 
+      this.filteredComments();
       this.nameComment = '';  // Borrar el campo de nombre
       this.textComment = '';  // Borrar el campo de comentario   
-    }    
+    }
   }
 
-  async filteredComments(){
-    this.aRoute.params.subscribe(async(params:any) => {
+  async filteredComments() {
+    this.aRoute.params.subscribe(async (params: any) => {
       this.articleId = parseInt(params.id)
     })
-    
-    let resp = await this.commentsService.getAllComments(); 
-    this.comments = resp; 
+
+    let resp = await this.commentsService.getAllComments();
+    this.comments = resp;
 
     let newResponse = this.comments.filter(value => value.articleId == this.articleId);
-    this.newComments = newResponse;      
+    this.newComments = newResponse;
   }
 }

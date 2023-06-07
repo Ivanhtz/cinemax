@@ -3,19 +3,47 @@
     {
       "email": "super@hotmail.com",
       "password": "$2a$10$91Lk2oTEzJvXf5es4huZJemi5AN2rIcZRVKzyvdBL1118NR9se4Y6",
-      "id": 1
+      "createdAt": "2023-06-04T16:22:26.494Z",
+      "id": 1,
+      "name": "Super",
+      "img": "https://img.freepik.com/vector-premium/icono-usuario-hombre-traje-negocios_454641-453.jpg?w=2000",
+      "active": true
     },
     {
       "email": "ivan2@gmail.com",
       "password": "$2a$10$HZDWg4690X.DFYvmsXwhMeE1hKCDcSHvnefSilGpNihhImUlP1ghS",
       "createdAt": "2023-06-04T16:22:26.494Z",
-      "id": 2
+      "id": 2,
+      "name": "Ivan",
+      "img": "https://cdn.icon-icons.com/icons2/11/PNG/256/person_user_customer_man_male_man_boy_people_1687.png",
+      "active": true
     },
     {
       "email": "ivan3@gmail.com",
       "password": "$2a$10$9i.jwNHxeqL3x1tlNPMV.Oku/880AIFVnnUmOgOLX063rOqfQwkmO",
       "createdAt": "2023-06-06T09:13:34.440Z",
-      "id": 3
+      "id": 3,
+      "name": "Ivan3",
+      "img": "https://cdn.icon-icons.com/icons2/11/PNG/256/person_user_customer_man_male_man_boy_people_1687.png",
+      "active": false
+    },
+    {
+      "email": "ramon@gmail",
+      "password": "$2a$10$9i.jwNHxeqL3x1tlNPMV.Oku/880AIFVnnUmOgOLX063rOqfQwkmO",
+      "createdAt": "2023-06-06T09:13:34.440Z",
+      "id": 4,
+      "name": "Ramón",
+      "img": "https://cdn.icon-icons.com/icons2/11/PNG/256/person_user_customer_man_male_man_boy_people_1687.png",
+      "active": true
+    },
+    {
+      "email": "rosa@gmail",
+      "password": "$2a$10$9i.jwNHxeqL3x1tlNPMV.Oku/880AIFVnnUmOgOLX063rOqfQwkmO",
+      "createdAt": "2023-06-06T09:13:34.440Z",
+      "id": 4,
+      "name": "Rosa",
+      "img": "https://cdn.icon-icons.com/icons2/11/PNG/256/person_user_customer_man_male_man_boy_people_1687.png",
+      "active": true
     }
   ],
   "films": [
@@ -453,14 +481,14 @@
       "id": 4,
       "title": "Esta desgarradora película es una joya de la animación",
       "image": "./assets/img/articles-img/pan.jpeg",
-      "content": "‘El exorcista’ (1973) del director William Friedkin es una de las películas de terror estadounidenses más icónicas del siglo XX y cumplirá 50 años en diciembre. William Peter Blatty ganó el Óscar a mejor guion por su adaptación de su propia novela, y desde entonces, ha sido una figura central en la historia de la película y su franquicia, aunque muchos no saben que la secuela oficial de la primera no lleva el nombre del exorcista sino ‘La novena configuración’ (1980), que acaba de estrenarse en acontra y Filmin. ",
+      "content": "A pesar de contar en su haber con una de las filmografías más interesantes de la animación actual, Cartoon Saloon sigue siendo un estudio no tan conocido como debería. 'El pan de la guerra', una de sus películas más brillantes y demoledoras, abandonará Netflix el próximo 31 de mayo. El poder de las historias: Parvana es una niña de 11 años que sobrevive como puede en Kabul (Afganistán), bajo el régimen terrorista que no permite a las mujeres ni salir a la calle solas. ",
       "text": "A pesar de contar en su haber con una de las filmografías más interesantes de la animación actual, Cartoon Saloon sigue siendo un estudio no tan conocido como debería. 'El pan de la guerra', una de sus películas más brillantes y demoledoras, abandonará Netflix el próximo 31 de mayo. El poder de las historias: Parvana es una niña de 11 años que sobrevive como puede en Kabul (Afganistán), bajo el régimen terrorista que no permite a las mujeres ni salir a la calle solas. Cuando su padre es apresado por los talibanes, su familia se queda sin recursos y decide hacerse pasar por un chico para poder trabajar. 'El pan de la guerra' ('The Breadwinner') es la tercera película de Cartoon Saloon, estrenada en 2017 y dirigida por Nora Twomey, también directora de 'El secreto del libro de Kells' y 'El dragón de papá'. El guion corre a cargo de Anita Doron y se basa en las novelas de Deborah Ellis. Lo primero que llama la atención de esta película es el salto temático que supuso para Cartoon Saloon: el estudio de animación irlandés nos tiene acostumbrados a historias de corte fantástico y aquí nos sumerge en la terrible realidad del pueblo afgano.Acompañamos a Parvana y vemos cómo se ve obligada a ingeniárselas para que su familia pueda sobrevivr. El guion no pretende utilizar el régimen talibán como excusa dramática, sino que muestra auténtica sensibilidad e interés por reflejar lo que fue el Primer Emirato Islámico de Afganistán (acontecido entre 1996 y 2001). La película es dura pero porque la realidad también lo es, y la historia lo refleja con respeto y sin necesidad de tirar de recursos lacrimógenos para resultar desgarradora. Hay violencia pero jamás se muestra de forma morbosa ni exagerada y el drama de los personajes conmueve de forma genuina."
     },
     {
       "id": 5,
       "title": "Pocos saben que es la verdadera secuela de 'El Exorcista' ",
       "image": "./assets/img/articles-img/exorcista.jpeg",
-      "content": "Por el momento solamente está en desarrollo, un movimiento lógico por parte de Lionsgate, pero Keanu Reeves y Chad Stahelski ya comentaron que iban a dejar descansar al personaje durante un tiempo, por lo que lo más probable es que pasen varios años hasta que 'John Wick 5' se estrene en cines. Vamos, todo apunta a que fácilmente será una espera similar a los 4 años que pasaron entre 'John Wick: Capítulo 3 - Parabellum' y la cuarta entrega, aunque ahí no fue algo meditado, sino fruto del parón del sector audiovisual provocado por el coronavirus.",
+      "content": "‘El exorcista’ (1973) del director William Friedkin es una de las películas de terror estadounidenses más icónicas del siglo XX y cumplirá 50 años en diciembre. William Peter Blatty ganó el Óscar a mejor guion por su adaptación de su propia novela, y desde entonces, ha sido una figura central en la historia de la película y su franquicia, aunque muchos no saben que la secuela oficial de la primera no lleva el nombre del exorcista sino ‘La novena configuración’ (1980), que acaba de estrenarse en acontra y Filmin.",
       "text": "‘El exorcista’ (1973) del director William Friedkin es una de las películas de terror estadounidenses más icónicas del siglo XX y cumplirá 50 años en diciembre. William Peter Blatty ganó el Óscar a mejor guion por su adaptación de su propia novela, y desde entonces, ha sido una figura central en la historia de la película y su franquicia, aunque muchos no saben que la secuela oficial de la primera no lleva el nombre del exorcista sino ‘La novena configuración’ (1980), que acaba de estrenarse en acontra y Filmin. La película original trataba sobre una joven poseída, Regan (Linda Blair), y un sacerdote psiquiatra (Jason Miller) que se ve obligado a dejar de lado su dependencia de la ciencia y su propia angustia espiritual para salvarla. En la imaginación colectiva, se considera que secuela directa fue el fracaso de John Boorman ‘El Exorcista II: el hereje’ (1977), sin embargo es una película que pese a volver a contar con Blair, no es aceptada por el creador como una entrega oficial.  Blatty dirigió ‘El Exorcista III’, que ganado culto con los años y se considera la verdadera heredera del film de Friedkin. Ni que decir tiene que la nueva trilogía de Blumhouse, que empieza con ‘The Believer’, ha sido rechazada por los herederos de Blatty.La película, que se reivindica ahora como precedente de ‘Seven’, momentos de ‘Carretera Perdida’ o ‘The Kingdom’ de Lars von Trier, es el segundo trabajo de Blatty como director, y la secuela temática de ‘La novena configuración’. El viaje de esta desconocida película comienza en 1966 cuando publicó la novela ‘Twinkle Twinkle,'Killer' Kane’ con el plan de convertirla en una película que él escribiría y William Friedkin dirigiría. Cuando ningún estudio se quiso arriesgar con ella, la pareja cambió el proyecto a ‘El exorcista’, una experiencia que inspiró a Blatty a reescribir su texto y conectar sus personajes y temas, para finalmente volverla a publicar en 1978 como ‘La novena configuración’."
     },
     {

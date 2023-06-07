@@ -18,7 +18,11 @@
       </div>
     </div>
   </article>
-
-  <mat-paginator [length]="newComments.length" [pageSize]="pageSize" [pageSizeOptions]="[5, 10, 25, 100]"
-    (page)="handlePageChange($event)"></mat-paginator>
+  <mat-paginator 
+    [length]="newComments.length" 
+    [pageSize]="pageSize" 
+    [pageSizeOptions]="[5, 10, 25, 100]"
+    (page)="handlePageChange($event)"
+  >
+  </mat-paginator>
 </div>
