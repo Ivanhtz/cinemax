@@ -8,19 +8,19 @@ import { IComment } from 'src/app/interfaces/icomment.interface';
 })
 export class CommentsService {
   private urlComments: string = 'http://localhost:3000/';
-    commentAdded = new Subject<void>();
+  commentAdded = new Subject<void>();
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   //Método para obtener todos los comentarios
-  getAllComments(): Promise<IComment[]>{
-    const url = `${this.urlComments}comments`; 
-    return lastValueFrom(this.http.get<IComment[]>(url)); 
-    
+  getAllComments(): Promise<IComment[]> {
+    const url = `${this.urlComments}comments`;
+    return lastValueFrom(this.http.get<IComment[]>(url));
+
   }
-  
+
   //Método para añadir comentarios
-  async postComment(comment:IComment): Promise<IComment>{
+  async postComment(comment: IComment): Promise<IComment> {
     const url = `${this.urlComments}comments`;
     const response = await lastValueFrom(this.http.post<IComment>(url, comment));
     this.commentAdded.next();
@@ -70,4 +70,3 @@ export class CommentsService {
     };
   }
 }
-  
