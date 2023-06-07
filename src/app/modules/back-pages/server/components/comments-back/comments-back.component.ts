@@ -23,7 +23,7 @@ export class CommentsBackComponent implements AfterViewInit {
   }
 
   private getCommentsAndSetData(): void {
-    this.commentsService.getComments().subscribe((comments) => {
+    this.commentsService.getAllComments().then((comments) => {
       this.comments.data = comments;
       if (this.paginator) {
         this.comments.paginator = this.paginator;

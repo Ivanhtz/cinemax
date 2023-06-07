@@ -39,9 +39,9 @@ export class CommentsListBackComponent {
           );
 
           // Actualizar la fuente de datos de la tabla
-          this.commentsService.refreshComments().subscribe((comments) => {
-            this.dataSource = new MatTableDataSource<IComment>(comments);
-          });
+          this.dataSource.data = this.dataSource.data.filter(
+            (comment) => comment.id !== id
+          );
         });
       }
     });

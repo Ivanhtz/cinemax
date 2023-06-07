@@ -1,0 +1,10 @@
+/* Se define un contenedor flex que se envuelve cuando no hay suficiente espacio */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Se define un elemento flex que ocupa el 100% del ancho de la pantalla en dispositivos pequeños, y el 50% del ancho de la pantalla en dispositivos más grandes */
+  .flex-item {
+    flex: 0 0 100%;
+  }

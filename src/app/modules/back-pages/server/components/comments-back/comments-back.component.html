@@ -1,3 +1,7 @@
 <!-- comments-back.component.html -->
-<app-comments-list-back [dataSource]="comments"></app-comments-list-back>
+<div class="flex-container">
+    <div class="flex-item">
+        <app-comments-list-back [dataSource]="comments"></app-comments-list-back>
+    </div>
+</div>
 <mat-paginator #paginator [pageSize]="5" [pageSizeOptions]="[5, 10, 20]"></mat-paginator>

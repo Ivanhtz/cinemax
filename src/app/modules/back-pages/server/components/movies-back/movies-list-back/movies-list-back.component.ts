@@ -12,7 +12,7 @@ import { MoviesService } from 'src/app/services/movies-service/movies.service';
   templateUrl: './movies-list-back.component.html',
   styleUrls: ['./movies-list-back.component.scss'],
 })
-export class MoviesListBackComponent implements OnInit {
+export class MoviesListBackComponent {
   displayedColumns: string[] = ['id', 'title', 'edit', 'delete'];
 
   @Input() dataSource: MatTableDataSource<Ifilm> =
@@ -45,15 +45,12 @@ export class MoviesListBackComponent implements OnInit {
 
   editFilm(id: number): void {
     if (id) {
-      console.log(`Editing film with ID: ${id}`);
       this.moviesService.getMovieById(id).then((film) => {
         this.moviesService.startEditingMovie(film);
       });
     }
   }
-  ngOnInit(): void {
-    console.log('DataSource:', this.dataSource);
-  }
+
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
