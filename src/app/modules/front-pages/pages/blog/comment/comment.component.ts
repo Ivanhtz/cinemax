@@ -20,8 +20,6 @@ export class CommentComponent {
 
   constructor(private commentsService:CommentsService, private aRoute: ActivatedRoute){ }
 
-
-
   async ngOnInit(): Promise <void> {
     this.filteredComments(); 
     this.commentsService.commentAdded.subscribe(()=> this.filteredComments()); 
@@ -37,7 +35,6 @@ export class CommentComponent {
 
     let newResponse = this.comments.filter(value => value.articleId == this.articleId);
     this.newComments = newResponse; 
-    console.log(this.newComments); 
   }
 
   handlePageChange(event: PageEvent) {

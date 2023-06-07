@@ -17,13 +17,7 @@ export class ViewBlogComponent {
   newComments:IComment[]=[]; 
   textComment: string = '';
   nameComment: string = ''; 
-  articleId: number = 0;
-  
-
-  // Variable para indicar si el formulario de comentarios está visible
-  showCommentForm = false;
-
-
+  articleId: number = 0;  
 
   constructor(private articles: ArticlesService, private commentsService:CommentsService, private aRoute: ActivatedRoute){ }
 
@@ -33,18 +27,7 @@ export class ViewBlogComponent {
       let response = this.articles.getArticleById(idArticle); 
       this.article = await response;
     })         
-  }
-
-    // Método para mostrar el formulario de comentarios
-    showForm(): void {
-      this.showCommentForm = true;
-    }
-
-
-    
-
-   
-    
+  }  
 }
 
 
