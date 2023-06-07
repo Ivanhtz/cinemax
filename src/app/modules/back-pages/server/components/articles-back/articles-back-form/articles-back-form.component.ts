@@ -16,7 +16,6 @@ export class ArticlesBackFormComponent implements OnInit, OnDestroy {
   articleForm: FormGroup;
   editingArticle: Iarticle;
   isEditing: boolean = false;
-  loading: boolean = false;
   private destroy$ = new Subject<void>();
 
   constructor(
@@ -93,7 +92,6 @@ export class ArticlesBackFormComponent implements OnInit, OnDestroy {
   }
 
   onSubmit(): void {
-    this.loading = true; // Establece "loading" a true cuando comienza el envío
 
     const articleObservable = this.isEditing
       ? this.articlesService.updateArticle(
@@ -105,7 +103,6 @@ export class ArticlesBackFormComponent implements OnInit, OnDestroy {
     const wasEditing = this.isEditing;
 
     articleObservable.subscribe(() => {
-      this.loading = false; // Establece "loading" a false cuando la operación asincrónica se completa
       this.articlesService.stopEditingArticle();
       this.articleForm.reset();
       this.editingArticle = this.initArticle();
@@ -125,4 +122,3 @@ export class ArticlesBackFormComponent implements OnInit, OnDestroy {
     this.editingArticle = this.initArticle();
   }
 }
-
