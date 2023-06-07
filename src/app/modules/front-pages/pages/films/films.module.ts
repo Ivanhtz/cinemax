@@ -9,6 +9,8 @@ import { MaterialModule } from 'src/app/modules/material/material.module';
 import { FormsModule } from '@angular/forms';
 import { AbstractPipe } from './pipes/abstract.pipe';
 import { ColorTextDirective } from './directives/colorText.directive';
+import { ImgDefaultPipe } from './pipes/img-default.pipe';
+
 
 
 @NgModule({
@@ -17,13 +19,16 @@ import { ColorTextDirective } from './directives/colorText.directive';
     FilmComponent,
     ViewFilmComponent,
     AbstractPipe,
-    ColorTextDirective
+    ColorTextDirective,
+    ImgDefaultPipe,
+
   ],
   imports: [
     CommonModule,
     FilmsRoutingModule,
     MaterialModule,
     FormsModule
+
   ],
   exports: [
     FilmsListComponent,

@@ -19,10 +19,41 @@ export class UsersBackFormComponent implements OnInit {
     private usersService: UsersService,
     private snackBar: MatSnackBar
   ) {
-    this.editingUser = { id: 0, email: '', password: '' };
+    this.editingUser = {
+      id: 0,
+      email: '',
+      password: '',
+      name: '',
+      img: '',
+      active: false,
+    };
     this.addressForm = this.formBuilder.group({
-      email: [this.editingUser.email, Validators.required],
-      password: [this.editingUser.password, Validators.required],
+      email: [
+        this.editingUser.email,
+        [Validators.required, Validators.pattern('https?://.+|/[^/]+')],
+      ],
+      password: [
+        this.editingUser.password,
+        [Validators.required, Validators.minLength(6)],
+      ],
+      name: [
+        this.editingUser.name,
+        [
+          Validators.required,
+          Validators.minLength(2),
+          Validators.maxLength(50),
+        ],
+      ],
+      img: [
+        this.editingUser.img,
+        [
+          Validators.required,
+          Validators.pattern(
+            'https?://.+|/[^/]+'
+          ),
+        ],
+      ],
+      active: [this.editingUser.active],
     });
   }
 
@@ -36,8 +67,26 @@ export class UsersBackFormComponent implements OnInit {
 
   createForm(user: Iuser): void {
     this.addressForm = this.formBuilder.group({
-      email: [user.email || '', Validators.required],
-      password: [user.password || '', Validators.required],
+      email: [user.email, [Validators.required, Validators.email]],
+      password: [user.password, [Validators.required, Validators.minLength(6)]],
+      name: [
+        user.name,
+        [
+          Validators.required,
+          Validators.minLength(2),
+          Validators.maxLength(50),
+        ],
+      ],
+      img: [
+        this.editingUser.img,
+        [
+          Validators.required,
+          Validators.pattern(
+            '^(https?://)?([da-z.-]+).([a-z.]{2,6})([/w .-]*)*/?$'
+          ),
+        ],
+      ],
+      active: [user.active],
     });
   }
 
@@ -48,23 +97,23 @@ export class UsersBackFormComponent implements OnInit {
           this.addressForm.value
         )
       : this.usersService.createUser(this.addressForm.value);
-  
-    const wasEditing = this.isEditing; 
-  
-    userObservable.subscribe(() => {
-      this.usersService.stopEditingUser();
-      this.snackBar.open(
-        `Usuario ${wasEditing ? 'editado' : 'creado'} exitosamente`,
-        'Cerrar',
-        { duration: 5000 }
-      );
-    },
-    (error) => { // Aquí se captura el error
-      this.snackBar.open(
-        `Error: ${error.message}`,
-        'Cerrar',
-        { duration: 5000 }
-      );
+
+    const wasEditing = this.isEditing;
+
+    userObservable.subscribe({
+      next: () => {
+        this.usersService.stopEditingUser();
+        this.snackBar.open(
+          `Usuario ${wasEditing ? 'editado' : 'creado'} exitosamente`,
+          'Cerrar',
+          { duration: 5000 }
+        );
+      },
+      error: (error) => {
+        this.snackBar.open(`Error: ${error.message}`, 'Cerrar', {
+          duration: 5000,
+        });
+      },
     });
   }
   cancel(): void {

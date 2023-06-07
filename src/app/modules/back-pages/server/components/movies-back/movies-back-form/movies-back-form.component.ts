@@ -5,6 +5,7 @@ import { MoviesService } from 'src/app/services/movies-service/movies.service';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { AbstractControl } from '@angular/forms';
 
 @Component({
   selector: 'app-movies-back-form',
@@ -84,7 +85,7 @@ export class MoviesBackFormComponent implements OnInit, OnDestroy {
       ],
       score: [
         movie ? movie.score : '',
-        [Validators.required, Validators.min(0), Validators.max(10)],
+        [Validators.required, Validators.min(1), Validators.max(10)],
       ],
       year: [
         movie ? movie.year : null,
@@ -95,19 +96,13 @@ export class MoviesBackFormComponent implements OnInit, OnDestroy {
         ],
       ],
       genre: [
-        movie ? movie.genre : '',
-        [
-          Validators.required,
-          Validators.minLength(2),
-          Validators.maxLength(50),
-        ],
+        movie ? movie.genre.toLowerCase() : '',
+        [Validators.required],
       ],
       abstract: [
         movie ? movie.abstract : '',
         [
           Validators.required,
-          Validators.minLength(10),
-          Validators.maxLength(500),
         ],
       ],
       img: [
@@ -119,7 +114,7 @@ export class MoviesBackFormComponent implements OnInit, OnDestroy {
         [
           Validators.required,
           Validators.minLength(10),
-          Validators.maxLength(1000),
+          Validators.maxLength(3000),
         ],
       ],
     });
@@ -147,6 +142,24 @@ export class MoviesBackFormComponent implements OnInit, OnDestroy {
         { duration: 5000 }
       );
     });
+  }
+
+  static genreValidator(
+    control: AbstractControl
+  ): { [key: string]: boolean } | null {
+    const validGenres = [
+      'accion',
+      'comedia',
+      'drama',
+      'belico',
+      'animacion',
+      'terror',
+      'aventura',
+    ];
+    if (control.value && !validGenres.includes(control.value.toLowerCase())) {
+      return { invalidGenre: true };
+    }
+    return null;
   }
 
   cancel(): void {

@@ -26,12 +26,13 @@
 
   <!-- Campo de Puntuación -->
   <mat-form-field class="full-width">
-    <input matInput type="number" min="0" max="10" step="0.1" placeholder="Puntuación" formControlName="score">
+    <input matInput type="number" min="1" max="10" step="0.1" placeholder="Puntuación" formControlName="score">
     <mat-error *ngIf="movieForm.controls['score'].hasError('required')">Puntuación es
       <strong>requerida</strong></mat-error>
-    <mat-error *ngIf="movieForm.controls['score'].hasError('min')">Puntuación debe ser al menos 0.</mat-error>
+    <mat-error *ngIf="movieForm.controls['score'].hasError('min')">Puntuación debe ser al menos 1.</mat-error>
     <mat-error *ngIf="movieForm.controls['score'].hasError('max')">Puntuación no debe ser mayor a 10.</mat-error>
   </mat-form-field>
+
 
   <!-- Campo de Año -->
   <mat-form-field class="full-width">
@@ -43,13 +44,21 @@
 
   <!-- Campo de Género -->
 
+  <!-- Campo de Género -->
   <mat-form-field class="full-width">
-    <input matInput placeholder="Género" formControlName="genre">
+    <mat-label>Género</mat-label>
+    <mat-select formControlName="genre">
+      <mat-option value="accion">Acción</mat-option>
+      <mat-option value="comedia">Comedia</mat-option>
+      <mat-option value="drama">Drama</mat-option>
+      <mat-option value="belico">Belico</mat-option>
+      <mat-option value="animacion">Animación</mat-option>
+      <mat-option value="terror">Terror</mat-option>
+      <mat-option value="aventura">Aventura</mat-option>
+    </mat-select>
     <mat-error *ngIf="movieForm.controls['genre'].hasError('required')">Género es <strong>requerido</strong></mat-error>
-    <mat-error *ngIf="movieForm.controls['genre'].hasError('minlength')">Género debe tener al menos 2
-      caracteres.</mat-error>
-    <mat-error *ngIf="movieForm.controls['genre'].hasError('maxlength')">Género no debe exceder 50
-      caracteres.</mat-error>
+    <mat-error *ngIf="movieForm.controls['genre'].hasError('invalidGenre')">Género debe ser uno de los siguientes:
+      acción, comedia, drama, belico, animacion, terror, aventura.</mat-error>
   </mat-form-field>
 
   <!-- Campo de Resumen -->

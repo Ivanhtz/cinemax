@@ -1,17 +1,24 @@
-import { TestBed } from '@angular/core/testing';
-import { CanActivateFn } from '@angular/router';
+import { TestBed } from "@angular/core/testing";
+import { LoginGuard } from "./login.guard";
 
-import { loginGuard } from './login.guard';
-
-describe('loginGuard', () => {
-  const executeGuard: CanActivateFn = (...guardParameters) => 
-      TestBed.runInInjectionContext(() => loginGuard(...guardParameters));
+describe('LoginGuard', () => {
+  let loginGuard: LoginGuard;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({
+      providers: [LoginGuard],
+    });
+
+    loginGuard = TestBed.inject(LoginGuard);
   });
 
   it('should be created', () => {
-    expect(executeGuard).toBeTruthy();
+    expect(loginGuard).toBeTruthy();
+  });
+
+  it('should call canActivate', () => {
+    spyOn(loginGuard, 'canActivate');
+    loginGuard.canActivate();
+    expect(loginGuard.canActivate).toHaveBeenCalled();
   });
 });

@@ -2,7 +2,7 @@ export interface Iuser {
     id: number;
     email: string;
     password: string;
-    createdAt?: Date; // Nuevo campo agregado
+    createdAt?: Date; 
     name?: string; 
     img?: string;
     active ?: boolean; 

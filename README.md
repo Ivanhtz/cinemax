@@ -1,6 +1,6 @@
 # Cinemax
 ---
-![Logo de Cinemax](./src//assets/img/icono.ico)
+![Logo de Cinemax](./src/assets/img/icono.ico)
 
 Cinemax es una aplicación Angular que permite a los usuarios navegar y buscar películas, obteniendo información detallada sobre ellas, también tienen una sección de blog, donde podrán leer artículos relacionados con el cine, permitiéndoles, escribir comentarios y poder comunicarse con otros usuarios, convirtiendo esta App en una red social enfocada en el cine.
 
@@ -20,7 +20,7 @@ La otra gran sección de la aplicación sería la parte privada, en la cual solo
 - Filtra películas por género.
 - Ver información detallada sobre cada película.
 - Explora un blog de noticias, con mucha información sobre el cine.
-- Permite mandar comentarios, lo que permíte la comunicación entre usuarios.
+- Permite mandar comentarios, lo que favorece la comunicación entre usuarios.
 - Descubrir películas populares y en tendencia.
 - Cuenta con una Base de Datos en formato JSON dentro de la carpeta DB
 - Diseño responsivo para una visualización óptima en diferentes dispositivos.
