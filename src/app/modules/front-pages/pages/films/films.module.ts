@@ -8,7 +8,7 @@ import { ViewFilmComponent } from './view-film/view-film.component';
 import { MaterialModule } from 'src/app/modules/material/material.module';
 import { FormsModule } from '@angular/forms';
 import { AbstractPipe } from './pipes/abstract.pipe';
-import { TooltipDirective } from './directives/tooltip.directive';
+import { ColorTextDirective } from './directives/colorText.directive';
 
 
 @NgModule({
@@ -17,7 +17,7 @@ import { TooltipDirective } from './directives/tooltip.directive';
     FilmComponent,
     ViewFilmComponent,
     AbstractPipe,
-    TooltipDirective
+    ColorTextDirective
   ],
   imports: [
     CommonModule,

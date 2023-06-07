@@ -3,7 +3,7 @@ import { Directive, ElementRef, Input, Renderer2 } from '@angular/core';
 @Directive({
   selector: '[highlight]'
 })
-export class TooltipDirective {
+export class ColorTextDirective {
 
 
   @Input('highlight') color?: string;

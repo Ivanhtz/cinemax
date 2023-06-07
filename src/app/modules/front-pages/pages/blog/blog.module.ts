@@ -9,6 +9,8 @@ import { MaterialModule } from 'src/app/modules/material/material.module';
 import { FormsModule } from '@angular/forms';
 import { CommentFormComponent } from './comment-form/comment-form.component';
 import { CommentComponent } from './comment/comment.component';
+import { AddIconPipe } from './pipes/add-icon.pipe';
+import { ResaltarDirective } from './directives/resaltar.directive';
 
 
 
@@ -19,8 +21,10 @@ import { CommentComponent } from './comment/comment.component';
     ViewBlogComponent,
     ArticleComponent,
     CommentFormComponent,
-    CommentComponent
-    
+    CommentComponent,
+    AddIconPipe,
+    ResaltarDirective
+
   ],
   imports: [
     CommonModule,
@@ -28,7 +32,7 @@ import { CommentComponent } from './comment/comment.component';
     MaterialModule,
     FormsModule
   ],
-  exports:[
+  exports: [
     BlogListComponent,
     ViewBlogComponent
   ]
