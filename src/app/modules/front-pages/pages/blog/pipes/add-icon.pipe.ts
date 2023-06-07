@@ -8,7 +8,7 @@ export class AddIconPipe implements PipeTransform {
 
   transform(value: string = ''): string {
 
-    return value + ' ' + '✔✔';
+    return value + ' ' + '📬';
   }
 
 }
