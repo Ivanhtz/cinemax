@@ -1,16 +1,12 @@
 <div class="card shadow-sm">
-  <img [src]="movie.img" [alt]="movie.title" />
+  <img [src]="movie.img | imgDefault" [alt]="movie.title" />
   <div class="card-body">
     <h3 class="text-center">{{ movie.title }}</h3>
     <p>Puntuación: {{ movie.score }}</p>
     <p>{{ movie.abstract | abstract : 50 }}</p>
     <div class="d-flex justify-content-between align-items-center">
       <div class="btn-group">
-        <button
-          mat-raised-button
-          color="accent"
-          routerLink="/principal/films/{{ movie.id }}"
-        >
+        <button mat-raised-button color="accent" routerLink="/principal/films/{{ movie.id }}">
           Ver más
         </button>
       </div>

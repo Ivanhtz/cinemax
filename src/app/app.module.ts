@@ -34,6 +34,7 @@ import { MoviesService } from './services/movies-service/movies.service';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,10 +43,6 @@ import { MoviesService } from './services/movies-service/movies.service';
     HomeComponent,
     HeaderComponent,
     FormComponent,
-
-
-
-
   ],
   imports: [
     BrowserModule,
@@ -77,6 +74,7 @@ import { MoviesService } from './services/movies-service/movies.service';
     LoginGuard
 
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+
 })
 export class AppModule { }
