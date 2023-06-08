@@ -9,15 +9,15 @@ import { UsersService } from 'src/app/services/users-service/users.service';
 })
 export class ViewUserComponent {
 
-  user !: any; 
+  user !: any;
 
-  constructor(private users:UsersService, private aRoute:ActivatedRoute){ }
-  
+  constructor(private users: UsersService, private aRoute: ActivatedRoute) { }
 
-  ngOnInit(){
+
+  ngOnInit() {
     const id = this.aRoute.snapshot.params["id"];
     this.users.getUser(id)
-    .subscribe(user => this.user = user); 
+      .subscribe(user => this.user = user);
   }
 }
 

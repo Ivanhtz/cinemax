@@ -12,12 +12,13 @@ export class UserStatusDirective implements OnInit {
         this.updateColor();
     }
 
-    //Método para controlar el color que se muestra en función de si la propiedad "isActive" está en true o en false
     private updateColor() {
         if (this.isActive) {
-            this.elementRef.nativeElement.style.backgroundColor = 'green';
+            this.elementRef.nativeElement.classList.add('active-status');
+            this.elementRef.nativeElement.classList.remove('inactive-status');
         } else {
-            this.elementRef.nativeElement.style.backgroundColor = 'red';
+            this.elementRef.nativeElement.classList.add('inactive-status');
+            this.elementRef.nativeElement.classList.remove('active-status');
         }
     }
 }
