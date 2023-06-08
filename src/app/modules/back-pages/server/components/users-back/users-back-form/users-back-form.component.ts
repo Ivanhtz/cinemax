@@ -86,6 +86,10 @@ export class UsersBackFormComponent implements OnInit {
       return;
     }
 
+    if (this.addressForm.value.active === null) {
+      this.addressForm.value.active = false;
+    }
+
     // Se elige entre actualizar o crear un usuario dependiendo de si se está editando
     const userObservable = this.isEditing
       ? this.usersService.updateUser(
