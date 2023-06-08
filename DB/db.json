@@ -35,6 +35,15 @@
       "name": "Jose",
       "img": "https://cdn.icon-icons.com/icons2/11/PNG/256/person_user_customer_man_male_man_boy_people_1687.png",
       "active": true
+    },
+    {
+      "email": "UsuarioInactivo@hotmail.com",
+      "password": "$2a$10$rfPWa9Lp43ePjDBsUdJHyeZrnzuWqMf5duksenTCAdAmx7mTx2zFu",
+      "name": "UsuarioInactivo",
+      "img": "https://img.freepik.com/vector-premium/icono-usuario-hombre-traje-negocios_454641-453.jpg?w=2000",
+      "active": false,
+      "createdAt": "2023-06-08T11:30:57.952Z",
+      "id": 5
     }
   ],
   "films": [
