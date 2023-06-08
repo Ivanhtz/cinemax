@@ -74,12 +74,7 @@ export class UsersBackFormComponent implements OnInit {
       ],
       img: [
         this.editingUser.img,
-        [
-          Validators.required,
-          Validators.pattern(
-            '^(https?://)?([da-z.-]+).([a-z.]{2,6})([/w .-]*)*/?$'
-          ),
-        ],
+        [Validators.required, Validators.pattern('https?://.+|/[^/]+')],
       ],
       active: [user.active],
     });
