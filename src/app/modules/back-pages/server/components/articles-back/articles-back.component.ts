@@ -20,16 +20,16 @@ export class ArticlesBackComponent implements AfterViewInit {
   constructor(private articlesService: ArticlesService) {}
 
   ngAfterViewInit(): void {
-    // Primero, obtener los artículos iniciales
+    // Al inicializar el componente, obtenemos los artículos iniciales
     this.getArticlesAndSetData();
 
-    // Luego, cada vez que articleUpdates$ emite, obtener los artículos de nuevo
+    // Nos suscribimos a articleUpdates$. Cada vez que se emite, obtenemos los artículos nuevamente
     this.articlesService.articleUpdates$
       .pipe(switchMap(() => this.articlesService.getArticles()))
       .subscribe((articles) => {
-        this.articles.data = articles;
+        this.articles.data = articles; // Actualizamos los datos de la tabla
         if (this.paginator) {
-          this.articles.paginator = this.paginator;
+          this.articles.paginator = this.paginator; // Asignamos el paginador a la tabla
         }
       });
   }

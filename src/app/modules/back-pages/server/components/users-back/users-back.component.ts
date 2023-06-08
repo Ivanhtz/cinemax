@@ -20,16 +20,16 @@ export class UsersBackComponent implements AfterViewInit {
   constructor(private usersService: UsersService) {}
 
   ngAfterViewInit(): void {
-    // Primero, obtener los usuarios iniciales
+    // Obtenemos los usuarios al inicializar el componente
     this.getUsersAndSetData();
 
-    // Luego, cada vez que userUpdates$ emite, obtener los usuarios de nuevo
+    // Nos suscribimos a las actualizaciones de los usuarios y refrescamos la lista cuando ocurren
     this.usersService.userUpdates$
       .pipe(switchMap(() => this.usersService.getUsers()))
       .subscribe((users) => {
-        this.users.data = users;
+        this.users.data = users; // Actualizamos los datos de la tabla
         if (this.paginator) {
-          this.users.paginator = this.paginator;
+          this.users.paginator = this.paginator; // Asignamos el paginador a la tabla
         }
       });
   }

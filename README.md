@@ -14,6 +14,8 @@ La otra gran sección de la aplicación sería la parte privada, en la cual solo
 
  Esta aplicación aprovecha la potencia del framework Angular para proporcionar una experiencia de usuario fluida.
 
+ ![Rendimiento de Cinemax](./src/assets/img/rendimientoCinemax.PNG)
+
 ## Características
 
 - Explorar una amplia colección de películas.
@@ -24,6 +26,8 @@ La otra gran sección de la aplicación sería la parte privada, en la cual solo
 - Descubrir películas populares y en tendencia.
 - Cuenta con una Base de Datos en formato JSON dentro de la carpeta DB
 - Diseño responsivo para una visualización óptima en diferentes dispositivos.
+
+![Diseño de Cinemax](./src/assets/img/escritoriomobile.png)
 
 ## Primeros pasos
 

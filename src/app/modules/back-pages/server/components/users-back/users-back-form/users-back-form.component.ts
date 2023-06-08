@@ -46,12 +46,7 @@ export class UsersBackFormComponent implements OnInit {
       ],
       img: [
         this.editingUser.img,
-        [
-          Validators.required,
-          Validators.pattern(
-            'https?://.+|/[^/]+'
-          ),
-        ],
+        [Validators.required, Validators.pattern('https?://.+|/[^/]+')],
       ],
       active: [this.editingUser.active],
     });
@@ -90,7 +85,13 @@ export class UsersBackFormComponent implements OnInit {
     });
   }
 
-  onSubmit(): void {
+  onSubmit() {
+    if (!this.addressForm.valid) {
+      // Si el formulario no es válido, se retorna
+      return;
+    }
+
+    // Se elige entre actualizar o crear un usuario dependiendo de si se está editando
     const userObservable = this.isEditing
       ? this.usersService.updateUser(
           this.editingUser.id,
@@ -98,21 +99,22 @@ export class UsersBackFormComponent implements OnInit {
         )
       : this.usersService.createUser(this.addressForm.value);
 
-    const wasEditing = this.isEditing;
+    const wasEditing = this.isEditing; // Se guarda el estado de edición
 
+    // Se suscribe al Observable del usuario
     userObservable.subscribe({
       next: () => {
-        this.usersService.stopEditingUser();
+        this.usersService.stopEditingUser(); // Se deja de editar el usuario
         this.snackBar.open(
           `Usuario ${wasEditing ? 'editado' : 'creado'} exitosamente`,
           'Cerrar',
           { duration: 5000 }
-        );
+        ); // Se muestra un mensaje de éxito
       },
       error: (error) => {
         this.snackBar.open(`Error: ${error.message}`, 'Cerrar', {
           duration: 5000,
-        });
+        }); // Se muestra un mensaje de error
       },
     });
   }

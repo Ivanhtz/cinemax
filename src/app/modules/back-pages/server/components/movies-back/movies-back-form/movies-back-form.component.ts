@@ -95,14 +95,13 @@ export class MoviesBackFormComponent implements OnInit, OnDestroy {
           Validators.max(new Date().getFullYear()),
         ],
       ],
-      genre: [
-        movie ? movie.genre.toLowerCase() : '',
-        [Validators.required],
-      ],
+      genre: [movie ? movie.genre.toLowerCase() : '', [Validators.required]],
       abstract: [
         movie ? movie.abstract : '',
         [
           Validators.required,
+          Validators.minLength(10),
+          Validators.maxLength(2000),
         ],
       ],
       img: [
@@ -120,7 +119,14 @@ export class MoviesBackFormComponent implements OnInit, OnDestroy {
     });
   }
 
-  onSubmit(): void {
+  // Método que se ejecuta al enviar el formulario
+  onSubmit() {
+    // Si el formulario no es válido, se retorna
+    if (!this.movieForm.valid) {
+      return;
+    }
+
+    // Se elige entre actualizar o crear una película dependiendo de si se está editando
     const movieObservable = this.isEditing
       ? this.moviesService.updateMovie(
           this.editingMovie.id,
@@ -128,16 +134,16 @@ export class MoviesBackFormComponent implements OnInit, OnDestroy {
         )
       : this.moviesService.createMovie(this.movieForm.value);
 
-    const wasEditing = this.isEditing;
-
+    // Se suscribe al Observable de la película
     movieObservable.subscribe(() => {
+      // Se deja de editar la película y se reinicia el formulario
       this.moviesService.stopEditingMovie();
       this.movieForm.reset();
       this.editingMovie = this.getEmptyMovie();
 
-      // Muestra un mensaje de éxito
+      // Se muestra un mensaje de éxito
       this.snackBar.open(
-        `Película ${wasEditing ? 'editada' : 'creada'} exitosamente`,
+        `Película ${this.isEditing ? 'editada' : 'creada'} exitosamente`,
         'Cerrar',
         { duration: 5000 }
       );

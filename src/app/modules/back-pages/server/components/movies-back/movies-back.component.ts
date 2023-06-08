@@ -6,7 +6,6 @@ import { switchMap } from 'rxjs/operators';
 import { Ifilm } from 'src/app/interfaces/ifilm.interface';
 import { MoviesService } from 'src/app/services/movies-service/movies.service';
 
-
 @Component({
   selector: 'app-movies-back',
   templateUrl: './movies-back.component.html',
@@ -21,16 +20,16 @@ export class MoviesBackComponent implements AfterViewInit {
   constructor(private moviesService: MoviesService) {}
 
   ngAfterViewInit(): void {
-    // Primero, obtener las películas iniciales
+    // Al inicializar el componente, obtenemos las películas iniciales
     this.getMoviesAndSetData();
 
-    // Luego, cada vez que movieUpdates$ emite, obtener las películas de nuevo
+    // Nos suscribimos a movieUpdates$. Cada vez que se emite, obtenemos las películas nuevamente
     this.moviesService.movieUpdates$
       .pipe(switchMap(() => this.moviesService.getMovies()))
       .subscribe((movies) => {
-        this.movies.data = movies;
+        this.movies.data = movies; // Actualizamos los datos de la tabla
         if (this.paginator) {
-          this.movies.paginator = this.paginator;
+          this.movies.paginator = this.paginator; // Asignamos el paginador a la tabla
         }
       });
   }

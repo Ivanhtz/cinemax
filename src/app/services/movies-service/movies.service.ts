@@ -14,10 +14,18 @@ import { Ifilm } from 'src/app/interfaces/ifilm.interface';
 @Injectable({
   providedIn: 'root',
 })
+/**
+ * MoviesService proporciona un conjunto de métodos para manejar las operaciones relacionadas con las películas.
+ * Esto incluye la obtención, creación, eliminación y actualización de películas.
+ */
 export class MoviesService {
   private urlMovie: string = 'http://localhost:3000/';
+  // Subject para la película que se está editando actualmente.
   private movieBeingEditedSubject = new BehaviorSubject<Ifilm | null>(null);
+  // Expone la película que se está editando actualmente como un Observable.
   public movieBeingEdited$ = this.movieBeingEditedSubject.asObservable();
+
+  // Subject para las actualizaciones de las películas. Emite cuando se ha creado, actualizado o eliminado una película.
   movieUpdates$ = new Subject<void>();
 
   constructor(private http: HttpClient) {}
@@ -73,7 +81,6 @@ export class MoviesService {
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
       console.error(`${operation} failed: ${error.message}`);
-      // Emit the error so it can be handled by the component
       return throwError(error);
     };
   }
