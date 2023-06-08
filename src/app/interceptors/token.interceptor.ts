@@ -4,13 +4,11 @@ import {
   HttpHandler,
   HttpEvent,
   HttpInterceptor,
-  HttpErrorResponse
+  HttpErrorResponse,
 } from '@angular/common/http';
 import { Observable, catchError, throwError } from 'rxjs';
 import { Router } from '@angular/router';
 import { AuthsService } from '../services/auths-service/auths.service';
-
-
 
 @Injectable()
 // Definimos la clase Token que implementa HttpInterceptor. Este es un interceptor de HTTP que se utilizará para interceptar todas las solicitudes HTTP

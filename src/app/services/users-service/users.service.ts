@@ -1,12 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import {
-  BehaviorSubject,
-  Observable,
-  Subject,
-  tap,
-  throwError
-} from 'rxjs';
+import { BehaviorSubject, Observable, Subject, tap, throwError } from 'rxjs';
 import { catchError, switchMap } from 'rxjs/operators';
 import { Iresponse } from 'src/app/interfaces/iresponse.interface';
 
@@ -15,10 +9,18 @@ import { Iuser } from 'src/app/interfaces/iuser.interface';
 @Injectable({
   providedIn: 'root',
 })
+/**
+ * UsersService proporciona un conjunto de métodos para manejar las operaciones relacionadas con los usuarios.
+ * Esto incluye la obtención, creación, eliminación y actualización de usuarios.
+ * También proporciona un BehaviorSubject para el usuario que se está editando actualmente.
+ * También proporciona un Subject para las actualizaciones de los usuarios. Emite cuando se ha creado, actualizado o eliminado un usuario.
+ */
 export class UsersService {
-  private apiUrl = 'http://localhost:3000';
+  public apiUrl = 'http://localhost:3000';
+  // BehaviorSubject para el usuario que se está editando actualmente.
   private userBeingEditedSubject = new BehaviorSubject<Iuser | null>(null);
   public userBeingEdited$ = this.userBeingEditedSubject.asObservable();
+  // Un observable para emitir eventos cuando se actualizan los datos del usuario.
   userUpdates$ = new Subject<void>();
 
   constructor(private http: HttpClient) {}

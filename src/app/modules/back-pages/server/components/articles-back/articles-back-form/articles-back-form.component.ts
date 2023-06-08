@@ -75,7 +75,7 @@ export class ArticlesBackFormComponent implements OnInit, OnDestroy {
         [
           Validators.required,
           Validators.minLength(10),
-          Validators.maxLength(3000),
+          Validators.maxLength(3100),
         ],
       ],
     });
@@ -91,8 +91,14 @@ export class ArticlesBackFormComponent implements OnInit, OnDestroy {
     };
   }
 
-  onSubmit(): void {
+  // Maneja el envío del formulario
+  onSubmit() {
+    // Verifica la validez del formulario
+    if (!this.articleForm.valid) {
+      return;
+    }
 
+    // Crea o actualiza el artículo
     const articleObservable = this.isEditing
       ? this.articlesService.updateArticle(
           this.editingArticle.id,
@@ -103,6 +109,7 @@ export class ArticlesBackFormComponent implements OnInit, OnDestroy {
     const wasEditing = this.isEditing;
 
     articleObservable.subscribe(() => {
+      // Reset de la edición
       this.articlesService.stopEditingArticle();
       this.articleForm.reset();
       this.editingArticle = this.initArticle();
@@ -115,7 +122,6 @@ export class ArticlesBackFormComponent implements OnInit, OnDestroy {
       );
     });
   }
-
   cancel(): void {
     this.articlesService.stopEditingArticle();
     this.articleForm.reset();
