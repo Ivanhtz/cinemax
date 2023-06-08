@@ -35,13 +35,13 @@
     <mat-form-field class="full-width">
       <textarea matInput placeholder="Contenido" formControlName="content"></textarea>
       <mat-error *ngIf="articleForm.controls['content'].hasError('required')">
-        Contenido es <strong>requerido</strong>
+        El resumen es <strong>requerido</strong>
       </mat-error>
       <mat-error *ngIf="articleForm.controls['content'].hasError('minlength')">
-        Contenido debe tener al menos 10 caracteres.
+        El resumen debe tener al menos 10 caracteres.
       </mat-error>
       <mat-error *ngIf="articleForm.controls['content'].hasError('maxlength')">
-        Contenido no debe exceder 1000 caracteres.
+        El resumen no debe exceder 1000 caracteres.
       </mat-error>
     </mat-form-field>
 
@@ -49,13 +49,13 @@
     <mat-form-field class="full-width">
       <textarea matInput placeholder="Texto" formControlName="text"></textarea>
       <mat-error *ngIf="articleForm.controls['text'].hasError('required')">
-        Texto es <strong>requerido</strong>
+        El contenido es <strong>requerido</strong>
       </mat-error>
       <mat-error *ngIf="articleForm.controls['text'].hasError('minlength')">
-        Texto debe tener al menos 10 caracteres.
+        El contenido debe tener al menos 10 caracteres.
       </mat-error>
       <mat-error *ngIf="articleForm.controls['text'].hasError('maxlength')">
-        Texto no debe exceder 3000 caracteres.
+        El contenido no debe exceder 3000 caracteres.
       </mat-error>
     </mat-form-field>
     <mat-card-actions>

@@ -74,12 +74,7 @@ export class UsersBackFormComponent implements OnInit {
       ],
       img: [
         this.editingUser.img,
-        [
-          Validators.required,
-          Validators.pattern(
-            '^(https?://)?([da-z.-]+).([a-z.]{2,6})([/w .-]*)*/?$'
-          ),
-        ],
+        [Validators.required, Validators.pattern('https?://.+|/[^/]+')],
       ],
       active: [user.active],
     });
@@ -89,6 +84,10 @@ export class UsersBackFormComponent implements OnInit {
     if (!this.addressForm.valid) {
       // Si el formulario no es válido, se retorna
       return;
+    }
+
+    if (this.addressForm.value.active === null) {
+      this.addressForm.value.active = false;
     }
 
     // Se elige entre actualizar o crear un usuario dependiendo de si se está editando
