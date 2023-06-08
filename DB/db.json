@@ -10,8 +10,8 @@
       "active": true
     },
     {
-      "email": "ivan2@gmail.com",
-      "password": "$2a$10$HZDWg4690X.DFYvmsXwhMeE1hKCDcSHvnefSilGpNihhImUlP1ghS",
+      "email": "ivan@gmail.com",
+      "password": "$2a$10$TZi/GOhDzk/Bnw1tW/Hbnum1sAaqzGHrEMaCTdHV5dOpaRY5PcWjq",
       "createdAt": "2023-06-04T16:22:26.494Z",
       "id": 2,
       "name": "Ivan",
@@ -19,31 +19,31 @@
       "active": true
     },
     {
-      "email": "ivan3@gmail.com",
-      "password": "$2a$10$9i.jwNHxeqL3x1tlNPMV.Oku/880AIFVnnUmOgOLX063rOqfQwkmO",
+      "email": "Pablo@gmail.com",
+      "password": "$2a$10$uemt1DrYzztxO3l.xIa5/ujN4A8BzECybZTY0OlWpka1qnferLt2G",
       "createdAt": "2023-06-06T09:13:34.440Z",
       "id": 3,
-      "name": "Ivan3",
-      "img": "https://cdn.icon-icons.com/icons2/11/PNG/256/person_user_customer_man_male_man_boy_people_1687.png",
-      "active": false
-    },
-    {
-      "email": "ramon@gmail",
-      "password": "$2a$10$9i.jwNHxeqL3x1tlNPMV.Oku/880AIFVnnUmOgOLX063rOqfQwkmO",
-      "createdAt": "2023-06-06T09:13:34.440Z",
-      "id": 4,
-      "name": "Ramón",
+      "name": "Pablo",
       "img": "https://cdn.icon-icons.com/icons2/11/PNG/256/person_user_customer_man_male_man_boy_people_1687.png",
       "active": true
     },
     {
-      "email": "rosa@gmail",
-      "password": "$2a$10$9i.jwNHxeqL3x1tlNPMV.Oku/880AIFVnnUmOgOLX063rOqfQwkmO",
+      "email": "Jose@gmail",
+      "password": "$2a$10$HoKwj1g5wmi.NlVe7nMeu.6l8S91dDQUBdZ/QYqP.UR7XPVc/5YEO",
       "createdAt": "2023-06-06T09:13:34.440Z",
       "id": 4,
-      "name": "Rosa",
+      "name": "Jose",
       "img": "https://cdn.icon-icons.com/icons2/11/PNG/256/person_user_customer_man_male_man_boy_people_1687.png",
       "active": true
+    },
+    {
+      "email": "UsuarioInactivo@hotmail.com",
+      "password": "$2a$10$rfPWa9Lp43ePjDBsUdJHyeZrnzuWqMf5duksenTCAdAmx7mTx2zFu",
+      "name": "UsuarioInactivo",
+      "img": "https://img.freepik.com/vector-premium/icono-usuario-hombre-traje-negocios_454641-453.jpg?w=2000",
+      "active": false,
+      "createdAt": "2023-06-08T11:30:57.952Z",
+      "id": 5
     }
   ],
   "films": [
@@ -442,6 +442,17 @@
       "abstract": "Un torpe detective de mascotas se embarca en búsqueda para encontrar la mascota perdida de los Miamis. En su divertida y caótica aventura, se enfrenta a situaciones absurdas y enredos cómicos mientras intenta resolver el misterio y recuperar al animal.",
       "img": "./assets/img/portadas-peliculas/36.jpg",
       "text": "Para ser detective de mascotas, hay que entender tanto a los criminales como a los animales. Ace Ventura va aún más lejos... Se comporta como un animal criminal. Cuando la mascota de un equipo de fútbol americano (un delfín) es robada justo antes de la Superbowl, Ace Ventura es puesto en el caso. Ahora bien, ¿quién querría robar un delfín y por qué?"
+    },
+    {
+      "id": 37,
+      "title": "Austin Powers",
+      "director": "Jay Roach",
+      "score": 6.6,
+      "year": "1999",
+      "genre": "comedia",
+      "abstract": "El malvado Doctor Maligno regresa con una nueva máquina del tiempo para robar el mojo de Austin Powers en los años 60. El agente secreto deberá enfrentarse a su némesis y recuperar su esencia para detener los planes del villano.",
+      "img": "./assets/img/portadas-peliculas/37.jpg",
+      "text": "Sediento de venganza tras los sucesos de Austin Powers: Misterioso agente internacional (1997), el despreciable Dr. Maligno se hace con una máquina diabólica y viaja al genial 1969. Pero todo el mundo sabe que los malos hábitos son difíciles de romper, y esta vez, además de dominar el mundo, el ambicioso megalómano está empeñado en robar todo lo que Austin aprecia: su innegable encanto y fanfarronería y su libido en alza. Mientras un inseguro Powers regresa a los psicodélicos años 60, en compañía de la rubia bomba de la CIA Felicity Shagwell, el agente británico fuera de tiempo debe hacer lo imposible: salvar lo que queda de su antaño imparable apetito sexual y frustrar el último plan lunático del Dr. Maligno. ¿Podrá Austin Powers, el hombre que perdió su mojo, evitar lo inevitable por segunda vez?"
     }
   ],
   "articles": [
@@ -571,18 +582,6 @@
       "text": "Me encanta Spiderman\n",
       "articleId": 3,
       "id": 8
-    },
-    {
-      "name": "Ximena",
-      "text": "Es una gran película y muy desconocida",
-      "articleId": 4,
-      "id": 9
-    },
-    {
-      "name": "Jesús",
-      "text": "Scorsese nunca decepciona",
-      "articleId": 10,
-      "id": 10
     }
   ]
 }

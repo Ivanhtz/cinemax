@@ -9,6 +9,8 @@ import { FormsModule } from '@angular/forms';
 import { MaterialModule } from 'src/app/modules/material/material.module';
 import { UserStatusPipe } from './pipes/user-status.pipe';
 import { UserStatusDirective } from './directives/user-status.directive';
+import { HighlightDateDirective } from './directives/highligh.directive';
+
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { UserStatusDirective } from './directives/user-status.directive';
     UsersListComponent,
     ViewUserComponent,
     UserStatusPipe,
-    UserStatusDirective
+    UserStatusDirective,
+    HighlightDateDirective
+
   ],
   imports: [
     CommonModule,
