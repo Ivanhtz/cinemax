@@ -10,19 +10,18 @@ import { ArticlesService } from 'src/app/services/articles-service/articles.serv
 })
 export class ViewBlogComponent {
 
-  article !: any; 
+  article !: any;
 
 
-  constructor(private articles: ArticlesService, private aRoute: ActivatedRoute){ }
+  constructor(private articles: ArticlesService, private aRoute: ActivatedRoute) { }
 
-  async ngOnInit(): Promise <void> {
-    this.aRoute.params.subscribe(async (params: any) =>{
+  async ngOnInit(): Promise<void> {
+    this.aRoute.params.subscribe(async (params: any) => {
       let idArticle = parseInt(params.id);
-      let response = this.articles.getArticleById(idArticle); 
+      let response = this.articles.getArticleById(idArticle);
       this.article = await response;
-      console.log(this.article);
-    })         
-  }  
+    })
+  }
 }
 
 

@@ -22,7 +22,6 @@ export class CommentFormComponent {
     this.commentsService.commentAdded.subscribe(() => this.filteredComments());
   }
 
-  //Método para añadir comentarios nuevos
   async addComment(): Promise<void> {
     let newComment = {
       name: this.nameComment,
@@ -30,16 +29,19 @@ export class CommentFormComponent {
       articleId: this.articleId
     }
 
-    if (newComment.name === '' || newComment.text === '') {
+    //Con el método trim eliminamos la posibilidad de enviar espacios en blanco como comentarios o nombre
+    if (newComment.name.trim() === '' || newComment.text.trim() === '') {
       alert("Campos vacíos");
       return;
-    } else {
-      let response = await this.commentsService.postComment(newComment);
-      this.filteredComments();
-      this.nameComment = '';  // Borrar el campo de nombre
-      this.textComment = '';  // Borrar el campo de comentario   
     }
+
+    let response = await this.commentsService.postComment(newComment);
+    this.filteredComments();
+    this.nameComment = '';  // Borrar el campo de nombre
+    this.textComment = '';  // Borrar el campo de comentario   
   }
+
+
 
   async filteredComments() {
     this.aRoute.params.subscribe(async (params: any) => {
