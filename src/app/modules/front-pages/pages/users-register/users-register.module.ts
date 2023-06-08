@@ -8,6 +8,7 @@ import { ViewUserComponent } from './view-user/view-user.component';
 import { FormsModule } from '@angular/forms';
 import { MaterialModule } from 'src/app/modules/material/material.module';
 import { UserStatusPipe } from './pipes/user-status.pipe';
+import { UserStatusDirective } from './directives/user-status.directive';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { UserStatusPipe } from './pipes/user-status.pipe';
     UserComponent,
     UsersListComponent,
     ViewUserComponent,
-    UserStatusPipe
+    UserStatusPipe,
+    UserStatusDirective
   ],
   imports: [
     CommonModule,
