@@ -1,12 +1,7 @@
 .mat-toolbar {
     background-color: black;
     color: whitesmoke;
-    position: fixed;
+    position: sticky;
     top: 0;
-    width: 100%;
-    z-index: 1000; 
-}
-
-mat-sidenav-container {
-    margin-top: 64px;
+    z-index: 1000;
 }

@@ -30,14 +30,14 @@
     <mat-error *ngIf="addressForm.controls['name'].hasError('required')">
       El <strong>nombre</strong> es requerido
     </mat-error>
-    <mat-error *ngIf="addressForm.controls['name'].hasError('minLength')">
+    <mat-error *ngIf="addressForm.controls['name'].hasError('minlength')">
       El <strong>nombre</strong> debe tener al menos 2 caracteres
     </mat-error>
-    <mat-error *ngIf="addressForm.controls['name'].hasError('maxLength')">
+    <mat-error *ngIf="addressForm.controls['name'].hasError('maxlength')">
       El <strong>nombre</strong> no debe tener más de 50 caracteres
     </mat-error>
   </mat-form-field>
-  
+
   <mat-form-field class="full-width">
     <input matInput placeholder="Image URL" formControlName="img">
     <mat-error *ngIf="addressForm.controls['img'].hasError('pattern')">
